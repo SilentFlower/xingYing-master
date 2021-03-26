@@ -7,6 +7,6 @@ package com.xingying.shopping.master.config.dubbo;
  * @description
  */
 public class DubboHost {
-    //测试Dubbo
+    //测试
     public static final String test = "dubbo://127.0.0.1:20890";
 }
