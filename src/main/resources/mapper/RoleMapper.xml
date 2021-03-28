@@ -38,4 +38,15 @@
             </if>
         </where>
     </select>
+
+    <select id="getRoleByUserId" resultType="com.xingying.shopping.master.entity.Role">
+        SELECT
+            b.*
+        FROM
+            XINGYING_SHOP.USER_TO_ROLE a
+            left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID
+        WHERE
+            a.USER_ID = #{userId}
+            AND b.DATA_STATUS = 1
+    </select>
 </mapper>

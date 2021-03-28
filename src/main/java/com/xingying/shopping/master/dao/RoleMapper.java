@@ -18,4 +18,11 @@ import java.util.List;
 public interface RoleMapper extends BaseMapper<Role> {
 
     List<Role> getListByPage(Role role);
+
+    /**
+     * 通过userID获取该用户所拥有的角色
+     * @param userId
+     * @return
+     */
+    List<Role> getRoleByUserId(Long userId);
 }

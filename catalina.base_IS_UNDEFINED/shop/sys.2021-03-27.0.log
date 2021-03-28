@@ -1,0 +1,116 @@
+2021-03-27 18:27:13,984 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 6376 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 18:27:13,987 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 18:27:13,988 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 18:28:34,733 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 1560 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 18:28:34,733 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 18:28:34,734 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 18:29:21,424 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 12312 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 18:29:21,424 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 18:29:21,425 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 18:29:29,670 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.73 seconds (JVM running for 10.438)
+2021-03-27 18:31:30,393 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE USER_ID=?
+2021-03-27 18:31:31,990 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262063722804154368(String)
+2021-03-27 18:31:32,050 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 18:31:32,081 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE USER_ID=?
+2021-03-27 18:31:32,082 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262063722804154368(String)
+2021-03-27 18:31:32,084 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 18:32:47,560 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 15524 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 18:32:47,560 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 18:32:47,561 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 18:32:55,073 INFO (StartupInfoLogger.java:61)- Started MasApplication in 7.918 seconds (JVM running for 9.577)
+2021-03-27 18:51:02,420 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 15344 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 18:51:02,421 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 18:51:02,421 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 18:51:10,667 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.746 seconds (JVM running for 10.421)
+2021-03-27 18:54:09,026 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 21824 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 18:54:09,027 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 18:54:09,027 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 18:54:17,198 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.646 seconds (JVM running for 10.267)
+2021-03-27 19:05:33,568 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 11640 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 19:05:33,568 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 19:05:33,569 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 19:05:43,957 INFO (StartupInfoLogger.java:61)- Started MasApplication in 10.886 seconds (JVM running for 12.62)
+2021-03-27 19:06:55,327 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE USER_ID=?
+2021-03-27 19:06:55,641 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262063722804154368(String)
+2021-03-27 19:06:55,662 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 20:01:38,002 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 3184 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 20:01:38,004 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 20:01:38,004 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 20:01:47,717 INFO (StartupInfoLogger.java:61)- Started MasApplication in 11.319 seconds (JVM running for 13.787)
+2021-03-27 20:13:46,299 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 20172 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 20:13:46,300 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 20:13:46,300 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 20:13:54,448 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.679 seconds (JVM running for 10.648)
+2021-03-27 20:15:06,338 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 10336 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 20:15:06,339 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 20:15:06,339 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 20:15:17,179 INFO (StartupInfoLogger.java:61)- Started MasApplication in 11.43 seconds (JVM running for 13.795)
+2021-03-27 20:47:41,034 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 10544 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 20:47:41,035 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 20:47:41,036 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 20:47:53,319 INFO (StartupInfoLogger.java:61)- Started MasApplication in 12.821 seconds (JVM running for 15.655)
+2021-03-27 20:51:05,607 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-27 20:51:05,734 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-27 20:51:05,759 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 20:51:05,764 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT ROLE_ID,USER_ID FROM XINGYING_SHOP.USER_TO_ROLE WHERE (USER_ID = ?)
+2021-03-27 20:51:05,768 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-27 20:51:05,772 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 20:51:05,775 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT ROLE_ID,ROLE_NAME,DATA_STATUS,DATA_CREATE_TIME,CREATED_BY FROM XINGYING_SHOP.ROLE WHERE ROLE_ID IN ( ? )
+2021-03-27 20:51:05,776 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-27 20:51:05,778 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 22:34:00,893 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 9888 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 22:34:00,894 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 22:34:00,895 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 22:35:25,097 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 11924 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 22:35:25,097 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 22:35:25,098 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 22:35:33,177 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.59 seconds (JVM running for 9.969)
+2021-03-27 22:35:39,721 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE USER_ID=?
+2021-03-27 22:35:40,013 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262063722804154368(String)
+2021-03-27 22:35:40,036 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 22:35:59,743 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE USER_ID=?
+2021-03-27 22:35:59,744 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262063722804154368(String)
+2021-03-27 22:35:59,745 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 22:36:28,972 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE USER_ID=?
+2021-03-27 22:36:28,972 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262063722804154368(String)
+2021-03-27 22:36:28,974 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 22:59:10,576 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 5984 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 22:59:10,577 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 22:59:10,577 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 23:02:36,711 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 9792 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 23:02:36,712 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 23:02:36,713 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 23:02:44,714 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.512 seconds (JVM running for 10.24)
+2021-03-27 23:03:26,726 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE USER_ID=?
+2021-03-27 23:03:26,854 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262063722804154368(String)
+2021-03-27 23:03:26,875 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 23:03:27,363 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE USER_ID=?
+2021-03-27 23:03:27,364 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262063722804154368(String)
+2021-03-27 23:03:27,366 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 23:05:50,897 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 22220 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 23:05:50,899 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 23:05:50,900 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 23:35:12,642 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 2676 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 23:35:12,643 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 23:35:12,643 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 23:35:20,038 INFO (StartupInfoLogger.java:61)- Started MasApplication in 7.867 seconds (JVM running for 9.654)
+2021-03-27 23:36:11,610 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 3568 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 23:36:11,611 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 23:36:11,611 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 23:36:19,784 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.695 seconds (JVM running for 10.38)
+2021-03-27 23:36:33,834 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE USER_ID=?
+2021-03-27 23:36:33,963 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262063722804154368(String)
+2021-03-27 23:36:33,983 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 23:36:43,908 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE USER_ID=?
+2021-03-27 23:36:43,908 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262063722804154368(String)
+2021-03-27 23:36:43,910 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 23:36:45,901 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE USER_ID=?
+2021-03-27 23:36:45,901 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262063722804154368(String)
+2021-03-27 23:36:45,903 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 23:36:46,195 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE USER_ID=?
+2021-03-27 23:36:46,196 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262063722804154368(String)
+2021-03-27 23:36:46,199 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-27 23:37:23,102 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 10088 (C:\Users\SiletFlower\Desktop\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\Desktop\xingYing-master)
+2021-03-27 23:37:23,102 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-03-27 23:37:23,103 INFO (SpringApplication.java:660)- No active profile set, falling back to default profiles: default
+2021-03-27 23:37:31,153 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.56 seconds (JVM running for 10.142)

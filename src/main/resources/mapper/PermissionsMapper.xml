@@ -61,4 +61,18 @@
             </if>
         </where>
     </select>
+
+    <select id="getPermissionsByRoles" resultType="com.xingying.shopping.master.entity.Permissions">
+        SELECT
+            b.*
+        FROM
+            XINGYING_SHOP.PERMISSIONS_TO_ROLE a
+            left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID
+        WHERE
+            b.DATA_STATUS = 1
+            AND a.PERMISSIONS_ID IN
+            <foreach collection="roles" item="role" open="(" separator="," close=")">
+                #{role.roleId}
+            </foreach>
+    </select>
 </mapper>

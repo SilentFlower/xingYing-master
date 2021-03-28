@@ -1,11 +1,22 @@
 package com.xingying.shopping.master.controller;
 
+import com.xingying.shopping.master.common.entitys.result.QueryResultBean;
 import com.xingying.shopping.master.config.dubbo.DubboHost;
+import com.xingying.shopping.master.entity.UserEntity;
+import com.xingying.shopping.master.entity.UserXy;
 import com.xingying.shopping.master.service.HelloService;
+import com.xingying.shopping.master.service.TestDubboService;
+import com.xingying.shopping.master.service.UserXyService;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.yaml.snakeyaml.events.Event;
 
+import javax.naming.Name;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -15,12 +26,18 @@ import javax.servlet.http.HttpSession;
  * @description
  */
 @RestController
+@RequestMapping("${xingYing.name}")
 public class TestDubboController {
-    @DubboReference(url = DubboHost.test,lazy = true)
+    @Autowired
     private HelloService helloService;
+    @Autowired
+    private TestDubboService testDubboService;
+    @Autowired
+    private UserXyService userXyService;
 
     @RequestMapping("/")
-    public String test(HttpServletRequest httpServletRequest){
+
+    public String test(@RequestBody UserEntity userEntity,HttpServletRequest request) {
         String s = helloService.sayHello("测试");
         System.out.println(s);
         return s;
@@ -28,17 +45,30 @@ public class TestDubboController {
 
     @RequestMapping("/session")
     public String test02(HttpServletRequest request) {
-        HttpSession session = request.getSession();
-        session.setAttribute("name", "测试");
-        return session.getId();
+        String id = testDubboService.createSession(request);
+        return id;
     }
 
     @RequestMapping("/getSession")
     public String test03(HttpServletRequest request) {
+        String name = testDubboService.getSession(request);
+        return name;
+    }
+
+
+    @RequestMapping("/getUser")
+    public QueryResultBean<UserXy> test06(HttpServletRequest request) {
         HttpSession session = request.getSession();
-        System.out.println(session.getAttribute("name"));
-        System.out.println(session.getId());
-        return session.getId();
+        UserXy user = (UserXy) session.getAttribute("User");
+        return new QueryResultBean<>(user);
+    }
+
+    /**
+     * 首页
+     */
+    @RequestMapping("/index")
+    public String index() {
+        return "index";
     }
 
 
