@@ -1,0 +1,175 @@
+2021-04-10 06:25:45,860 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 8436 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 06:25:46,190 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 06:25:46,190 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 06:25:53,900 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 06:26:02,978 INFO (StartupInfoLogger.java:61)- Started MasApplication in 17.772 seconds (JVM running for 21.476)
+2021-04-10 06:27:22,986 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-04-10 06:27:23,274 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-04-10 06:27:23,329 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 06:27:23,333 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-04-10 06:27:23,338 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-04-10 06:27:23,342 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 06:27:23,345 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-04-10 06:27:23,346 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-04-10 06:27:23,350 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 06:29:53,886 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 11888 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 06:29:53,887 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 06:29:53,889 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 06:29:57,039 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 06:30:02,401 INFO (StartupInfoLogger.java:61)- Started MasApplication in 9.113 seconds (JVM running for 10.992)
+2021-04-10 06:30:11,660 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-04-10 06:30:11,798 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-04-10 06:30:11,822 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 06:30:11,826 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-04-10 06:30:11,831 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-04-10 06:30:11,835 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 06:30:11,838 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-04-10 06:30:11,840 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-04-10 06:30:11,841 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 06:33:46,883 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 2512 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 06:33:46,884 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 06:33:46,884 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 06:33:49,921 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 06:33:54,629 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.268 seconds (JVM running for 10.139)
+2021-04-10 06:34:57,914 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 29988 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 06:34:57,914 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 06:34:57,915 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 06:35:00,891 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 06:35:05,588 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.225 seconds (JVM running for 9.978)
+2021-04-10 06:38:59,615 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 20452 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 06:38:59,616 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 06:38:59,617 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 06:39:02,788 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 06:39:07,965 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.964 seconds (JVM running for 10.681)
+2021-04-10 06:40:15,791 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 10584 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 06:40:15,791 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 06:40:15,792 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 06:40:18,968 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 06:40:24,260 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.974 seconds (JVM running for 10.775)
+2021-04-10 06:43:09,565 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 28772 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 06:43:09,566 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 06:43:09,567 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 06:43:12,673 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 06:43:17,478 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.435 seconds (JVM running for 10.236)
+2021-04-10 06:46:08,653 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-04-10 06:46:08,777 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-04-10 06:46:08,799 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 06:46:08,803 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-04-10 06:46:08,807 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-04-10 06:46:08,811 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 06:46:08,814 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-04-10 06:46:08,815 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-04-10 06:46:08,817 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 06:50:31,015 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 14596 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 06:50:31,016 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 06:50:31,016 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 06:50:34,207 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 06:50:39,064 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.692 seconds (JVM running for 10.515)
+2021-04-10 06:54:30,316 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 23784 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 06:54:30,317 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 06:54:30,317 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 06:54:33,380 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 06:54:38,286 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.511 seconds (JVM running for 10.309)
+2021-04-10 07:02:33,355 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 17096 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 07:02:33,356 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 07:02:33,357 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 07:02:36,730 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 07:02:42,366 INFO (StartupInfoLogger.java:61)- Started MasApplication in 9.498 seconds (JVM running for 11.687)
+2021-04-10 07:05:04,781 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 26680 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 07:05:04,782 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 07:05:04,782 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 07:05:07,858 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 07:05:12,733 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.553 seconds (JVM running for 10.294)
+2021-04-10 07:07:09,506 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-04-10 07:07:09,628 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-04-10 07:07:09,650 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:07:09,654 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-04-10 07:07:09,659 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-04-10 07:07:09,662 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:07:09,665 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-04-10 07:07:09,666 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-04-10 07:07:09,668 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:08:52,645 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 21916 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 07:08:52,646 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 07:08:52,646 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 07:08:55,609 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 07:09:00,203 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.115 seconds (JVM running for 9.656)
+2021-04-10 07:12:55,593 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 31636 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 07:12:55,593 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 07:12:55,594 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 07:12:58,593 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 07:13:03,665 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.577 seconds (JVM running for 10.329)
+2021-04-10 07:18:41,105 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-04-10 07:18:41,225 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-04-10 07:18:41,250 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:18:41,254 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-04-10 07:18:41,260 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-04-10 07:18:41,263 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:18:41,266 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-04-10 07:18:41,268 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-04-10 07:18:41,270 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:18:51,777 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-04-10 07:18:51,778 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-04-10 07:18:51,781 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:18:51,782 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-04-10 07:18:51,782 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-04-10 07:18:51,784 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:18:51,785 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-04-10 07:18:51,785 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-04-10 07:18:51,786 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:19:01,758 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-04-10 07:19:01,759 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-04-10 07:19:01,761 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:19:01,762 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-04-10 07:19:01,763 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-04-10 07:19:01,764 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:19:01,765 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-04-10 07:19:01,765 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-04-10 07:19:01,768 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:20:32,879 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 8160 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 07:20:32,880 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 07:20:32,880 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 07:20:36,446 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 07:20:41,534 INFO (StartupInfoLogger.java:61)- Started MasApplication in 9.331 seconds (JVM running for 11.269)
+2021-04-10 07:20:59,354 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-04-10 07:20:59,472 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-04-10 07:20:59,493 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:20:59,497 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-04-10 07:20:59,502 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-04-10 07:20:59,505 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:20:59,508 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-04-10 07:20:59,510 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-04-10 07:20:59,511 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:23:05,615 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 2580 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 07:23:05,615 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 07:23:05,616 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 07:23:09,066 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 07:23:14,038 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.973 seconds (JVM running for 10.821)
+2021-04-10 07:34:56,517 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 13964 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 07:34:56,518 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 07:34:56,518 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 07:34:59,707 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 07:35:05,030 INFO (StartupInfoLogger.java:61)- Started MasApplication in 9.086 seconds (JVM running for 11.024)
+2021-04-10 07:38:20,111 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 23768 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-04-10 07:38:20,112 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-10 07:38:20,113 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-04-10 07:38:23,598 DEBUG (GenericFilterBean.java:242)- Filter 'jwtAuthenticationTokenFilter' configured for use
+2021-04-10 07:38:28,495 INFO (StartupInfoLogger.java:61)- Started MasApplication in 9.074 seconds (JVM running for 10.954)
+2021-04-10 07:38:38,630 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-04-10 07:38:38,775 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-04-10 07:38:38,800 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:38:38,805 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-04-10 07:38:38,810 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-04-10 07:38:38,815 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:38:38,818 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-04-10 07:38:38,820 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-04-10 07:38:38,821 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:39:03,852 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-04-10 07:39:03,853 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-04-10 07:39:03,856 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:39:03,857 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-04-10 07:39:03,857 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-04-10 07:39:03,858 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-04-10 07:39:03,860 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-04-10 07:39:03,860 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-04-10 07:39:03,861 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1

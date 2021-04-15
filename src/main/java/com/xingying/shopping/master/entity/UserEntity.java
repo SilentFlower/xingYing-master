@@ -15,7 +15,6 @@ public class UserEntity implements UserDetails {
     private Long id;// 用户id
     private String username;// 用户名
     private String password;// 密码
-    private List<Role> userRoles;// 用户权限集合(可去
     private List<Permissions> roleMenus;// 角色菜单集合
 
     private Collection<? extends GrantedAuthority> authorities;
@@ -82,13 +81,6 @@ public class UserEntity implements UserDetails {
         this.password = password;
     }
 
-    public List<Role> getUserRoles() {
-        return userRoles;
-    }
-
-    public void setUserRoles(List<Role> userRoles) {
-        this.userRoles = userRoles;
-    }
 
     public List<Permissions> getRoleMenus() {
         return roleMenus;

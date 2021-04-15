@@ -52,7 +52,6 @@ public class UserDetailService implements UserDetailsService {
         List<Permissions> permissions = permissionsMapper.getPermissionsByRoles(roles);
         Collection<SimpleGrantedAuthority> simpleGrantedAuthorities = createAuthorities(roles);
         UserEntity userDetails = new UserEntity(user.getAccount(), user.getPasswords(), simpleGrantedAuthorities, permissions);
-        userDetails.setUserRoles(roles);
         userDetails.setId(user.getUserId());
         return userDetails;
     }

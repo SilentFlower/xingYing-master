@@ -1,0 +1,24 @@
+2021-03-29 09:46:04,211 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 23820 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-29 09:46:04,215 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-29 09:46:04,215 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-29 09:46:15,212 INFO (StartupInfoLogger.java:61)- Started MasApplication in 11.515 seconds (JVM running for 13.614)
+2021-03-29 09:46:16,316 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-29 09:46:16,451 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: admin(String)
+2021-03-29 09:46:16,475 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-29 09:46:16,478 DEBUG (UserDetailService.java:46)- 用户未找到
+2021-03-29 09:46:56,182 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-29 09:46:56,183 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: admin(String)
+2021-03-29 09:46:56,185 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-29 09:46:56,186 DEBUG (UserDetailService.java:46)- 用户未找到
+2021-03-29 09:47:10,622 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-29 09:47:10,623 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: admin(String)
+2021-03-29 09:47:10,624 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-29 09:47:10,624 DEBUG (UserDetailService.java:46)- 用户未找到
+2021-03-29 09:48:31,361 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-29 09:48:31,361 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: admin(String)
+2021-03-29 09:48:31,362 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-29 09:48:31,362 DEBUG (UserDetailService.java:46)- 用户未找到
+2021-03-29 09:49:00,469 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-29 09:49:00,470 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: admin(String)
+2021-03-29 09:49:00,471 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-29 09:49:00,471 DEBUG (UserDetailService.java:46)- 用户未找到

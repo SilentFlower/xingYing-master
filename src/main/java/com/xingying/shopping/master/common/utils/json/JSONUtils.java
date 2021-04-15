@@ -4,8 +4,10 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.io.*;
 import java.net.URL;
@@ -41,6 +43,7 @@ public class JSONUtils {
         module.addDeserializer(LocalDate.class, new LocalDateDeserializer());
         module.addDeserializer(LocalTime.class, new LocalTimeDeserializer());
         module.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer());
+        module.addDeserializer(SimpleGrantedAuthority.class, new SimpleGrantedAuthorityDeserializer());
         jacksonMapper.registerModule(module);
     }
 
@@ -228,6 +231,16 @@ public class JSONUtils {
         }
     }
 
+    static class SimpleGrantedAuthorityDeserializer extends StdDeserializer<SimpleGrantedAuthority> {
+        public SimpleGrantedAuthorityDeserializer() {
+            super(SimpleGrantedAuthority.class);
+        }
+        @Override
+        public SimpleGrantedAuthority deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JsonProcessingException {
+            JsonNode tree = p.getCodec().readTree(p);
+            return new SimpleGrantedAuthority(tree.get("authority").textValue());
+        }
+    }
 
 
 

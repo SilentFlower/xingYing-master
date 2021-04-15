@@ -1,7 +1,10 @@
 package com.xingying.shopping.master.config.security;
 
+import com.xingying.shopping.master.common.filter.JwtAuthenticationTokenFilter;
+import com.xingying.shopping.master.config.security.handler.AuthenticationEntryPointImpl;
 import com.xingying.shopping.master.config.security.handler.AuthenticationFailHandlerImpl;
 import com.xingying.shopping.master.config.security.handler.AuthenticationSuccessHandlerImpl;
+import com.xingying.shopping.master.config.security.handler.LogoutSuccessHandlerImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -10,7 +13,10 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
  * @author SiletFlower
@@ -32,6 +38,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private AuthenticationFailHandlerImpl authenticationFailHandler;
     @Autowired
     private AuthenticationSuccessHandlerImpl authenticationSuccessHandler;
+    @Autowired
+    private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
+    @Autowired
+    private AuthenticationEntryPointImpl authenticationEntryPoint;
+    @Autowired
+    private LogoutSuccessHandlerImpl logoutSuccessHandler;
 
     /**
      * 静态资源设置
@@ -58,9 +70,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.headers().frameOptions().disable();//解决 in a frame because it set 'X-Frame-Options' to 'DENY' 问题
         http.formLogin().failureHandler(authenticationFailHandler);
         http.formLogin().successHandler(authenticationSuccessHandler);
+        http.logout().logoutSuccessHandler(logoutSuccessHandler);
+        http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
         //http.anonymous().disable();
         http.authorizeRequests()
-                .antMatchers("/master/login/**","/initUserData")//不拦截登录相关方法
+                .antMatchers("/master/login/**","/master/user/addUser")//不拦截登录相关方法
                 .permitAll()
                 //.antMatchers("/user").hasRole("ADMIN")  // user接口只有ADMIN角色的可以访问
 //            .anyRequest()
@@ -73,12 +87,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/master/login")  //登录POST请求路径
                 .usernameParameter("username") //登录用户名参数
                 .passwordParameter("password") //登录密码参数
+                //无状态登陆
+                .and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .exceptionHandling()
                 .accessDeniedHandler(accessDeniedHandler) //无权限处理器
+                .authenticationEntryPoint(authenticationEntryPoint)//匿名访问
                 .and()
                 .logout()
-                .logoutSuccessUrl("/master/login?logout");  //退出登录成功URL
+                .logoutUrl("/master/logout");
+//                .logoutSuccessUrl("/master/logoutSuccess");  //退出登录成功URL
     }
 
     @Override

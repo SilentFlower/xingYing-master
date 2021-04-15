@@ -25,39 +25,30 @@ public class MyExceptionHandler {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @ExceptionHandler(value = Exception.class)
-    public ModelAndView resolveException(HttpServletRequest request,
+    public void resolveException(HttpServletRequest request,
                                          HttpServletResponse response, Object handler, Exception ex) {
 
-        ModelAndView modelAndView = null;
+        ResultBean<String> feedback;
         String ajax = request.getHeader("X-Requested-With");
         if (StringUtils.isNotEmpty(ajax)) {
-            ResultBean<String> feedback;
             if (ex instanceof IllegalArgumentException){
                 feedback = new OperationResultBean<>(ReturnCode.ERROR_PARAMS_FORMAT, ex.getMessage());
             }else {
                 feedback = new OperationResultBean<>(ReturnCode.ACTIVE_EXCEPTION,ex.getMessage());
             }
-            try {
-                response.setContentType("text/json;charset=utf-8");
-                JSONUtils.output(response.getWriter(),feedback);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
 
         } else {
-            //handler就是处理器适配器要执行的Handler对象(只有method)
-            //解析出异常类型。
-            modelAndView = new ModelAndView();
-            //将错误信息传到页面
-            modelAndView.addObject("message", ex.getMessage());
-            //指向到错误界面
-            modelAndView.setViewName("error");
+            feedback = new OperationResultBean<>(ReturnCode.ACTIVE_FAILURE,ex.getMessage());
+        }
+        try {
+            response.setContentType("text/json;charset=utf-8");
+            JSONUtils.output(response.getWriter(),feedback);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         if (logger.isDebugEnabled()){
             logger.debug("业务异常=>",ex);
         }
-
-        return modelAndView;
     }
 
 }

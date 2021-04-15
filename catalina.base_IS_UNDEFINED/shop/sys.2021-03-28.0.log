@@ -1,0 +1,977 @@
+2021-03-28 02:40:15,751 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 22916 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 02:40:15,754 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 02:40:15,755 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 02:40:29,735 INFO (StartupInfoLogger.java:61)- Started MasApplication in 14.623 seconds (JVM running for 17.841)
+2021-03-28 02:46:37,153 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 1408 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 02:46:37,155 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 02:46:37,155 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 02:46:44,825 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.205 seconds (JVM running for 9.762)
+2021-03-28 02:47:29,223 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 24080 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 02:47:29,224 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 02:47:29,224 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 02:47:37,925 INFO (StartupInfoLogger.java:61)- Started MasApplication in 9.252 seconds (JVM running for 11.022)
+2021-03-28 02:50:32,164 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 14720 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 02:50:32,165 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 02:50:32,166 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 02:50:40,386 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.743 seconds (JVM running for 10.312)
+2021-03-28 02:50:42,737 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 02:50:43,008 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 02:50:43,039 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 02:50:43,042 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 02:50:59,373 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 02:50:59,374 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 02:50:59,376 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 02:50:59,376 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 02:51:02,494 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 02:51:02,495 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 02:51:02,496 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 02:51:02,497 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 02:51:28,412 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 02:51:28,413 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 02:51:28,414 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 02:51:28,414 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 02:53:55,257 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 22584 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 02:53:55,258 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 02:53:55,258 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 02:54:04,403 INFO (StartupInfoLogger.java:61)- Started MasApplication in 9.621 seconds (JVM running for 11.093)
+2021-03-28 02:55:08,858 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 02:55:08,974 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 02:55:08,992 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 02:55:08,995 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 02:56:22,535 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 2984 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 02:56:22,535 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 02:56:22,535 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 02:56:30,383 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.298 seconds (JVM running for 9.764)
+2021-03-28 02:57:18,402 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 8752 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 02:57:18,402 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 02:57:18,403 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 02:57:43,469 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 13428 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 02:57:43,469 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 02:57:43,469 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 02:57:51,145 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.15 seconds (JVM running for 9.759)
+2021-03-28 02:59:08,312 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 02:59:08,433 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 02:59:08,451 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 02:59:08,453 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 02:59:54,141 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 2736 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 02:59:54,142 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 02:59:54,142 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 03:00:03,161 INFO (StartupInfoLogger.java:61)- Started MasApplication in 9.698 seconds (JVM running for 11.791)
+2021-03-28 03:00:06,970 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 03:00:07,086 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 03:00:07,104 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 03:00:07,107 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 03:01:15,077 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 22860 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 03:01:15,077 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 03:01:15,078 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 03:01:22,688 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.119 seconds (JVM running for 9.62)
+2021-03-28 03:01:28,645 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 03:01:28,765 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 03:01:28,785 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 03:01:28,787 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 03:02:17,751 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 14796 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 03:02:17,751 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 03:02:17,752 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 03:02:27,269 INFO (StartupInfoLogger.java:61)- Started MasApplication in 10.041 seconds (JVM running for 11.735)
+2021-03-28 03:02:31,925 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 03:02:32,058 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 03:02:32,080 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 03:02:32,083 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 03:22:35,148 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 3984 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 03:22:35,148 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 03:22:35,148 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 03:22:43,408 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.726 seconds (JVM running for 10.306)
+2021-03-28 03:22:45,745 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 03:22:45,860 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 03:22:45,880 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 03:22:45,882 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 03:49:49,624 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 6720 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 03:49:49,624 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 03:49:49,625 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 03:49:57,264 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.056 seconds (JVM running for 9.402)
+2021-03-28 03:54:45,983 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 19876 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 03:54:45,984 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 03:54:45,985 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 03:54:53,712 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.275 seconds (JVM running for 9.738)
+2021-03-28 03:55:58,847 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 03:55:58,962 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 03:55:58,980 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 03:55:58,983 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 03:57:03,032 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 03:57:03,033 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 03:57:03,036 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 03:57:03,037 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 03:58:31,757 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 03:58:31,758 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 03:58:31,760 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 03:58:31,760 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 03:59:59,074 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 03:59:59,075 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 03:59:59,076 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 03:59:59,076 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 04:05:33,383 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 04:05:33,384 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 04:05:33,385 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 04:05:33,385 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 04:06:28,071 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 04:06:28,072 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 04:06:28,074 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 04:07:06,331 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 04:07:14,105 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 04:07:14,106 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 04:07:14,107 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 04:07:14,107 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 04:28:17,982 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 04:28:17,984 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 04:28:17,986 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 04:28:17,986 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 04:28:48,598 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 24048 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 04:28:48,598 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 04:28:48,599 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 04:29:14,903 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 15696 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 04:29:14,904 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 04:29:14,904 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 04:29:22,140 INFO (StartupInfoLogger.java:61)- Started MasApplication in 7.871 seconds (JVM running for 9.764)
+2021-03-28 04:34:02,508 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 5516 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 04:34:02,508 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 04:34:02,509 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 04:34:10,573 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.52 seconds (JVM running for 10.046)
+2021-03-28 04:35:07,229 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 17628 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 04:35:07,229 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 04:35:07,230 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 04:35:15,377 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.667 seconds (JVM running for 10.908)
+2021-03-28 04:49:03,586 DEBUG (MyExceptionHandler.java:57)- 业务异常=>
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String com.xingying.shopping.master.controller.TestDubboController.test(com.xingying.shopping.master.entity.UserEntity,javax.servlet.http.HttpServletRequest)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:161)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:131)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:141)
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:82)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.xingying.shopping.master.common.filter.CorsFilter.doFilter(CorsFilter.java:28)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-03-28 04:49:45,876 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 14580 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 04:49:45,877 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 04:49:45,877 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 04:49:54,604 INFO (StartupInfoLogger.java:61)- Started MasApplication in 9.218 seconds (JVM running for 10.669)
+2021-03-28 04:53:05,205 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 9868 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 04:53:05,205 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 04:53:05,206 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 04:53:15,529 INFO (StartupInfoLogger.java:61)- Started MasApplication in 10.855 seconds (JVM running for 12.69)
+2021-03-28 04:53:17,603 DEBUG (MyExceptionHandler.java:57)- 业务异常=>
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String com.xingying.shopping.master.controller.TestDubboController.test(com.xingying.shopping.master.entity.UserEntity,javax.servlet.http.HttpServletRequest)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:161)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:131)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:141)
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:82)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.xingying.shopping.master.common.filter.CorsFilter.doFilter(CorsFilter.java:28)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-03-28 05:01:27,148 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 4344 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 05:01:27,149 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 05:01:27,149 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 05:01:38,261 INFO (StartupInfoLogger.java:61)- Started MasApplication in 11.595 seconds (JVM running for 13.181)
+2021-03-28 05:01:57,088 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 22644 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 05:01:57,089 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 05:01:57,092 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 05:02:05,456 INFO (StartupInfoLogger.java:61)- Started MasApplication in 9.138 seconds (JVM running for 10.766)
+2021-03-28 05:05:42,449 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:05:42,592 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:05:42,613 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:05:42,616 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:05:59,523 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:05:59,523 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:05:59,524 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:05:59,525 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:11:28,215 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:11:28,217 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:11:28,218 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:11:28,219 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:11:39,441 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:11:39,441 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:11:39,441 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:11:39,442 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:11:52,139 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:11:52,140 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:11:52,141 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:11:52,141 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:12:00,422 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:12:00,423 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:12:00,424 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:12:00,424 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:16:02,609 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:16:02,610 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:16:02,611 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:16:02,612 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:16:02,616 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:16:02,617 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:16:02,618 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:16:02,618 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:16:06,829 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:16:06,829 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:16:06,830 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:16:06,830 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:16:30,144 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:16:30,144 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:16:30,145 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:16:30,146 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:17:29,173 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 7440 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 05:17:29,173 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 05:17:29,174 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 05:17:36,923 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.195 seconds (JVM running for 9.802)
+2021-03-28 05:17:53,219 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:17:53,337 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:17:53,355 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:17:53,358 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:19:41,316 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:19:41,317 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:19:41,319 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:19:41,319 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:22:12,789 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:22:12,791 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:22:12,793 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:22:12,793 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:22:19,752 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:22:19,753 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:22:19,754 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:22:19,754 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:22:46,307 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:22:46,308 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:22:46,309 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:22:46,309 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:27:50,767 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 17724 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 05:27:50,768 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 05:27:50,769 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 05:27:59,277 INFO (StartupInfoLogger.java:61)- Started MasApplication in 9.032 seconds (JVM running for 10.562)
+2021-03-28 05:28:03,320 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:28:03,492 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:28:03,523 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:28:03,528 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:31:01,554 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 6720 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 05:31:01,555 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 05:31:01,555 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 05:31:24,684 INFO (StartupInfoLogger.java:61)- Started MasApplication in 23.58 seconds (JVM running for 24.95)
+2021-03-28 05:31:33,040 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:31:33,153 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:31:33,171 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:31:33,173 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:31:46,306 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:31:46,307 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:31:46,308 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:31:46,309 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:34:40,264 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 19948 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 05:34:40,265 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 05:34:40,265 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 05:34:51,090 INFO (StartupInfoLogger.java:61)- Started MasApplication in 11.319 seconds (JVM running for 13.141)
+2021-03-28 05:34:53,962 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:34:54,077 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:34:54,096 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:34:54,099 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:35:00,995 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:35:00,996 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:35:00,998 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:35:00,998 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:36:09,017 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:36:09,018 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:36:09,019 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:36:09,020 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:36:31,608 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:36:31,609 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:36:31,610 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:36:31,610 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:36:36,074 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:36:36,075 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:36:36,076 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:36:36,076 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:36:41,236 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:36:41,236 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:36:41,237 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:36:41,238 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:36:48,714 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:36:48,715 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:36:48,716 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:36:48,716 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:45:49,314 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 23340 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 05:45:49,314 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 05:45:49,315 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 05:45:57,284 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.465 seconds (JVM running for 9.953)
+2021-03-28 05:46:01,902 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:46:02,015 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:46:02,033 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:46:02,035 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:46:36,383 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:46:36,384 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:46:36,385 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:46:36,386 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:47:47,902 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 2196 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 05:47:47,902 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 05:47:47,903 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 05:47:55,901 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.442 seconds (JVM running for 9.87)
+2021-03-28 05:48:02,230 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:48:02,343 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:48:02,362 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:48:02,365 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:53:10,015 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:53:10,016 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:53:10,018 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:53:10,018 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:53:48,249 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:53:48,250 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: (String)
+2021-03-28 05:53:48,251 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:53:48,252 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:57:51,282 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:57:51,381 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: admin(String)
+2021-03-28 05:57:51,382 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 05:57:51,383 DEBUG (UserDetailService.java:45)- 用户未找到
+2021-03-28 05:58:47,061 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 05:58:47,062 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 05:58:47,066 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 05:58:47,068 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 05:58:47,218 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 05:58:47,258 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:00:06,736 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 22712 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 06:00:06,737 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 06:00:06,737 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 06:00:15,649 INFO (StartupInfoLogger.java:61)- Started MasApplication in 9.475 seconds (JVM running for 11.249)
+2021-03-28 06:00:20,131 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:00:20,300 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:00:20,330 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:00:20,336 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:00:20,343 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:00:20,348 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:00:20,352 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:00:20,354 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:00:20,357 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:04:16,589 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 22532 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 06:04:16,590 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 06:04:16,590 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 06:04:24,697 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.596 seconds (JVM running for 10.033)
+2021-03-28 06:04:35,474 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:04:35,647 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:04:35,676 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:04:35,681 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:04:35,690 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:04:35,695 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:04:35,699 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:04:35,701 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:04:35,703 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:08:27,215 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:08:27,216 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:08:27,218 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:08:27,219 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:08:27,219 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:08:27,221 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:08:27,222 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:08:27,223 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:08:27,224 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:09:08,909 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:09:08,910 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:09:08,912 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:09:08,912 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:09:08,913 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:09:08,915 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:09:08,916 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:09:08,917 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:09:08,919 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:09:19,500 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:09:19,500 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:09:19,502 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:09:19,503 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:09:19,504 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:09:19,504 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:09:19,505 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:09:19,505 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:09:19,506 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:09:34,747 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:09:34,747 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:09:34,748 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:09:34,749 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:09:34,749 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:09:34,750 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:09:34,750 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:09:34,751 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:09:34,752 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:09:55,241 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:09:55,243 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:09:55,246 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:09:55,248 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:09:55,248 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:09:55,249 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:09:55,250 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:09:55,251 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:09:55,251 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:14:31,822 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 5428 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 06:14:31,822 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 06:14:31,823 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 06:14:40,036 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.653 seconds (JVM running for 10.451)
+2021-03-28 06:14:53,367 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:14:53,486 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:14:53,507 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:14:53,511 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:14:53,516 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:14:53,519 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:14:53,522 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:14:53,523 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:14:53,525 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:23:11,376 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:23:11,377 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:23:11,379 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:23:11,380 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:23:11,380 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:23:11,381 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:23:11,382 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:23:11,382 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:23:11,384 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:23:53,338 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 8528 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 06:23:53,338 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 06:23:53,338 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 06:24:01,128 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.236 seconds (JVM running for 9.754)
+2021-03-28 06:24:06,225 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:24:06,337 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:24:06,357 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:24:06,360 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:24:06,365 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:24:06,368 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:24:06,371 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:24:06,372 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:24:06,374 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:24:28,493 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:24:28,493 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: admin(String)
+2021-03-28 06:24:28,495 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 06:24:28,495 DEBUG (UserDetailService.java:46)- 用户未找到
+2021-03-28 06:24:46,485 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:24:46,486 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:24:46,488 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:24:46,488 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:24:46,488 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:24:46,490 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:24:46,490 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:24:46,490 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:24:46,492 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:24:56,047 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:24:56,047 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:24:56,049 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:24:56,050 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:24:56,050 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:24:56,052 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:24:56,053 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:24:56,054 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:24:56,055 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:28:30,559 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:28:30,560 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:28:30,561 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:28:30,562 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:28:30,562 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:28:30,563 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:28:30,564 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:28:30,564 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:28:30,565 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:34:59,674 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:34:59,675 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:34:59,677 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:34:59,678 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:34:59,678 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:34:59,680 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:34:59,683 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:34:59,684 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:34:59,687 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:38:11,573 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:38:11,574 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: admin(String)
+2021-03-28 06:38:11,575 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2021-03-28 06:38:11,576 DEBUG (UserDetailService.java:46)- 用户未找到
+2021-03-28 06:38:48,843 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:38:48,844 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:38:48,847 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:38:48,848 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:38:48,848 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:38:48,849 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:38:48,850 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:38:48,850 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:38:48,851 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:46:58,283 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 16772 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 06:46:58,283 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 06:46:58,284 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 06:47:06,593 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.849 seconds (JVM running for 10.49)
+2021-03-28 06:47:23,684 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:47:23,833 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:47:23,870 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:47:23,876 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:47:23,890 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:47:23,895 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:47:23,899 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:47:23,902 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:47:23,904 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:52:36,349 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 8636 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 06:52:36,349 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 06:52:36,350 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 06:52:44,392 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.608 seconds (JVM running for 10.316)
+2021-03-28 06:53:01,459 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 06:53:01,575 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 06:53:01,597 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:53:01,601 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 06:53:01,606 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 06:53:01,609 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 06:53:01,612 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 06:53:01,613 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 06:53:01,615 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:00:39,370 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:00:39,371 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:00:39,373 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:00:39,374 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:00:39,375 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:00:39,376 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:00:39,377 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:00:39,378 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:00:39,380 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:01:32,728 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:01:32,728 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:01:32,731 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:01:32,732 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:01:32,732 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:01:32,734 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:01:32,735 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:01:32,735 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:01:32,737 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:02:56,758 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 18240 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 07:02:56,758 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 07:02:56,759 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 07:03:04,542 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.32 seconds (JVM running for 9.681)
+2021-03-28 07:03:15,444 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:03:15,564 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:03:15,589 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:03:15,594 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:03:15,600 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:03:15,604 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:03:15,606 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:03:15,608 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:03:15,612 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:03:42,198 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 5260 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 07:03:42,199 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 07:03:42,199 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 07:03:50,205 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.467 seconds (JVM running for 9.955)
+2021-03-28 07:03:54,647 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:03:54,773 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:03:54,795 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:03:54,800 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:03:54,805 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:03:54,809 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:03:54,812 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:03:54,814 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:03:54,816 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:05:05,982 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:05:05,983 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:05:05,986 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:05:05,987 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:05:05,987 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:05:05,989 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:05:05,990 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:05:05,990 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:05:05,992 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:08:47,829 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:08:47,830 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:08:47,832 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:08:47,833 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:08:47,834 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:08:47,836 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:08:47,836 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:08:47,837 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:08:47,839 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:09:00,065 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:09:00,066 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:09:00,067 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:09:00,068 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:09:00,068 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:09:00,069 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:09:00,070 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:09:00,071 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:09:00,073 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:11:09,572 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 5800 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 07:11:09,572 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 07:11:09,573 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 07:11:17,337 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.225 seconds (JVM running for 9.62)
+2021-03-28 07:11:29,133 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:11:29,254 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:11:29,277 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:11:29,282 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:11:29,287 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:11:29,290 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:11:29,293 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:11:29,294 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:11:29,296 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:30:37,290 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 18824 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 07:30:37,291 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 07:30:37,291 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 07:30:45,009 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.188 seconds (JVM running for 9.607)
+2021-03-28 07:31:03,258 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:31:03,368 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:31:03,389 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:31:03,393 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:31:03,397 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:31:03,400 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:31:03,402 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:31:03,403 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:31:03,406 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:31:48,409 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:31:48,409 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:31:48,411 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:31:48,412 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:31:48,412 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:31:48,414 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:31:48,414 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:31:48,415 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:31:48,416 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:31:57,863 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:31:57,864 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:31:57,866 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:31:57,867 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:31:57,868 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:31:57,870 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:31:57,871 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:31:57,872 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:31:57,874 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:36:11,762 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 9480 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 07:36:11,763 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 07:36:11,763 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 07:36:19,996 INFO (StartupInfoLogger.java:61)- Started MasApplication in 8.733 seconds (JVM running for 10.292)
+2021-03-28 07:36:40,694 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:36:40,812 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:36:40,834 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:36:40,837 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:36:40,842 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:36:40,846 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:36:40,849 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:36:40,850 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:36:40,852 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:45:13,627 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:45:13,627 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:45:13,629 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:45:13,630 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:45:13,630 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:45:13,632 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:45:13,633 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:45:13,633 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:45:13,634 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:45:18,388 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:45:18,389 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:45:18,392 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:45:18,393 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:45:18,393 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:45:18,395 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:45:18,396 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:45:18,397 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:45:18,398 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:48:26,307 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 19200 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 07:48:26,307 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 07:48:26,307 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 07:48:36,151 INFO (StartupInfoLogger.java:61)- Started MasApplication in 10.372 seconds (JVM running for 11.749)
+2021-03-28 07:48:43,198 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:48:43,316 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:48:43,339 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:48:43,344 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:48:43,349 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:48:43,352 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:48:43,355 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:48:43,357 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:48:43,359 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:59:17,814 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 17224 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 07:59:17,815 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 07:59:17,815 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-03-28 07:59:27,636 INFO (StartupInfoLogger.java:61)- Started MasApplication in 10.396 seconds (JVM running for 11.736)
+2021-03-28 07:59:30,952 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 07:59:31,067 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 07:59:31,091 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:59:31,094 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 07:59:31,100 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 07:59:31,105 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 07:59:31,108 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 07:59:31,109 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 07:59:31,111 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:21:24,141 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:21:24,142 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:21:24,144 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:21:24,145 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:21:24,146 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:21:24,147 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:21:24,147 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:21:24,148 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:21:24,150 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:23:13,613 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:23:13,614 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:23:13,617 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:23:13,618 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:23:13,618 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:23:13,620 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:23:13,621 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:23:13,622 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:23:13,624 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:36:53,395 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:36:53,395 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:36:53,398 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:36:53,398 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:36:53,399 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:36:53,400 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:36:53,400 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:36:53,401 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:36:53,402 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:37:28,799 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:37:28,799 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:37:28,801 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:37:28,802 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:37:28,802 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:37:28,804 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:37:28,804 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:37:28,805 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:37:28,807 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:38:03,163 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:38:03,164 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:38:03,167 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:38:03,169 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:38:03,169 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:38:03,170 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:38:03,170 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:38:03,171 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:38:03,172 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:38:14,489 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:38:14,490 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:38:14,493 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:38:14,494 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:38:14,494 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:38:14,495 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:38:14,496 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:38:14,496 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:38:14,497 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:39:31,681 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:39:31,682 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:39:31,683 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:39:31,684 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:39:31,684 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:39:31,686 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:39:31,687 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:39:31,688 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:39:31,689 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:40:25,411 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:40:25,411 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:40:25,413 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:40:25,414 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:40:25,414 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:40:25,416 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:40:25,416 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:40:25,417 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:40:25,418 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:44:45,707 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:44:45,707 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:44:45,708 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:44:45,709 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:44:45,709 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:44:45,710 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:44:45,710 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:44:45,711 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:44:45,711 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:48:33,446 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:48:33,446 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:48:33,447 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:48:33,448 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:48:33,448 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:48:33,449 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:48:33,450 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:48:33,450 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:48:33,451 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:49:34,781 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:49:34,781 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:49:34,782 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:49:34,783 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:49:34,783 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:49:34,784 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:49:34,784 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:49:34,784 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:49:34,785 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:51:05,943 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:51:05,944 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:51:05,945 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:51:05,945 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:51:05,946 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:51:05,947 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:51:05,948 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:51:05,948 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:51:05,949 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:51:57,176 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:51:57,177 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:51:57,179 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:51:57,179 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:51:57,180 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:51:57,181 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:51:57,181 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:51:57,182 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:51:57,183 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:52:55,810 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:52:55,811 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:52:55,813 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:52:55,813 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:52:55,814 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:52:55,815 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:52:55,816 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:52:55,816 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:52:55,818 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:54:01,074 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 08:54:01,075 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 08:54:01,082 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:54:01,083 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 08:54:01,083 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 08:54:01,087 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 08:54:01,089 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 08:54:01,089 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 08:54:01,094 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:04:57,784 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 09:04:57,786 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 09:04:57,788 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:04:57,789 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 09:04:57,790 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 09:04:57,792 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:04:57,793 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 09:04:57,794 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 09:04:57,795 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:09:46,254 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 09:09:46,254 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 09:09:46,256 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:09:46,257 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 09:09:46,258 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 09:09:46,260 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:09:46,261 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 09:09:46,261 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 09:09:46,263 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:11:30,742 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 09:11:30,743 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 09:11:30,744 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:11:30,745 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 09:11:30,745 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 09:11:30,746 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:11:30,747 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 09:11:30,748 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 09:11:30,749 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:14:19,215 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 09:14:19,216 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 09:14:19,217 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:14:19,217 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 09:14:19,218 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 09:14:19,218 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:14:19,219 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 09:14:19,219 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 09:14:19,220 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:16:03,689 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 09:16:03,690 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 09:16:03,691 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:16:03,692 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 09:16:03,692 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 09:16:03,693 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:16:03,694 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 09:16:03,694 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 09:16:03,695 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:17:18,325 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT USER_ID,ACCOUNT,PASSWORDS,PASSWORDS_SALT,NICK_NAME,REAL_NAME,ENABLED,DELETED,DATA_CREATE_TIME,SEX FROM XINGYING_SHOP.USER_XY WHERE (ACCOUNT = ?)
+2021-03-28 09:17:18,325 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: zhaoweihao98(String)
+2021-03-28 09:17:18,329 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:17:18,330 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.USER_TO_ROLE a left join XINGYING_SHOP.ROLE b on b.ROLE_ID = a.ROLE_ID WHERE a.USER_ID = ? AND b.DATA_STATUS = 1
+2021-03-28 09:17:18,331 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 262075531158228992(Long)
+2021-03-28 09:17:18,332 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 09:17:18,333 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT b.* FROM XINGYING_SHOP.PERMISSIONS_TO_ROLE a left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID WHERE b.DATA_STATUS = 1 AND a.PERMISSIONS_ID IN ( ? )
+2021-03-28 09:17:18,333 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 0(Long)
+2021-03-28 09:17:18,334 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2021-03-28 23:53:26,847 INFO (StartupInfoLogger.java:55)- Starting MasApplication using Java 11.0.7 on GWRZ-4PVPSN with PID 16532 (C:\Users\SiletFlower\IdeaProjects\xingYing-master\target\classes started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-03-28 23:53:26,926 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-03-28 23:53:26,927 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default

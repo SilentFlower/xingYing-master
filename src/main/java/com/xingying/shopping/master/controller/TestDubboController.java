@@ -1,6 +1,7 @@
 package com.xingying.shopping.master.controller;
 
 import com.xingying.shopping.master.common.entitys.result.QueryResultBean;
+import com.xingying.shopping.master.common.utils.token.JwtTokenUtil;
 import com.xingying.shopping.master.config.dubbo.DubboHost;
 import com.xingying.shopping.master.entity.UserEntity;
 import com.xingying.shopping.master.entity.UserXy;
@@ -34,6 +35,8 @@ public class TestDubboController {
     private TestDubboService testDubboService;
     @Autowired
     private UserXyService userXyService;
+    @Autowired
+    JwtTokenUtil jwtTokenUtil;
 
     @RequestMapping("/")
 
@@ -69,6 +72,18 @@ public class TestDubboController {
     @RequestMapping("/index")
     public String index() {
         return "index";
+    }
+
+    /**
+     * 模拟修改密码后清除所有登陆设备
+     *
+     */
+    @RequestMapping("/editPasswd")
+    public String editPasswd(HttpServletRequest request){
+        String token = jwtTokenUtil.getTokenFromFront(request);
+        String id = jwtTokenUtil.getuidByToken(token);
+        jwtTokenUtil.makeTokenExpireByUid(id);
+        return "success";
     }
 
 
