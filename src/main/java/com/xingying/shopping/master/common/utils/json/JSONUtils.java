@@ -7,6 +7,12 @@ import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
+import io.jsonwebtoken.CompressionCodec;
+import io.jsonwebtoken.Header;
+import io.jsonwebtoken.MalformedJwtException;
+import io.jsonwebtoken.impl.DefaultHeader;
+import io.jsonwebtoken.impl.DefaultJwsHeader;
+import io.jsonwebtoken.impl.TextCodec;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.io.*;
@@ -16,6 +22,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Map;
 
 /**
  * json处理工具
@@ -241,7 +248,6 @@ public class JSONUtils {
             return new SimpleGrantedAuthority(tree.get("authority").textValue());
         }
     }
-
 
 
 }

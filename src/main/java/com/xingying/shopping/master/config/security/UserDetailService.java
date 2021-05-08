@@ -1,6 +1,7 @@
 package com.xingying.shopping.master.config.security;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.xingying.shopping.master.common.utils.token.JwtTokenUtil;
 import com.xingying.shopping.master.dao.PermissionsMapper;
 import com.xingying.shopping.master.dao.RoleMapper;
 import com.xingying.shopping.master.dao.UserToRoleMapper;
@@ -31,9 +32,7 @@ public class UserDetailService implements UserDetailsService {
     @Autowired
     private UserXyMapper userXyMapper;
     @Autowired
-    private RoleMapper roleMapper;
-    @Autowired
-    private PermissionsMapper permissionsMapper;
+    JwtTokenUtil jwtTokenUtil;
 
     private static final Logger logger = LoggerFactory.getLogger(UserDetailService.class);
 
@@ -48,19 +47,9 @@ public class UserDetailService implements UserDetailsService {
         }
         //接着获取对应角色
         //可优化成一次查询(优化完成)
-        List<Role> roles = roleMapper.getRoleByUserId(user.getUserId());
-        List<Permissions> permissions = permissionsMapper.getPermissionsByRoles(roles);
-        Collection<SimpleGrantedAuthority> simpleGrantedAuthorities = createAuthorities(roles);
-        UserEntity userDetails = new UserEntity(user.getAccount(), user.getPasswords(), simpleGrantedAuthorities, permissions);
-        userDetails.setId(user.getUserId());
-        return userDetails;
-    }
-
-    private Collection<SimpleGrantedAuthority> createAuthorities(List<Role> roles){
-        Collection<SimpleGrantedAuthority> simpleGrantedAuthorities = new ArrayList<>();
-        for (Role role : roles) {
-            simpleGrantedAuthorities.add(new SimpleGrantedAuthority(role.getRoleName()));
-        }
-        return simpleGrantedAuthorities;
+        UserEntity userInfo = jwtTokenUtil.getUserbyId(user.getUserId());
+        userInfo.setUsername(user.getAccount());
+        userInfo.setPassword(user.getPasswords());
+        return userInfo;
     }
 }

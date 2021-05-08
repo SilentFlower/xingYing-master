@@ -1,8 +1,22 @@
 package com.xingying.shopping.master.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Assert;
 import com.github.pagehelper.PageInfo;
+import com.xingying.shopping.master.common.utils.json.JSONUtils;
+import com.xingying.shopping.master.common.utils.token.JwtTokenUtil;
+import com.xingying.shopping.master.config.security.handler.AuthenticationSuccessHandlerImpl;
+import com.xingying.shopping.master.entity.UserAuths;
+import com.xingying.shopping.master.entity.UserEntity;
+import com.xingying.shopping.master.service.UserAuthsService;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.netty.handler.codec.base64.Base64Decoder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
 import com.xingying.shopping.master.common.entitys.page.PageQueryEntity;
@@ -12,7 +26,14 @@ import com.xingying.shopping.master.common.entitys.result.QueryResultBean;
 import com.xingying.shopping.master.service.UserXyService;
 import com.xingying.shopping.master.entity.UserXy;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.Base64;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -28,6 +49,13 @@ import java.util.List;
 
     @Autowired
     private UserXyService userXyService;
+    @Autowired
+    private UserAuthsService userAuthsService;
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
+    @Autowired
+    private AuthenticationSuccessHandlerImpl authenticationSuccessHandler;
+
 
     /**
     * 分页列表
@@ -76,5 +104,32 @@ import java.util.List;
         boolean b = userXyService.removeByIds(keys);
         Assert.isTrue(b, "删除失败");
         return new OperationResultBean<>("success");
+    }
+
+    /**
+     * 通过google第三登陆
+     */
+    @PostMapping("/loginWithGoogle")
+    public OperationResultBean<String> delUserXys(@RequestBody Map<String,String> map, HttpServletRequest request, HttpServletResponse response) {
+        UserAuths one = userAuthsService.getOne(new QueryWrapper<UserAuths>()
+                .eq("IDENTIFIER", map.get("email"))
+                .eq("IDENTITY_TYPE", "google"));
+        //如果授权表无数据那么创建新用户
+        Long uid = null;
+        if (one == null) {
+            uid = userXyService.addUserByGoogle(map);
+        }else{
+            uid = one.getUserId();
+        }
+        UserEntity userInfo = jwtTokenUtil.getUserbyId(uid);
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userInfo, null, userInfo.getAuthorities());
+        try {
+            authenticationSuccessHandler.onAuthenticationSuccess(request,response,authenticationToken);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ServletException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

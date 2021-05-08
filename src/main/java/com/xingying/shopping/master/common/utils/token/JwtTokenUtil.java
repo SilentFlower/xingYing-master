@@ -1,6 +1,10 @@
 package com.xingying.shopping.master.common.utils.token;
 
 import com.sun.el.parser.Token;
+import com.xingying.shopping.master.dao.PermissionsMapper;
+import com.xingying.shopping.master.dao.RoleMapper;
+import com.xingying.shopping.master.entity.Permissions;
+import com.xingying.shopping.master.entity.Role;
 import com.xingying.shopping.master.entity.UserEntity;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -10,14 +14,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -30,6 +32,10 @@ public class JwtTokenUtil {
     private static final Logger log = LoggerFactory.getLogger(JwtTokenUtil.class);
     @Autowired
     RedisTemplate<String,Object> redisTemplate;
+    @Autowired
+    private RoleMapper roleMapper;
+    @Autowired
+    private PermissionsMapper permissionsMapper;
     /**
      * 秘钥
      */
@@ -202,4 +208,23 @@ public class JwtTokenUtil {
             return false;
         }
     }
+
+    //获取用户的权限
+    public UserEntity getUserbyId(Long uid) {
+        List<Role> roles = roleMapper.getRoleByUserId(uid);
+        List<Permissions> permissions = permissionsMapper.getPermissionsByRoles(roles);
+        Collection<SimpleGrantedAuthority> simpleGrantedAuthorities = createAuthorities(roles);
+        UserEntity userDetails = new UserEntity("", "", simpleGrantedAuthorities, permissions);
+        userDetails.setId(uid);
+        return userDetails;
+    }
+
+    private Collection<SimpleGrantedAuthority> createAuthorities(List<Role> roles){
+        Collection<SimpleGrantedAuthority> simpleGrantedAuthorities = new ArrayList<>();
+        for (Role role : roles) {
+            simpleGrantedAuthorities.add(new SimpleGrantedAuthority(role.getRoleName()));
+        }
+        return simpleGrantedAuthorities;
+    }
+
 }

@@ -7,6 +7,7 @@ import com.xingying.shopping.master.config.security.handler.AuthenticationSucces
 import com.xingying.shopping.master.config.security.handler.LogoutSuccessHandlerImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -15,7 +16,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
@@ -24,8 +24,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
  * @description
  */
 @Configuration
-@EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true,securedEnabled = true,jsr250Enabled = true)
+
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -74,11 +73,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
         //http.anonymous().disable();
         http.authorizeRequests()
-                .antMatchers("/master/login/**","/master/user/addUser")//不拦截登录相关方法
-                .permitAll()
+                .antMatchers("/master/login/**").permitAll()//不拦截登录相关方法
+//                .antMatchers("/master/user/addUser").permitAll()
+                .antMatchers(HttpMethod.POST,"/master/user/loginWithGoogle").permitAll()
                 //.antMatchers("/user").hasRole("ADMIN")  // user接口只有ADMIN角色的可以访问
-//            .anyRequest()
-//            .authenticated()// 任何尚未匹配的URL只需要验证用户即可访问
+//                .anyRequest()
+//                .authenticated()// 任何尚未匹配的URL只需要验证用户即可访问
                 .anyRequest()
                 .access("@rbacPermission.hasPermission(request, authentication)")//根据账号权限访问
                 .and()
@@ -88,8 +88,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .usernameParameter("username") //登录用户名参数
                 .passwordParameter("password") //登录密码参数
                 //无状态登陆
-                .and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .exceptionHandling()
                 .accessDeniedHandler(accessDeniedHandler) //无权限处理器

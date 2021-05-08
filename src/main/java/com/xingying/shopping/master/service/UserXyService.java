@@ -5,6 +5,8 @@ import com.xingying.shopping.master.common.entitys.page.PageQueryEntity;
 import com.xingying.shopping.master.entity.UserXy;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.Map;
+
 /**
  * <p>
  *  UserXyService 服务类
@@ -23,4 +25,10 @@ public interface UserXyService extends IService<UserXy> {
      * @return
      */
     boolean addUser(UserXy user);
+
+    /**
+     * google登陆生成用户信息并返回UID
+     * @return
+     */
+    Long addUserByGoogle(Map<String,String> map);
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.UserAuthsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.UserAuths">
+        <id column="IDENTIFIER" property="identifier" />
+        <result column="USER_ID" property="userId"  />
+        <result column="IDENTITY_TYPE" property="identityType"  />
+        <result column="CREDENTIAL" property="credential"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        USER_ID, IDENTITY_TYPE, IDENTIFIER, CREDENTIAL
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.UserAuths">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.USER_AUTHS
+        <where>
+            <if test="userId != null  and userId != '' ">
+            </if>
+            <if test="identityType != null  and identityType != '' ">
+                AND USER_AUTHS.IDENTITY_TYPE like concat(concat('%',#{identityType}),'%')
+            </if>
+            <if test="identifier != null  and identifier != '' ">
+                AND USER_AUTHS.IDENTIFIER like concat(concat('%',#{identifier}),'%')
+            </if>
+            <if test="credential != null  and credential != '' ">
+                AND USER_AUTHS.CREDENTIAL like concat(concat('%',#{credential}),'%')
+            </if>
+        </where>
+    </select>
+</mapper>

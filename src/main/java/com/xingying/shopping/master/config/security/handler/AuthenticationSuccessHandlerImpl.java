@@ -34,13 +34,15 @@ public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHa
         httpServletResponse.setContentType("text/json;charset=utf-8");
         //判断原先的token是否需要清除
         String oldToken = jwtTokenUtil.getTokenFromFront(httpServletRequest);
-        String oldId = jwtTokenUtil.getuidByToken(oldToken);
-        //清除旧的token
-        jwtTokenUtil.redisDel(oldToken + "#" + oldId);
+        if (oldToken != null && oldToken != "") {
+            String oldId = jwtTokenUtil.getuidByToken(oldToken);
+            //清除旧的token
+            jwtTokenUtil.redisDel(oldToken + "#" + oldId);
+        }
         UserEntity userInfo = (UserEntity) authentication.getPrincipal();
         String token = jwtTokenUtil.generateToken(String.valueOf(userInfo.getId()), userInfo);
         Cookie cookie = new Cookie(jwtTokenUtil.getTokenName(), token);
-        cookie.setMaxAge(Math.toIntExact(jwtTokenUtil.getExpireTime()));
+        cookie.setPath("/master");
         cookie.setHttpOnly(true);
         httpServletResponse.addCookie(cookie);
         JSONUtils.output(httpServletResponse.getWriter(),

@@ -89,4 +89,15 @@ public class UserEntity implements UserDetails {
     public void setRoleMenus(List<Permissions> roleMenus) {
         this.roleMenus = roleMenus;
     }
+
+    @Override
+    public String toString() {
+        return "UserEntity{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", roleMenus=" + roleMenus +
+                ", authorities=" + authorities +
+                '}';
+    }
 }
