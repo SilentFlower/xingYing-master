@@ -73,8 +73,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
         //http.anonymous().disable();
         http.authorizeRequests()
-                .antMatchers("/master/login/**","/master/user/loginWithGoogle").permitAll()//不拦截登录相关方法
-//                .antMatchers("/master/user/addUser").permitAll()
+                .antMatchers("/master/login/**","/master/user/addUser","/master/user/loginWithGoogle").permitAll()//不拦截登录相关方法
                 //.antMatchers("/user").hasRole("ADMIN")  // user接口只有ADMIN角色的可以访问
 //                .anyRequest()
 //                .authenticated()// 任何尚未匹配的URL只需要验证用户即可访问
@@ -87,6 +86,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .usernameParameter("username") //登录用户名参数
                 .passwordParameter("password") //登录密码参数
                 //无状态登陆
+                .and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .exceptionHandling()
                 .accessDeniedHandler(accessDeniedHandler) //无权限处理器

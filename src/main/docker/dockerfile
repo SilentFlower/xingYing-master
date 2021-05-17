@@ -1,4 +1,8 @@
 FROM azul/zulu-openjdk-alpine:11
-VOLUME /test
-ADD *.jar shop_master.jar
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/shop_master.jar"]
+VOLUME /var/emr/template/
+ENV TZ Asia/Shanghai
+RUN apk add tzdata && cp /usr/share/zoneinfo/${TZ} /etc/localtime \
+    && echo ${TZ} > /etc/timezone \
+    && apk del tzdata
+ADD *.jar shop-master.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/shop-master.jar"]

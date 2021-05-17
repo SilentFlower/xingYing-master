@@ -57,6 +57,8 @@ public class JwtTokenUtil {
     @Value("${token.head}")
     private String head;
 
+    private static final String REDIS_PRE = "XingYingShop";
+
     public String getTokenName() {
         return tokenName;
     }
@@ -157,7 +159,7 @@ public class JwtTokenUtil {
      */
     private boolean redisSet(String key, UserEntity value) {
         try {
-            redisTemplate.opsForValue().set(key, value,expireTime/1000, TimeUnit.SECONDS);
+            redisTemplate.opsForValue().set(REDIS_PRE+":"+key, value,expireTime/1000, TimeUnit.SECONDS);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -173,7 +175,7 @@ public class JwtTokenUtil {
      * @return
      */
     private UserEntity redisGet(String key) {
-        return key == null ? null : (UserEntity) redisTemplate.opsForValue().get(key);
+        return key == null ? null : (UserEntity) redisTemplate.opsForValue().get(REDIS_PRE+":"+key);
     }
 
     /**
@@ -184,7 +186,7 @@ public class JwtTokenUtil {
     public boolean redisDel(String key) {
         try {
             //模糊删除
-            redisTemplate.delete(key);
+            redisTemplate.delete(REDIS_PRE+":"+key);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -197,10 +199,10 @@ public class JwtTokenUtil {
      */
     private boolean redisExtend(String key) {
         try {
-            Long expire = redisTemplate.getExpire(key);
+            Long expire = redisTemplate.getExpire(REDIS_PRE+":"+key);
             //获取某个key的时长如果小于12小时那么自动续期1天
             if (expire <= 60 * 60 * 12) {
-                redisTemplate.expire(key,60*60*24+expire,TimeUnit.SECONDS);
+                redisTemplate.expire(REDIS_PRE+":"+key,60*60*24+expire,TimeUnit.SECONDS);
             }
             return true;
         } catch (Exception e) {

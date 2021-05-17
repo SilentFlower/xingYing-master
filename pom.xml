@@ -15,7 +15,6 @@
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
-        <docker.image.prefix>huajiwuyan</docker.image.prefix>
     </properties>
     <dependencies>
         <dependency>
@@ -154,9 +153,17 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.1.0</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>javax.activation</groupId>
+                        <artifactId>activation</artifactId>
+                        <version>1.1.1</version>
+                    </dependency>
+                </dependencies>
                 <configuration>
-                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                    <imageName>docker.747698.xyz/shop-master</imageName>
                     <dockerDirectory>src/main/docker</dockerDirectory>
+                    <dockerHost>http://doc.747698.xyz:9000</dockerHost>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>

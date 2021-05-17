@@ -43,6 +43,7 @@ public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHa
         String token = jwtTokenUtil.generateToken(String.valueOf(userInfo.getId()), userInfo);
         Cookie cookie = new Cookie(jwtTokenUtil.getTokenName(), token);
         cookie.setPath("/master");
+        cookie.setMaxAge(1000*60*60);
         cookie.setHttpOnly(true);
         httpServletResponse.addCookie(cookie);
         JSONUtils.output(httpServletResponse.getWriter(),

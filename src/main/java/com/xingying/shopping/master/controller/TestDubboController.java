@@ -67,13 +67,13 @@ public class TestDubboController {
     }
 
     /**
-     * 首页
+     * 测试登陆成功
      */
     @RequestMapping("/index")
-    public String index() {
-        return "index";
+    public QueryResultBean<String> index(HttpServletRequest request) {
+        String token = jwtTokenUtil.getTokenFromFront(request);
+        return new QueryResultBean<>(token);
     }
-
     /**
      * 模拟修改密码后清除所有登陆设备
      *
