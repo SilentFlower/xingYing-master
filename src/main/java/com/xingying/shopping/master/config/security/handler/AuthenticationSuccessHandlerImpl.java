@@ -18,6 +18,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author SiletFlower
@@ -46,7 +48,10 @@ public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHa
         cookie.setMaxAge(1000*60*60);
         cookie.setHttpOnly(true);
         httpServletResponse.addCookie(cookie);
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("token", token);
+        map.put("user", userInfo);
         JSONUtils.output(httpServletResponse.getWriter(),
-                new QueryResultBean<>(ReturnCode.LOGIN_SUCCESS, token));
+                new QueryResultBean<>(ReturnCode.LOGIN_SUCCESS, map));
     }
 }

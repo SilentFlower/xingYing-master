@@ -5,6 +5,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author SiletFlower
@@ -12,10 +13,10 @@ import java.util.List;
  * @description
  */
 public class UserEntity implements UserDetails {
-    private Long id;// 用户id
+    private String id;// 用户id
     private String username;// 用户名
     private String password;// 密码
-    private List<Permissions> roleMenus;// 角色菜单集合
+    private Set<String> roleMenus;// 权限集(url)
 
     private Collection<? extends GrantedAuthority> authorities;
     public UserEntity() {
@@ -23,18 +24,18 @@ public class UserEntity implements UserDetails {
     }
 
     public UserEntity(String username, String password, Collection<? extends GrantedAuthority> authorities,
-                      List<Permissions> roleMenus) {
+                      Set<String>  roleMenus) {
         this.username = username;
         this.password = password;
         this.authorities = authorities;
         this.roleMenus = roleMenus;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -81,12 +82,11 @@ public class UserEntity implements UserDetails {
         this.password = password;
     }
 
-
-    public List<Permissions> getRoleMenus() {
+    public Set<String> getRoleMenus() {
         return roleMenus;
     }
 
-    public void setRoleMenus(List<Permissions> roleMenus) {
+    public void setRoleMenus(Set<String> roleMenus) {
         this.roleMenus = roleMenus;
     }
 

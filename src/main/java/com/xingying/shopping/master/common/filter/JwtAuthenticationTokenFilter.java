@@ -1,7 +1,10 @@
 package com.xingying.shopping.master.common.filter;
 
+import com.xingying.shopping.master.common.context.UserContext;
 import com.xingying.shopping.master.common.utils.token.JwtTokenUtil;
+import com.xingying.shopping.master.entity.ShopUser;
 import com.xingying.shopping.master.entity.UserEntity;
+import com.xingying.shopping.master.entity.UserInfo;
 import io.jsonwebtoken.Claims;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,6 +47,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
                 if (userInfo != null) {
                     //小于12小时自动续期
                     jwtTokenUtil.tokenExtend(jwtToken, uid);
+                    UserContext.setCurrentUser(new UserInfo().setUser(userInfo));
                     Collection<? extends GrantedAuthority> authorities = userInfo.getAuthorities();
                     UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userInfo, null, authorities);
                     SecurityContextHolder.getContext().setAuthentication(authenticationToken);

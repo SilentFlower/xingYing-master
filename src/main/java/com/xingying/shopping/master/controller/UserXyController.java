@@ -121,7 +121,7 @@ import java.util.Map;
         }else{
             uid = one.getUserId();
         }
-        UserEntity userInfo = jwtTokenUtil.getUserbyId(uid);
+        UserEntity userInfo = jwtTokenUtil.getUserbyId(String.valueOf(uid));
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userInfo, null, userInfo.getAuthorities());
         try {
             authenticationSuccessHandler.onAuthenticationSuccess(request,response,authenticationToken);
@@ -131,5 +131,36 @@ import java.util.Map;
             e.printStackTrace();
         }
         return null;
+    }
+
+    /**
+     * 修改密码
+     * {
+     *     oldPwd://旧密码
+     *     newPwd://新密码
+     * }
+     *
+     * @param map key字符串，根据,号分隔
+     * @return Result
+     */
+    @PostMapping("/editPwd")
+    public OperationResultBean<String> editPwd(@RequestBody Map<String,Object> map) {
+        String msg =  userXyService.editPwd(map);
+        return new OperationResultBean<>(msg);
+    }
+
+    /**
+     *{
+     *     account://账户名
+     *     pwd://密码
+     * }
+     * 第三方登陆完善用户名和密码
+     * @param map
+     * @return
+     */
+    @PostMapping("/completePwd")
+    public OperationResultBean<String> completePwd(@RequestBody Map<String,Object> map) {
+        String msg = userXyService.completePwd(map);
+        return new OperationResultBean<>(msg);
     }
 }

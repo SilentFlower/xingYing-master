@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.MessageMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.Message">
+        <id column="MSG_ID" property="msgId" />
+        <result column="MSG_TYPE" property="msgType"  />
+        <result column="MSG_CONTENT" property="msgContent"  />
+        <result column="MSG_DATE" property="msgDate"  />
+        <result column="USER_ID" property="userId"  />
+        <result column="MSG_STATUS" property="msgStatus"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        MSG_ID, MSG_TYPE, MSG_CONTENT, MSG_DATE, USER_ID, MSG_STATUS
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.Message">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.MESSAGE
+        <where>
+            <if test="msgId != null  and msgId != '' ">
+            </if>
+            <if test="msgType != null  and msgType != '' ">
+                AND MESSAGE.MSG_TYPE like concat(concat('%',#{msgType}),'%')
+            </if>
+            <if test="msgContent != null  and msgContent != '' ">
+                AND MESSAGE.MSG_CONTENT like concat(concat('%',#{msgContent}),'%')
+            </if>
+            <if test="msgDate != null  and msgDate != '' ">
+            </if>
+            <if test="userId != null  and userId != '' ">
+            </if>
+        </where>
+    </select>
+</mapper>

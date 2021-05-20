@@ -10,6 +10,7 @@ import org.springframework.util.AntPathMatcher;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author SiletFlower
@@ -27,10 +28,10 @@ public class RbacPermission {
         boolean hasPermission = false;
         if (principal instanceof UserEntity) {
             // 读取用户所拥有的权限菜单
-            List<Permissions> menus = ((UserEntity) principal).getRoleMenus();
+            Set<String> menus = ((UserEntity) principal).getRoleMenus();
             System.out.println(menus.size());
-            for (Permissions permissions : menus) {
-                if (antPathMatcher.match(permissions.getPermissionsUri(), request.getRequestURI())) {
+            for (String menu : menus) {
+                if (antPathMatcher.match(menu, request.getRequestURI())) {
                     hasPermission = true;
                     break;
                 }

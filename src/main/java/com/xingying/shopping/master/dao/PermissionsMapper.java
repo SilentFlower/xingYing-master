@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * <p>
@@ -25,5 +26,5 @@ public interface PermissionsMapper extends BaseMapper<Permissions> {
      * @param roles
      * @return
      */
-    List<Permissions> getPermissionsByRoles(List<Role> roles);
+    Set<String> getPermissionsByRoles(List<Role> roles);
 }

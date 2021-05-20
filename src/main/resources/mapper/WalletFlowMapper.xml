@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.WalletFlowMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.WalletFlow">
+        <id column="WALLET_FLOW_ID" property="walletFlowId" />
+        <result column="WALLET_FLOW_TYPE" property="walletFlowType"  />
+        <result column="WALLET_FLOW_FEE" property="walletFlowFee"  />
+        <result column="WALLET_FLOW_DATE" property="walletFlowDate"  />
+        <result column="WALLET_FLOW_STATUS" property="walletFlowStatus"  />
+        <result column="USER_ID" property="userId"/>
+        <result column="WITHDRAW_TYPE" property="withdrawType"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        WALLET_FLOW_ID, WALLET_FLOW_TYPE, WALLET_FLOW_FEE, WALLET_FLOW_DATE, WALLET_FLOW_STATUS, USER_ID, WITHDRAW_TYPE
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.WalletFlow">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.WALLET_FLOW
+        <where>
+            <if test="walletFlowId != null  and walletFlowId != '' ">
+            </if>
+            <if test="walletFlowType != null ">
+                AND WALLET_FLOW.WALLET_FLOW_TYPE = #{walletFlowType}
+            </if>
+            <if test="walletFlowFee != null  and walletFlowFee != '' ">
+            </if>
+            <if test="walletFlowDate != null  and walletFlowDate != '' ">
+            </if>
+            <if test="walletFlowStatus != null ">
+                AND WALLET_FLOW.WALLET_FLOW_STATUS = #{walletFlowStatus}
+            </if>
+        </where>
+    </select>
+</mapper>

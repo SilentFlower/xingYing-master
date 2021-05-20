@@ -24,7 +24,7 @@ private static final long serialVersionUID = 1L;
      * 角色id
      */
     @TableId(value = "ROLE_ID", type = IdType.INPUT)
-    private Long roleId;
+    private String roleId;
 
     /**
      * 角色名称
@@ -51,11 +51,11 @@ private static final long serialVersionUID = 1L;
     private String createdBy;
 
 
-    public Long getRoleId() {
+    public String getRoleId() {
         return roleId;
     }
 
-    public void setRoleId(Long roleId) {
+    public void setRoleId(String roleId) {
         this.roleId = roleId;
     }
 

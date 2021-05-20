@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.WithdrawMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.Withdraw">
+        <id column="USER_ID" property="userId" />
+        <result column="WITHDRAW_TYPE" property="withdrawType"  />
+        <result column="WITHDRAW_NAME" property="withdrawName"  />
+        <result column="WITHDRAW_ACCOUNT" property="withdrawAccount"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        USER_ID, WITHDRAW_TYPE, WITHDRAW_NAME, WITHDRAW_ACCOUNT
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.Withdraw">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.WITHDRAW
+        <where>
+            <if test="userId != null  and userId != '' ">
+            </if>
+            <if test="withdrawType != null  and withdrawType != '' ">
+                AND WITHDRAW.WITHDRAW_TYPE like concat(concat('%',#{withdrawType}),'%')
+            </if>
+            <if test="withdrawName != null  and withdrawName != '' ">
+                AND WITHDRAW.WITHDRAW_NAME like concat(concat('%',#{withdrawName}),'%')
+            </if>
+            <if test="withdrawAccount != null  and withdrawAccount != '' ">
+                AND WITHDRAW.WITHDRAW_ACCOUNT like concat(concat('%',#{withdrawAccount}),'%')
+            </if>
+        </where>
+    </select>
+</mapper>

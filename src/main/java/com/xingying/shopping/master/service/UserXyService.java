@@ -31,4 +31,18 @@ public interface UserXyService extends IService<UserXy> {
      * @return
      */
     Long addUserByGoogle(Map<String,String> map);
+
+    /**
+     * 修改密码
+     * @param map
+     * @return
+     */
+    String editPwd(Map<String, Object> map);
+
+    /**
+     * 完善密码
+     * @param map
+     * @return
+     */
+    String completePwd(Map<String, Object> map);
 }

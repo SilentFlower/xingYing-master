@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.OrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.OrderMaster">
+        <id column="ORDER_ID" property="orderId" />
+        <result column="PAY_AMOUNT" property="payAmount"  />
+        <result column="STATUS" property="status"  />
+        <result column="USER_ID" property="userId"  />
+        <result column="DATA_CREATE_TIME" property="dataCreateTime"  />
+        <result column="DATA_EDIT_TIME" property="dataEditTime"  />
+        <result column="DATA_COM_TIME" property="dataComTime"  />
+        <result column="DATA_CAL_TIME" property="dataCalTime"  />
+        <result column="SHOP_ID" property="shopId"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ORDER_ID, PAY_AMOUNT, STATUS, USER_ID, DATA_CREATE_TIME, DATA_EDIT_TIME, DATA_COM_TIME, DATA_CAL_TIME, SHOP_ID
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.OrderMaster">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.ORDER_MASTER
+        <where>
+            <if test="orderId != null  and orderId != '' ">
+            </if>
+            <if test="payAmount != null  and payAmount != '' ">
+                AND ORDER_MASTER.PAY_AMOUNT = #{payAmount}
+            </if>
+            <if test="status != null ">
+                AND ORDER_MASTER.STATUS = #{status}
+            </if>
+            <if test="userId != null  and userId != '' ">
+            </if>
+            <if test="dataCreateTime != null  and dataCreateTime != '' ">
+            </if>
+            <if test="dataEditTime != null  and dataEditTime != '' ">
+            </if>
+            <if test="dataComTime != null  and dataComTime != '' ">
+            </if>
+            <if test="dataCalTime != null  and dataCalTime != '' ">
+            </if>
+        </where>
+    </select>
+<!--    分页查询 订单（时间倒序）-->
+    <select id="getOrdersByIdAndTime" resultType="com.xingying.shopping.master.entity.ext.OrderMasterExt">
+        select
+            ORDER_MASTER.*,
+            "SHOP".SHOP_NAME AS ShopName
+        from
+            XINGYING_SHOP.ORDER_MASTER
+            LEFT JOIN XINGYING_SHOP.SHOP on "SHOP".SHOP_ID = "ORDER_MASTER".SHOP_ID
+        <where>
+            "ORDER_MASTER".STATUS != '3' --3表示已经假删除不应该显示
+            <if test="shopId != null  and shopId != '' ">
+                AND "SHOP".SHOP_ID = #{shopId}
+            </if>
+            <if test="userId != null  and userId != '' ">
+                AND "ORDER_MASTER".USER_ID = #{userId}
+            </if>
+            <if test="orderId != null  and orderId != '' ">
+                AND "ORDER_MASTER".ORDER_ID = #{orderId}
+            </if>
+            <if test="status != null ">
+                AND "ORDER_MASTER".STATUS = #{status}
+            </if>
+            <if test="ShopName != null and ShopName != '' ">
+                AND "SHOP".SHOP_NAME like concat(concat('%',#{shopName}),'%')
+            </if>
+            <if test="goodSName != null and goodSName != '' ">
+                AND EXISTS (
+                SELECT
+                    "ORDER_DETAIL".GOODS_ID
+                FROM
+                    XINGYING_SHOP.ORDER_DETAIL --详细表中存了商品ID
+                    LEFT JOIN XINGYING_SHOP.GOODS ON "ORDER_DETAIL".GOODS_ID = "GOODS".GOODS_ID
+                WHERE
+                    "ORDER_DETAIL".ORDER_ID = "ORDER_MASTER".ORDER_ID
+                    AND "GOODS".GOODS_NAME like concat(concat('%',#{goodSName}),'%') --模糊判断
+                )
+            </if>
+        </where>
+        ORDER BY "ORDER_MASTER".DATA_CREATE_TIME DESC -- 默认为时间倒序
+    </select>
+<!--    查询今日支出、收入、今日订单、总成交订单-->
+    <select id="getOrdersByIdForSum" resultType="com.xingying.shopping.master.entity.response.OrderStatistics">
+        SELECT
+            NVL( COUNT(1), 0) AS totalTradedOrders, --总成交订单
+            NVL( SUM(case when trunc(sysdate) = trunc("ORDER_MASTER".DATA_CREATE_TIME) then 1 else 0 end), 0) AS orderToday,
+            NVL( SUM(case when
+            "ORDER_MASTER".USER_ID = #{userId}
+            and trunc(sysdate) = trunc("ORDER_MASTER".DATA_CREATE_TIME)
+            then "ORDER_MASTER".PAY_AMOUNT else 0 end
+            ), 0) AS spendToday,
+            NVL( SUM(case when
+            "ORDER_MASTER".SHOP_ID = #{userId}
+            and trunc(sysdate) = trunc("ORDER_MASTER".DATA_CREATE_TIME)
+            then "ORDER_MASTER".PAY_AMOUNT else 0 end
+            ), 0) AS todaySEarnings
+        FROM
+            XINGYING_SHOP.ORDER_MASTER
+        WHERE
+            ("ORDER_MASTER".USER_ID = #{userId} OR "ORDER_MASTER".SHOP_ID = #{userId})
+            AND "ORDER_MASTER".STATUS = '5'--查找订单完成的
+    </select>
+
+<!--    查询某天某用户的统计数据 -->
+    <select id="getStatisticsForPic"
+            resultType="com.xingying.shopping.master.entity.response.OrderStatisticsForPic">
+        SELECT
+            NVL( COUNT(1), 0) AS submitOrders, --当天提交订单
+            NVL( SUM(case when "ORDER_MASTER".STATUS = '5' then 1 else 0 end), 0) AS successfulOrder,--成功的订单
+            NVL( SUM(case when
+            "ORDER_MASTER".USER_ID = #{userId}
+            AND "ORDER_MASTER".STATUS = '5'
+            then "ORDER_MASTER".PAY_AMOUNT else 0 end
+            ), 0) AS outcome, --当天支出
+            NVL( SUM(case when
+            "ORDER_MASTER".SHOP_ID = #{userId}
+            AND "ORDER_MASTER".STATUS = '5'
+            then "ORDER_MASTER".PAY_AMOUNT else 0 end
+            ), 0) AS income --当天收入
+        FROM
+            XINGYING_SHOP.ORDER_MASTER
+        WHERE
+            ("ORDER_MASTER".USER_ID = #{userId} OR "ORDER_MASTER".SHOP_ID = #{userId})
+            AND trunc("ORDER_MASTER".DATA_CREATE_TIME) = trunc(#{orderTime}) --查询限定时间
+    </select>
+</mapper>

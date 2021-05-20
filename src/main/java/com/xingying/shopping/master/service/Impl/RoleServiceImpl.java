@@ -40,7 +40,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
     @Override
     public boolean addRole(Role role) {
         if(role.getRoleId() == null){
-            role.setRoleId(snowFakeIdGenerator.nextId());
+            role.setRoleId(String.valueOf(snowFakeIdGenerator.nextId()));
         }
         role.setDataCreateTime(LocalDateTime.now());
         //需要

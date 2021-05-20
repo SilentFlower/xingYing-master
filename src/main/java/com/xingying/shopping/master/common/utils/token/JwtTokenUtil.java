@@ -3,9 +3,11 @@ package com.xingying.shopping.master.common.utils.token;
 import com.sun.el.parser.Token;
 import com.xingying.shopping.master.dao.PermissionsMapper;
 import com.xingying.shopping.master.dao.RoleMapper;
+import com.xingying.shopping.master.dao.UserXyMapper;
 import com.xingying.shopping.master.entity.Permissions;
 import com.xingying.shopping.master.entity.Role;
 import com.xingying.shopping.master.entity.UserEntity;
+import com.xingying.shopping.master.entity.UserXy;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -36,6 +38,8 @@ public class JwtTokenUtil {
     private RoleMapper roleMapper;
     @Autowired
     private PermissionsMapper permissionsMapper;
+    @Autowired
+    private UserXyMapper userXyMapper;
     /**
      * 秘钥
      */
@@ -185,8 +189,23 @@ public class JwtTokenUtil {
      */
     public boolean redisDel(String key) {
         try {
-            //模糊删除
             redisTemplate.delete(REDIS_PRE+":"+key);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * redis模糊删除某用户所有token(在修改密码时候调用)
+     * @param id
+     * @return
+     */
+    public boolean redisDelById(String id) {
+        try {
+            Set<String> keys = redisTemplate.keys(REDIS_PRE+":"+"*"+"#"+id);
+            redisTemplate.delete(keys);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -211,13 +230,26 @@ public class JwtTokenUtil {
         }
     }
 
-    //获取用户的权限
-    public UserEntity getUserbyId(Long uid) {
+    /**
+     * 获取用户的权限
+     * @param uid
+     * @return
+     */
+    public UserEntity getUserbyId(String uid) {
+        String pwd = "true";
+        //获取用户信息
+        UserXy userXy = userXyMapper.selectById(uid);
+        //获取所有的角色
         List<Role> roles = roleMapper.getRoleByUserId(uid);
-        List<Permissions> permissions = permissionsMapper.getPermissionsByRoles(roles);
+        //获取所有权限的URL
+        Set<String> permissions = permissionsMapper.getPermissionsByRoles(roles);
         Collection<SimpleGrantedAuthority> simpleGrantedAuthorities = createAuthorities(roles);
-        UserEntity userDetails = new UserEntity("", "", simpleGrantedAuthorities, permissions);
-        userDetails.setId(uid);
+        //（此处用NickName代替）
+        if (userXy.getPasswords() == null || userXy.getPasswords() == "") {
+            pwd = "false";
+        }
+        UserEntity userDetails = new UserEntity(userXy.getNickName(), pwd, simpleGrantedAuthorities, permissions);
+        userDetails.setId(String.valueOf(uid));
         return userDetails;
     }
 

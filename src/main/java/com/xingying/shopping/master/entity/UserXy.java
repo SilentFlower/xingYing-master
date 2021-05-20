@@ -24,7 +24,7 @@ private static final long serialVersionUID = 1L;
      * 用户ID
      */
     @TableId(value = "USER_ID", type = IdType.INPUT)
-    private Long userId;
+    private String userId;
 
     /**
      * 账户
@@ -80,12 +80,11 @@ private static final long serialVersionUID = 1L;
     @TableField("SEX")
     private String sex;
 
-
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

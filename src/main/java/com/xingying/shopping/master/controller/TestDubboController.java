@@ -1,8 +1,10 @@
 package com.xingying.shopping.master.controller;
 
+import com.xingying.shopping.master.common.context.UserContext;
 import com.xingying.shopping.master.common.entitys.result.QueryResultBean;
 import com.xingying.shopping.master.common.utils.token.JwtTokenUtil;
 import com.xingying.shopping.master.config.dubbo.DubboHost;
+import com.xingying.shopping.master.entity.ShopUser;
 import com.xingying.shopping.master.entity.UserEntity;
 import com.xingying.shopping.master.entity.UserXy;
 import com.xingying.shopping.master.service.HelloService;
@@ -20,6 +22,8 @@ import org.yaml.snakeyaml.events.Event;
 import javax.naming.Name;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author SiletFlower
@@ -70,9 +74,13 @@ public class TestDubboController {
      * 测试登陆成功
      */
     @RequestMapping("/index")
-    public QueryResultBean<String> index(HttpServletRequest request) {
+    public QueryResultBean<Map<String,Object>> index(HttpServletRequest request) {
+        UserEntity user = UserContext.getCurrentUser().getUser();
         String token = jwtTokenUtil.getTokenFromFront(request);
-        return new QueryResultBean<>(token);
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("token", token);
+        map.put("user", user);
+        return new QueryResultBean<>(map);
     }
     /**
      * 模拟修改密码后清除所有登陆设备

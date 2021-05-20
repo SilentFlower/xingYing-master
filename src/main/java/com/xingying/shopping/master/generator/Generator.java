@@ -58,7 +58,7 @@ public class Generator {
                         .setFileOverride(true)
         ).setDataSource(
                 new DataSourceConfig()
-                        .setUrl("jdbc:oracle:thin:@localhost:1521:orcl")
+                        .setUrl("jdbc:oracle:thin:@194.233.70.142:1521:helowin")
                         .setDriverName("oracle.jdbc.OracleDriver")
                         .setUsername("silent")
                         .setPassword("flower")

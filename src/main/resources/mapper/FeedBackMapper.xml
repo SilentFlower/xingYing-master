@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.FeedBackMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.FeedBack">
+        <id column="USER_ID" property="userId" />
+        <result column="FEEDBACK_DATE" property="feedbackDate"  />
+        <result column="FEEDBACK_CONTENT" property="feedbackContent"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        USER_ID, FEEDBACK_DATE, FEEDBACK_CONTENT
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.FeedBack">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.FEED_BACK
+        <where>
+            <if test="userId != null  and userId != '' ">
+            </if>
+            <if test="feedbackDate != null  and feedbackDate != '' ">
+            </if>
+            <if test="feedbackContent != null  and feedbackContent != '' ">
+                AND FEED_BACK.FEEDBACK_CONTENT like concat(concat('%',#{feedbackContent}),'%')
+            </if>
+        </where>
+    </select>
+</mapper>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.WalletMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.Wallet">
+        <id column="USER_ID" property="userId" />
+        <result column="BALANCE" property="balance"  />
+        <result column="WALLET_INCOME" property="walletIncome"  />
+        <result column="WALLET_OUTCOME" property="walletOutcome"  />
+        <result column="UPDATE_DATE" property="updateDate"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        USER_ID, BALANCE, WALLET_INCOME, WALLET_OUTCOME, UPDATE_DATE
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.Wallet">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.WALLET
+        <where>
+            <if test="userId != null  and userId != '' ">
+            </if>
+            <if test="balance != null  and balance != '' ">
+            </if>
+            <if test="walletIncome != null  and walletIncome != '' ">
+            </if>
+            <if test="walletOutcome != null  and walletOutcome != '' ">
+            </if>
+            <if test="updateDate != null  and updateDate != '' ">
+            </if>
+        </where>
+    </select>
+</mapper>

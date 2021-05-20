@@ -62,9 +62,9 @@
         </where>
     </select>
 
-    <select id="getPermissionsByRoles" resultType="com.xingying.shopping.master.entity.Permissions">
+    <select id="getPermissionsByRoles" resultType="java.lang.String">
         SELECT
-            b.*
+            b.PERMISSIONS_URI
         FROM
             XINGYING_SHOP.PERMISSIONS_TO_ROLE a
             left join XINGYING_SHOP.PERMISSIONS b on b.PERMISSIONS_ID = a.PERMISSIONS_ID
