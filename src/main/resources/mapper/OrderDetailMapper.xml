@@ -11,12 +11,11 @@
         <result column="TOTAL" property="total"  />
         <result column="TOTAL_AMOUNT" property="totalAmount"  />
         <result column="GOODS_SPC" property="goodsSpc"  />
-        <result column="GOODS_CARDS" property="goodsCards"  />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        ORDER_DETAIL_ID, GOODS_ID, ORDER_ID, PRICE, TOTAL, TOTAL_AMOUNT, GOODS_CARDS, GOODS_SPC
+        ORDER_DETAIL_ID, GOODS_ID, ORDER_ID, PRICE, TOTAL, TOTAL_AMOUNT, GOODS_SPC
     </sql>
 
     <!-- 分页查询 -->
