@@ -3,6 +3,7 @@ package com.xingying.shopping.master.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Assert;
 import com.github.pagehelper.PageInfo;
+import com.xingying.shopping.master.common.context.UserContext;
 import com.xingying.shopping.master.common.utils.json.JSONUtils;
 import com.xingying.shopping.master.common.utils.token.JwtTokenUtil;
 import com.xingying.shopping.master.config.security.handler.AuthenticationSuccessHandlerImpl;
@@ -163,4 +164,40 @@ import java.util.Map;
         String msg = userXyService.completePwd(map);
         return new OperationResultBean<>(msg);
     }
+
+    /**
+     *{
+     *    //GET
+     *    无参
+     * }
+     *
+     * @param
+     * @return
+     */
+    @GetMapping("/getPhonePre")
+    public QueryResultBean<String> getPhonePre() {
+        UserXy info = userXyService.getById(UserContext.getCurrentUser().getUserId());
+        return new QueryResultBean<>(info.getPhone());
+    }
+
+    /**
+     *{
+     *    //GET
+     *    phone//手机号
+     * }
+     *
+     * @param
+     * @return
+     */
+    @GetMapping("/setPhone")
+    public QueryResultBean<String> setPhone(@RequestParam String phone) {
+        UserXy userXy = new UserXy();
+        userXy.setUserId(UserContext.getCurrentUser().getUserId());
+        userXy.setPhone(phone);
+        boolean b = userXyService.updateById(userXy);
+        Assert.isTrue(b, "绑定失败");
+        return new QueryResultBean<>("success");
+    }
+
+
 }

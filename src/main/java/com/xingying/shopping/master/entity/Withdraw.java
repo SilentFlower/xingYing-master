@@ -24,7 +24,7 @@ private static final long serialVersionUID = 1L;
      * 用户ID
      */
     @TableId(value = "USER_ID", type = IdType.INPUT)
-    private BigDecimal userId;
+    private String userId;
 
     /**
      * 提现方式（支付宝）
@@ -45,11 +45,11 @@ private static final long serialVersionUID = 1L;
     private String withdrawAccount;
 
 
-    public BigDecimal getUserId() {
-            return userId;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUserId(BigDecimal userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

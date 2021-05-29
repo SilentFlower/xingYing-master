@@ -111,9 +111,10 @@ public class JwtTokenUtil {
      * 根据用户信息生成token，并将token#id和用户信息存入redis
      */
     public String generateToken(String uid, UserEntity userEntity) {
+        //600
         String token = Jwts.builder()
                 .setSubject(uid)
-                .setExpiration(new Date(System.currentTimeMillis() + expireTime))
+                .setExpiration(new Date(System.currentTimeMillis() + expireTime*60))
                 .signWith(SignatureAlgorithm.HS512, secret)
                 .compact();
         //将token#id存入redis

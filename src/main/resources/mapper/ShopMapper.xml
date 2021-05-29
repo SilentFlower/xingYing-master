@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.ShopMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.Shop">
+        <id column="SHOP_ID" property="shopId" />
+        <result column="SHOP_NAME" property="shopName"  />
+        <result column="SHOP_MEMO" property="shopMemo"  />
+        <result column="SHOP_CREATE_DATE" property="shopCreateDate"  />
+        <result column="SHOP_NOTICE" property="shopNotice"  />
+        <result column="SHOP_CONTACT_TYPE" property="shopContactType"  />
+        <result column="SHOP_CONTACT_CONTENT" property="shopContactContent"  />
+        <result column="SHOP_STATUS" property="shopStatus"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        SHOP_ID, SHOP_NAME, SHOP_MEMO, SHOP_CREATE_DATE, SHOP_NOTICE, SHOP_CONTACT_TYPE, SHOP_CONTACT_CONTENT, SHOP_STATUS
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.Shop">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.SHOP
+        <where>
+            <if test="shopId != null  and shopId != '' ">
+            </if>
+            <if test="shopName != null  and shopName != '' ">
+                AND SHOP.SHOP_NAME like concat(concat('%',#{shopName}),'%')
+            </if>
+            <if test="shopMemo != null  and shopMemo != '' ">
+                AND SHOP.SHOP_MEMO like concat(concat('%',#{shopMemo}),'%')
+            </if>
+            <if test="shopCreateDate != null  and shopCreateDate != '' ">
+            </if>
+            <if test="shopNotice != null  and shopNotice != '' ">
+                AND SHOP.SHOP_NOTICE like concat(concat('%',#{shopNotice}),'%')
+            </if>
+            <if test="shopContactType != null  and shopContactType != '' ">
+                AND SHOP.SHOP_CONTACT_TYPE like concat(concat('%',#{shopContactType}),'%')
+            </if>
+            <if test="shopContactContent != null  and shopContactContent != '' ">
+                AND SHOP.SHOP_CONTACT_CONTENT like concat(concat('%',#{shopContactContent}),'%')
+            </if>
+            <if test="shopStatus != null ">
+                AND SHOP.SHOP_STATUS = #{shopStatus}
+            </if>
+        </where>
+    </select>
+</mapper>

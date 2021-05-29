@@ -1,5 +1,6 @@
 package com.xingying.shopping.master.controller;
 
+import com.xingying.shopping.master.common.context.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.baomidou.mybatisplus.core.toolkit.Assert;
 import com.github.pagehelper.PageInfo;
@@ -120,7 +121,7 @@ import com.xingying.shopping.master.entity.WalletFlow;
     }
 
     /**
-     * 提现
+     * 开始提现
      *{
      *     walletFlowFee//充值金额
      *     //后台获取
@@ -141,6 +142,44 @@ import com.xingying.shopping.master.entity.WalletFlow;
     public OperationResultBean<String> withdraw(@RequestBody WalletFlow walletFlow) {
         String walletFlowId = walletFlowService.withdraw(walletFlow);
         return new OperationResultBean<>(walletFlowId);
+    }
+
+    /**
+     * 查询提现记录
+     * {
+     *     必传值
+     *     walletFlowType 业务类型（2.提现 ）
+     *     可传值
+     *     walletFlowStatus//状态(0正在进行，1完成，-1操作失败)
+     * }
+     * 查询流水记录
+     *{
+     *     //可传
+     *     walletFlowType //业务类型（1.充值 2.提现 3.下单）
+     *     walletFlowStatus //状态(0正在进行，1完成，-1操作失败)
+     *     //后台获取
+     *     userId //用户ID
+     *
+     *
+     *}
+     * @param param key字符串，根据,号分隔
+     * @return Result
+     * {
+     *   "walletFlowId": "",
+     *   "walletFlowType": 0,
+     *   "walletFlowFee": 0.00,
+     *   "walletFlowDate": "2021-05-27 02:06:20",
+     *   "walletFlowStatus": 0,
+     *   "userId": "",
+     *   "withdrawType": "",
+     *   "walletFlowBalance": 0.00
+     * }
+     */
+    @PostMapping("/getWalletFlowByPage")
+    public OperationResultBean<PageInfo<WalletFlow>> getWalletFlowByPage(@RequestBody PageQueryEntity<WalletFlow> param) {
+        param.getData().setUserId(UserContext.getCurrentUser().getUserId());
+        PageInfo page = walletFlowService.getWalletFlowByPage(param);
+        return new OperationResultBean<>(page);
     }
 
     /**

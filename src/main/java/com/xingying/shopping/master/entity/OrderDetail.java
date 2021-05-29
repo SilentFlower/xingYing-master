@@ -56,6 +56,33 @@ private static final long serialVersionUID = 1L;
     @TableField("TOTAL_AMOUNT")
     private BigDecimal totalAmount;
 
+    /**
+     * 商品规格
+     */
+    @TableField("GOODS_SPC")
+    private String goodsSpc;
+
+    /**
+     * 商品可能涉及的卡密
+     */
+    @TableField("GOODS_CARDS")
+    private String goodsCards;
+
+    public String getGoodsSpc() {
+        return goodsSpc;
+    }
+
+    public void setGoodsSpc(String goodsSpc) {
+        this.goodsSpc = goodsSpc;
+    }
+
+    public String getGoodsCards() {
+        return goodsCards;
+    }
+
+    public void setGoodsCards(String goodsCards) {
+        this.goodsCards = goodsCards;
+    }
 
     public String getOrderDetailId() {
         return orderDetailId;

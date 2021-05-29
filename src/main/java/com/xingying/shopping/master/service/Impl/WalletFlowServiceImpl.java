@@ -17,6 +17,7 @@ import com.xingying.shopping.master.entity.Withdraw;
 import com.xingying.shopping.master.service.WalletFlowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -66,23 +67,36 @@ public class WalletFlowServiceImpl extends ServiceImpl<WalletFlowMapper, WalletF
     }
 
     /**
-     * 提现
+     * 提现（进行中）
      * @param walletFlow
      * @return
      */
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public String withdraw(WalletFlow walletFlow) {
         String userId = UserContext.getCurrentUser().getUserId();
         //检查钱包剩余可用余额,并与提现金额对比
         Wallet wallet = walletMapper.selectById(userId);
         BigDecimal balance = wallet.getBalance();
-        Assert.isTrue(balance.compareTo(walletFlow.getWalletFlowFee()) > 1, "钱包余额不足");
+        BigDecimal nowBalance = balance.subtract(walletFlow.getWalletFlowFee());
+        Assert.isTrue(balance.compareTo(walletFlow.getWalletFlowFee()) == 1, "钱包余额不足");
+        //获取提现的内容是否存在
+        String s = withdrawPre();
+        Assert.isTrue("正常".equals(s), "未补全提现方式");
         String id = String.valueOf(snowFakeIdGenerator.nextId());
         walletFlow.setWalletFlowId(id);
         walletFlow.setWalletFlowType(2);
         walletFlow.setUserId(userId);
         walletFlow.setWalletFlowDate(LocalDateTime.now());
+        walletFlow.setWithdrawType("支付宝");
         walletFlow.setWalletFlowStatus(0);
+        //金额以及冻结金额更新
+        walletFlow.setWalletFlowBalance(nowBalance);
+        walletFlowMapper.insert(walletFlow);
+        wallet.setBalance(nowBalance);
+        wallet.setBalanceDisable(wallet.getBalanceDisable().add(walletFlow.getWalletFlowFee()));
+        //锁定钱包中的金额
+        walletMapper.updateById(wallet);
         return id;
     }
 
@@ -116,5 +130,17 @@ public class WalletFlowServiceImpl extends ServiceImpl<WalletFlowMapper, WalletF
             return "未补齐收款方式";
         }
         return "正常";
+    }
+
+    /**
+     * 查询流水记录
+     * @param param
+     * @return
+     */
+    @Override
+    public PageInfo<WalletFlow> getWalletFlowByPage(PageQueryEntity<WalletFlow> param) {
+        PageHelper.startPage(param.getPageNumber(), param.getPageSize());
+        List<WalletFlow> list =  walletFlowMapper.getWalletFlowByPage(param.getData());
+        return new PageInfo<WalletFlow>(list);
     }
 }

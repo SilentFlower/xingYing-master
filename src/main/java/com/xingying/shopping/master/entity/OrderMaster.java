@@ -76,6 +76,7 @@ private static final long serialVersionUID = 1L;
     private String shopId;
 
 
+
     public String getOrderId() {
         return orderId;
     }

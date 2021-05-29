@@ -1,0 +1,67 @@
+2021-05-27 02:21:48,298 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 23452 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 02:21:48,303 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 02:21:48,306 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 02:30:47,534 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 12300 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 02:30:47,535 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 02:30:47,543 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 02:31:33,493 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 46.381 seconds (JVM running for 47.865)
+2021-05-27 03:28:19,271 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 20868 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 03:28:19,272 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 03:28:19,275 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 03:28:51,614 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 32.737 seconds (JVM running for 34.156)
+2021-05-27 04:13:04,720 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 14944 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 04:13:04,721 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 04:13:04,728 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 04:13:37,978 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 33.724 seconds (JVM running for 35.687)
+2021-05-27 04:43:31,063 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 21720 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 04:43:31,064 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 04:43:31,067 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 04:44:18,428 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 47.979 seconds (JVM running for 50.429)
+2021-05-27 05:00:39,205 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 26904 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 05:00:39,207 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 05:00:39,209 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 05:01:37,350 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 58.931 seconds (JVM running for 61.775)
+2021-05-27 05:10:30,830 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 18104 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 05:10:30,831 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 05:10:30,833 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 05:11:04,022 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 33.589 seconds (JVM running for 35.159)
+2021-05-27 05:18:05,545 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 25552 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 05:18:05,546 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 05:18:05,549 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 05:18:38,077 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 32.925 seconds (JVM running for 34.357)
+2021-05-27 10:26:05,687 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 26276 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 10:26:05,688 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 10:26:05,690 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 10:26:51,975 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 46.768 seconds (JVM running for 48.571)
+2021-05-27 10:44:28,991 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 11356 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 10:44:28,992 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 10:44:28,995 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 10:45:32,860 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 64.247 seconds (JVM running for 65.686)
+2021-05-27 11:24:18,621 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 17308 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 11:24:18,623 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 11:24:18,629 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 11:24:53,000 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 34.886 seconds (JVM running for 36.713)
+2021-05-27 12:18:25,797 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 19504 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 12:18:25,798 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 12:18:25,808 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 12:19:23,258 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 57.848 seconds (JVM running for 59.51)
+2021-05-27 12:22:09,432 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 15900 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 12:22:09,433 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 12:22:09,437 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 12:22:41,162 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 32.108 seconds (JVM running for 33.537)
+2021-05-27 16:28:21,428 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 19304 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 16:28:21,432 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 16:28:21,437 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 16:29:19,498 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 58.611 seconds (JVM running for 60.313)
+2021-05-27 17:02:21,238 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 9108 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 17:02:21,238 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 17:02:21,245 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 17:03:22,929 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 62.096 seconds (JVM running for 63.544)
+2021-05-27 18:30:38,795 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 23372 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 18:30:38,797 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 18:30:38,805 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 18:31:34,984 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 56.652 seconds (JVM running for 58.283)
+2021-05-27 18:55:51,956 INFO (StartupInfoLogger.java:55)- Starting MasApplicationTests using Java 11.0.7 on GWRZ-4PVPSN with PID 14216 (started by SiletFlower in C:\Users\SiletFlower\IdeaProjects\xingYing-master)
+2021-05-27 18:55:51,957 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-27 18:55:51,967 INFO (SpringApplication.java:662)- No active profile set, falling back to default profiles: default
+2021-05-27 18:57:00,746 INFO (StartupInfoLogger.java:61)- Started MasApplicationTests in 69.409 seconds (JVM running for 70.926)

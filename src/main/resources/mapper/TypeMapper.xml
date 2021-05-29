@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.TypeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.Type">
+        <id column="TYPE_ID" property="typeId" />
+        <result column="TYPE_NAME" property="typeName"  />
+        <result column="PARENT_ID" property="parentId"  />
+        <result column="DATA_CREATE_TIME" property="dataCreateTime"  />
+        <result column="DATA_EDIT_TIME" property="dataEditTime"  />
+        <result column="MEMO" property="memo"  />
+        <result column="TYPE_PIC" property="typePic"  />
+        <result column="ROOT_FLAG" property="rootFlag"  />
+        <result column="STATUS" property="status"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        TYPE_ID, TYPE_NAME, PARENT_ID, DATA_CREATE_TIME, DATA_EDIT_TIME, MEMO, TYPE_PIC, ROOT_FLAG, STATUS
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.Type">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.TYPE
+        <where>
+            <if test="typeId != null  and typeId != '' ">
+            </if>
+            <if test="typeName != null  and typeName != '' ">
+                AND TYPE.TYPE_NAME like concat(concat('%',#{typeName}),'%')
+            </if>
+            <if test="parentId != null  and parentId != '' ">
+            </if>
+            <if test="dataCreateTime != null  and dataCreateTime != '' ">
+            </if>
+            <if test="dataEditTime != null  and dataEditTime != '' ">
+            </if>
+            <if test="memo != null  and memo != '' ">
+                AND TYPE.MEMO like concat(concat('%',#{memo}),'%')
+            </if>
+            <if test="typePic != null  and typePic != '' ">
+                AND TYPE.TYPE_PIC like concat(concat('%',#{typePic}),'%')
+            </if>
+            <if test="rootFlag != null ">
+                AND TYPE.ROOT_FLAG = #{rootFlag}
+            </if>
+            <if test="status != null ">
+                AND TYPE.STATUS = #{status}
+            </if>
+        </where>
+    </select>
+</mapper>

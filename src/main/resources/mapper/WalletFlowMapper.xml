@@ -39,4 +39,23 @@
             </if>
         </where>
     </select>
+
+<!--    查询流水记录-->
+    <select id="getWalletFlowByPage" resultType="com.xingying.shopping.master.entity.WalletFlow">
+        select
+            WALLET_FLOW.*
+        from
+            XINGYING_SHOP.WALLET_FLOW
+        <where>
+            <if test="walletFlowType != null ">
+                AND WALLET_FLOW.WALLET_FLOW_TYPE = #{walletFlowType}
+            </if>
+            <if test="walletFlowStatus != null ">
+                AND WALLET_FLOW.WALLET_FLOW_STATUS = #{walletFlowStatus}
+            </if>
+            <if test="userId != null and userId !='' ">
+                AND WALLET_FLOW.USER_ID = #{userId}
+            </if>
+        </where>
+    </select>
 </mapper>

@@ -46,6 +46,7 @@ public class WalletServiceImpl extends ServiceImpl<WalletMapper, Wallet> impleme
         wallet.setBalance(BigDecimal.valueOf(0.00));
         wallet.setWalletIncome(BigDecimal.valueOf(0.00));
         wallet.setWalletOutcome(BigDecimal.valueOf(0.00));
+        wallet.setBalanceDisable(BigDecimal.valueOf(0.00));
         wallet.setUpdateDate(LocalDateTime.now());
         int insert = walletMapper.insert(wallet);
         Assert.isTrue(insert > 0, "钱包表生成失败");

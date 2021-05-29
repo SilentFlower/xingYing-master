@@ -9,11 +9,12 @@
         <result column="WALLET_INCOME" property="walletIncome"  />
         <result column="WALLET_OUTCOME" property="walletOutcome"  />
         <result column="UPDATE_DATE" property="updateDate"  />
+        <result column="BALANCE_DISABLE" property="balanceDisable"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        USER_ID, BALANCE, WALLET_INCOME, WALLET_OUTCOME, UPDATE_DATE
+        USER_ID, BALANCE, WALLET_INCOME, WALLET_OUTCOME, UPDATE_DATE, BALANCE_DISABLE
     </sql>
 
     <!-- 分页查询 -->

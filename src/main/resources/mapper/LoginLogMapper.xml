@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.LoginLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.LoginLog">
+        <id column="USER_ID" property="userId" />
+        <result column="USER_IP" property="userIp"  />
+        <result column="USER_AREA" property="userArea"  />
+        <result column="USER_DEVICE " property="userDevice"  />
+        <result column="LOGIN_DATE" property="loginDate"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        USER_ID, USER_IP, USER_AREA, USER_DEVICE , LOGIN_DATE
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.LoginLog">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.LOGIN_LOG
+        <where>
+            <if test="userId != null  and userId != '' ">
+            </if>
+            <if test="userIp != null  and userIp != '' ">
+                AND LOGIN_LOG.USER_IP like concat(concat('%',#{userIp}),'%')
+            </if>
+            <if test="userArea != null  and userArea != '' ">
+                AND LOGIN_LOG.USER_AREA like concat(concat('%',#{userArea}),'%')
+            </if>
+            <if test="userDevice  != null  and userDevice  != '' ">
+                AND LOGIN_LOG.USER_DEVICE  like concat(concat('%',#{userDevice }),'%')
+            </if>
+            <if test="loginDate != null  and loginDate != '' ">
+            </if>
+        </where>
+    </select>
+</mapper>

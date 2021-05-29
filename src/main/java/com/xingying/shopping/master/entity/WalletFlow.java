@@ -63,6 +63,20 @@ private static final long serialVersionUID = 1L;
     @TableField("WITHDRAW_TYPE")
     private String withdrawType;
 
+    /**
+     * 钱包余额
+     */
+    @TableField("WALLET_FLOW_BALANCE")
+    private BigDecimal walletFlowBalance;
+
+    public BigDecimal getWalletFlowBalance() {
+        return walletFlowBalance;
+    }
+
+    public void setWalletFlowBalance(BigDecimal walletFlowBalance) {
+        this.walletFlowBalance = walletFlowBalance;
+    }
+
     public String getWithdrawType() {
         return withdrawType;
     }

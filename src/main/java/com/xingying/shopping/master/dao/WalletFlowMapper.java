@@ -18,4 +18,11 @@ import java.util.List;
 public interface WalletFlowMapper extends BaseMapper<WalletFlow> {
 
     List<WalletFlow> getListByPage(WalletFlow walletFlow);
+
+    /**
+     * 查询流水记录
+     * @param data
+     * @return
+     */
+    List<WalletFlow> getWalletFlowByPage(WalletFlow data);
 }

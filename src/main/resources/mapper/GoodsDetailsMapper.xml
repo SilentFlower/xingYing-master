@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.GoodsDetailsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.GoodsDetails">
+        <id column="GOODS_ID" property="goodsId" />
+        <result column="GOODS_SPC" property="goodsSpc"  />
+        <result column="GOODS_PRICE" property="goodsPrice"  />
+        <result column="GOODS_NUM" property="goodsNum"  />
+        <result column="GOODS_AUTO" property="goodsAuto"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        GOODS_ID, GOODS_SPC, GOODS_PRICE, GOODS_NUM, GOODS_AUTO
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.ext.GoodsDetailsExt">
+        select
+            GOODS_DETAILS.*,
+            "GOODS".GOODS_NAME AS goodsName
+        from
+            XINGYING_SHOP.GOODS_DETAILS
+            left join  XINGYING_SHOP.GOODS on "GOODS".GOODS_ID = "GOODS_DETAILS".GOODS_ID
+        <where>
+            <if test="goodsId != null  and goodsId != '' ">
+                AND "GOODS_DETAILS".GOODS_ID = #{goodsId}
+            </if>
+            <if test="goodsSpc != null  and goodsSpc != '' ">
+                AND GOODS_DETAILS.GOODS_SPC like concat(concat('%',#{goodsSpc}),'%')
+            </if>
+            <if test="goodsNum != null  and goodsNum != '' ">
+                AND GOODS_DETAILS.GOODS_NUM = #{goodsNum}
+            </if>
+        </where>
+    </select>
+</mapper>

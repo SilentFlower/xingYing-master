@@ -43,4 +43,11 @@ public interface WalletFlowService extends IService<WalletFlow> {
      * @return
      */
     String withdrawPre();
+
+    /**
+     * 查询流水记录
+     * @param param
+     * @return
+     */
+    PageInfo<WalletFlow> getWalletFlowByPage(PageQueryEntity<WalletFlow> param);
 }

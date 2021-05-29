@@ -80,6 +80,20 @@ private static final long serialVersionUID = 1L;
     @TableField("SEX")
     private String sex;
 
+    /**
+     * 电话
+     */
+    @TableField("PHONE")
+    private String phone;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public String getUserId() {
         return userId;
     }

@@ -46,11 +46,24 @@ private static final long serialVersionUID = 1L;
     private BigDecimal walletOutcome;
 
     /**
+     * 冻结余额
+     */
+    @TableField("BALANCE_DISABLE")
+    private BigDecimal balanceDisable;
+
+    /**
      * 更新时间
      */
     @TableField("UPDATE_DATE")
     private LocalDateTime updateDate;
 
+    public BigDecimal getBalanceDisable() {
+        return balanceDisable;
+    }
+
+    public void setBalanceDisable(BigDecimal balanceDisable) {
+        this.balanceDisable = balanceDisable;
+    }
 
     public String getUserId() {
         return userId;

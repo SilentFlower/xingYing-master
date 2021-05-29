@@ -89,7 +89,7 @@ public class TestDubboController {
     @RequestMapping("/editPasswd")
     public String editPasswd(HttpServletRequest request){
         String token = jwtTokenUtil.getTokenFromFront(request);
-        String id = jwtTokenUtil.getuidByToken(token);
+        String id = UserContext.getCurrentUser().getUserId();
         jwtTokenUtil.makeTokenExpireByUid(id);
         return "success";
     }
