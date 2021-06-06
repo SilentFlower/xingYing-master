@@ -1,5 +1,6 @@
 package com.xingying.shopping.master.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.xingying.shopping.master.common.context.UserContext;
 import com.xingying.shopping.master.entity.ext.GoodsExt;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,13 +46,15 @@ import com.xingying.shopping.master.entity.Goods;
     /**
      * 获取星荧虚拟商品交易系统的商品表
      *
-     * @param key
+     * @param typeId
      * @return Result
      */
-    @GetMapping("/getGoodsByParam")
-    public QueryResultBean<Goods> getGoods(@RequestParam String key) {
-        Goods goods = goodsService.getById(key);
-        return new QueryResultBean<>(goods);
+    @GetMapping("/getGoodsByType")
+    public QueryResultBean<List<Goods>> getGoods(@RequestParam String typeId) {
+        List<Goods> list = goodsService.list(new QueryWrapper<Goods>()
+                .eq("TYPE_ID", typeId)
+                .eq("STATUS", 1));
+        return new QueryResultBean<>(list);
     }
 
     /**

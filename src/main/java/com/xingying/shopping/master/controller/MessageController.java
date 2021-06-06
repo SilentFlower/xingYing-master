@@ -132,4 +132,15 @@ import java.util.List;
                 .eq("USER_ID",String.valueOf(UserContext.getCurrentUser().getUserId())));
         return new OperationResultBean<>("success");
     }
+
+    /**
+     * 获取新消息个数
+     */
+    @GetMapping("/getNewCount")
+    public QueryResultBean<Integer> getNewCount() {
+        int count = messageService.count(new QueryWrapper<Message>()
+                .eq("USER_ID", String.valueOf(UserContext.getCurrentUser().getUserId()))
+                .eq("MSG_STATUS", 0));
+        return new QueryResultBean<Integer>(count);
+    }
 }

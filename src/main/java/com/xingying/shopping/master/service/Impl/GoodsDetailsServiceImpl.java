@@ -6,8 +6,9 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xingying.shopping.master.common.entitys.page.PageQueryEntity;
-import com.xingying.shopping.master.dao.GoodsCardsMapper;
-import com.xingying.shopping.master.entity.GoodsCards;
+import com.xingying.shopping.master.common.utils.key.SnowFakeIdGenerator;
+import com.xingying.shopping.master.dao.CardsMapper;
+import com.xingying.shopping.master.entity.Cards;
 import com.xingying.shopping.master.entity.GoodsDetails;
 import com.xingying.shopping.master.dao.GoodsDetailsMapper;
 import com.xingying.shopping.master.entity.ext.GoodsDetailsExt;
@@ -16,9 +17,9 @@ import org.apache.ibatis.session.ExecutorType;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.connection.ReturnType;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -37,7 +38,9 @@ public class GoodsDetailsServiceImpl extends ServiceImpl<GoodsDetailsMapper, Goo
     @Autowired
     private SqlSessionFactory sqlSessionFactory;
     @Autowired
-    private GoodsCardsMapper cardsMapper;
+    private CardsMapper cardsMapper;
+    @Autowired
+    private SnowFakeIdGenerator snowFakeIdGenerator;
 
     /**
      * 分页列表查询商品详细表
@@ -57,7 +60,7 @@ public class GoodsDetailsServiceImpl extends ServiceImpl<GoodsDetailsMapper, Goo
      */
     private void handlingCardSecrets(GoodsDetailsExt goodsDetails){
         SqlSession session = sqlSessionFactory.openSession(ExecutorType.BATCH,false);
-        GoodsCardsMapper goodsCardsMapper = session.getMapper(GoodsCardsMapper.class);
+        CardsMapper mapper = session.getMapper(CardsMapper.class);
         String cards = goodsDetails.getCards();
         String id = goodsDetails.getGoodsId();
         String spc = goodsDetails.getGoodsSpc();
@@ -65,19 +68,22 @@ public class GoodsDetailsServiceImpl extends ServiceImpl<GoodsDetailsMapper, Goo
         //根据#来区分
         String[] splits = cards.split("#");
         int count = 0;
+        LocalDateTime now = LocalDateTime.now();
         try {
             for (String s : splits) {
                 if (s == null || "".equals(s)) {
                     //直接跳过
                     continue;
                 }
-                GoodsCards goodsCards = new GoodsCards();
+                Cards card = new Cards();
                 //可用标志
-                goodsCards.setCardsFlag(1);
-                goodsCards.setGoodsCards(s);
-                goodsCards.setGoodsId(id);
-                goodsCards.setGoodsSpc(spc);
-                goodsCardsMapper.insert(goodsCards);
+                card.setCardId(String.valueOf(snowFakeIdGenerator.nextId()));
+                card.setCardFlag(1);
+                card.setGoodsCards(s);
+                card.setGoodsId(id);
+                card.setGoodsSpc(spc);
+                card.setCardDateCreate(now);
+                mapper.insert(card);
                 count++;
                 //每3000提交一次
                 if (count % 3000 == 0) {
@@ -86,6 +92,7 @@ public class GoodsDetailsServiceImpl extends ServiceImpl<GoodsDetailsMapper, Goo
             }
         }catch (Exception e) {
             session.rollback();
+            throw new RuntimeException("存在重复卡密");
         }finally {
             session.commit();
             session.close();
@@ -165,7 +172,7 @@ public class GoodsDetailsServiceImpl extends ServiceImpl<GoodsDetailsMapper, Goo
     }
 
     /**
-     * 获取通用的QueryWrapper
+     * 获取通用的QueryWrapper (GoodsDetails)
      * @param goodsDetails
      * @return
      */
@@ -177,15 +184,15 @@ public class GoodsDetailsServiceImpl extends ServiceImpl<GoodsDetailsMapper, Goo
     }
 
     /**
-     * 获取通用的QueryWrapper2
+     * 获取通用的QueryWrapper2 (Cards)
      * @param goodsDetails
      * @return
      */
     private QueryWrapper getQueryWrapper2(GoodsDetails goodsDetails) {
-        QueryWrapper<GoodsCards> queryWrapper = new QueryWrapper<GoodsCards>()
+        QueryWrapper<Cards> queryWrapper = new QueryWrapper<Cards>()
                 .eq("GOODS_ID", goodsDetails.getGoodsId())
                 .eq("GOODS_SPC", goodsDetails.getGoodsSpc())
-                .eq("CARDS_FLAG", 1);
+                .eq("CARD_FLAG", 1);
         return queryWrapper;
     }
 

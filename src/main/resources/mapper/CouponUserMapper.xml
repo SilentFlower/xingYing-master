@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.CouponUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.CouponUser">
+        <id column="USER_ID" property="userId" />
+        <result column="COUPON_ID" property="couponId"  />
+        <result column="GET_DATE" property="getDate"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        USER_ID, COUPON_ID, GET_DATE
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.CouponUser">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.COUPON_USER
+        <where>
+            <if test="userId != null  and userId != '' ">
+            </if>
+            <if test="couponId != null  and couponId != '' ">
+            </if>
+            <if test="getDate != null  and getDate != '' ">
+            </if>
+        </where>
+    </select>
+</mapper>

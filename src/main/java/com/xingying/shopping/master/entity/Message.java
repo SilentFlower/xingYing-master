@@ -52,7 +52,7 @@ private static final long serialVersionUID = 1L;
     private String userId;
 
     /**
-     * 用户ID
+     * 消息状态(0 未读)
      */
     @TableField("MSG_STATUS")
     private Integer msgStatus;

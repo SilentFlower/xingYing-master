@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.CardsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.Cards">
+        <id column="CARD_ID" property="cardId" />
+        <result column="GOODS_ID" property="goodsId"  />
+        <result column="GOODS_SPC" property="goodsSpc"  />
+        <result column="GOODS_CARDS" property="goodsCards"  />
+        <result column="CARD_FLAG" property="cardFlag"  />
+        <result column="CARD_DATE_CREATE" property="cardDateCreate"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        CARD_ID, GOODS_ID, GOODS_SPC, GOODS_CARDS, CARD_FLAG, CARD_DATE_CREATE
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.Cards">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.CARDS
+        <where>
+            <if test="goodsId != null  and goodsId != '' ">
+                AND CARDS.GOODS_ID = #{goodsId}
+            </if>
+            <if test="goodsSpc != null  and goodsSpc != '' ">
+                AND CARDS.GOODS_SPC = #{goodsSpc}
+            </if>
+            <if test="cardFlag != null">
+                AND CARDS.CARD_FLAG = #{cardFlag}
+            </if>
+            <if test="goodsCards != null  and goodsCards != '' ">
+                AND CARDS.GOODS_CARDS = #{goodsCards}
+            </if>
+        </where>
+    </select>
+</mapper>

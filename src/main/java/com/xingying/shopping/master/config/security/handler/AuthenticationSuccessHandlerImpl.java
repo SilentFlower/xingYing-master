@@ -37,12 +37,11 @@ public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHa
     private JwtTokenUtil jwtTokenUtil;
     @Autowired
     private LoginLogMapper loginLogMapper;
-
     @Override
     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
         httpServletResponse.setContentType("text/json;charset=utf-8");
         UserEntity userInfo = (UserEntity) authentication.getPrincipal();
-        //登陆日志
+        //登陆日志记录
         try {
             String area = "";
             String ipAddr = "";
@@ -58,6 +57,7 @@ public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHa
             loginLog.setUserDevice(type);
             //插入用户登录记录表
             loginLogMapper.insert(loginLog);
+            System.out.println("完成");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -70,9 +70,10 @@ public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHa
         }
         String token = jwtTokenUtil.generateToken(String.valueOf(userInfo.getId()), userInfo);
         Cookie cookie = new Cookie(jwtTokenUtil.getTokenName(), token);
-        cookie.setPath("/master");
         cookie.setMaxAge(1000*60*60);
+        cookie.setPath("/");
         cookie.setHttpOnly(true);
+        cookie.setSecure(true);
         httpServletResponse.addCookie(cookie);
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("token", token);

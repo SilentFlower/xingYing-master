@@ -8,6 +8,7 @@ import com.xingying.shopping.master.common.context.UserContext;
 import com.xingying.shopping.master.common.entitys.page.PageQueryEntity;
 import com.xingying.shopping.master.common.utils.io.ioUtils;
 import com.xingying.shopping.master.common.utils.key.SnowFakeIdGenerator;
+import com.xingying.shopping.master.config.rabbitMq.mqSender;
 import com.xingying.shopping.master.dao.GoodsDetailsMapper;
 import com.xingying.shopping.master.entity.Goods;
 import com.xingying.shopping.master.dao.GoodsMapper;
@@ -38,6 +39,8 @@ public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements
     private GoodsDetailsMapper goodsDetailsMapper;
     @Autowired
     private SnowFakeIdGenerator snowFakeIdGenerator;
+    @Autowired
+    private com.xingying.shopping.master.config.rabbitMq.mqSender mqSender;
     private static final String PIC_URL = "/app/shop/goods/";
 
     @Override

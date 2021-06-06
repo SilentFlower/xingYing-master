@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.CouponMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.Coupon">
+        <id column="COUPON_ID" property="couponId" />
+        <result column="COUPON_TYPE" property="couponType"  />
+        <result column="GOODS_ID" property="goodsId"  />
+        <result column="COUPON_USE_TYPE" property="couponUseType"  />
+        <result column="COUPON_VALUE" property="couponValue"  />
+        <result column="COUPON_LIMIT" property="couponLimit"  />
+        <result column="COUPON_DATE_CREATE" property="couponDateCreate"  />
+        <result column="COUPON_DATE_END" property="couponDateEnd"  />
+        <result column="COUPON_FLAG" property="couponFlag"  />
+        <result column="COUPON_NUM" property="couponNum"  />
+        <result column="SHOP_ID" property="shopId"  />
+        <result column="COUPON_NAME" property="couponName"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        COUPON_ID, COUPON_TYPE, GOODS_ID, COUPON_USE_TYPE, COUPON_VALUE, COUPON_LIMIT, COUPON_DATE_CREATE, COUPON_DATE_END, COUPON_FLAG, COUPON_NUM, SHOP_ID, COUPON_NAME
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.ext.CouponExt">
+        select
+            COUPON.*,
+            "GOODS".GOODS_NAME AS goodsName,
+            NVL((SELECT COUNT(1) FROM XINGYING_SHOP.COUPON_USER WHERE "COUPON_USER".COUPON_ID = "COUPON".COUPON_ID), 0) AS haveUseCount
+        from
+            XINGYING_SHOP.COUPON
+            left join XINGYING_SHOP.GOODS on "GOODS".GOODS_ID = "COUPON".GOODS_ID
+        <where>
+            <if test="couponFlag != null ">
+                AND "COUPON".COUPON_FLAG = #{couponFlag}
+            </if>
+            <if test="shopId != null  and shopId != '' ">
+                AND "COUPON".SHOP_ID = #{shopId}
+            </if>
+            <if test="expiredFlag != null">
+                <if test="expiredFlag == 1">
+                    AND "COUPON".COUPON_DATE_END &lt; sysdate
+                </if>
+                <if test="expiredFlag == 0">
+                    AND "COUPON".COUPON_DATE_END > sysdate
+                </if>
+            </if>
+            <if test="startTime != null">
+                AND "COUPON".COUPON_DATE_CREATE > #{startTime}
+            </if>
+            <if test="endTime != null">
+                AND "COUPON".COUPON_DATE_CREATE &lt; #{endTime}
+            </if>
+            <if test="couponName != null and couponName != '' ">
+                AND "COUPON".COUPON_NAME like concat('%',concat(#{couponName},'%'))
+            </if>
+            <if test="couponUseType != null and couponUseType != '' ">
+                AND "COUPON".COUPON_USE_TYPE = #{couponUseType}
+            </if>
+            <if test="goodsName != null and goodsName != '' ">
+                AND "GOODS".GOODS_NAME like concat('%',concat(#{goodsName},'%'))
+            </if>
+        </where>
+    </select>
+</mapper>

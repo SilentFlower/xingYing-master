@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.CardsUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.CardsUser">
+        <id column="USER_ID" property="userId" />
+        <result column="CARD_ID" property="cardId"  />
+        <result column="GET_DATE" property="getDate"  />
+        <result column="ORDER_DETAIL_ID" property="orderDetailId"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        USER_ID, CARD_ID, GET_DATE, ORDER_DETAIL_ID
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.CardsUser">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.CARDS_USER
+        <where>
+            <if test="userId != null  and userId != '' ">
+            </if>
+            <if test="cardId != null  and cardId != '' ">
+            </if>
+            <if test="getDate != null  and getDate != '' ">
+            </if>
+            <if test="orderDetailId != null  and orderDetailId != '' ">
+            </if>
+        </where>
+    </select>
+</mapper>
