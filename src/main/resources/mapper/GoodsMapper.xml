@@ -21,30 +21,28 @@
     </sql>
 
     <!-- 分页查询 -->
-    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.Goods">
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.ext.GoodsExt">
         select
-            <include refid="Base_Column_List" />
+            "GOODS".*,
+            "TYPE".TYPE_NAME AS typeName,
+            "SHOP".SHOP_NAME AS shopName
         from
             XINGYING_SHOP.GOODS
+            left join XINGYING_SHOP.TYPE on "GOODS".TYPE_ID = "TYPE".TYPE_ID
+            left join XINGYING_SHOP.SHOP on "GOODS".SHOP_ID = "SHOP".SHOP_ID
         <where>
-            <if test="goodsId != null  and goodsId != '' ">
-            </if>
+            GOODS.STATUS = '1'
             <if test="goodsName != null  and goodsName != '' ">
-                AND GOODS.GOODS_NAME like concat(concat('%',#{goodsName}),'%')
+                AND "GOODS".GOODS_NAME like concat(concat('%',#{goodsName}),'%')
             </if>
-            <if test="goodsPic != null  and goodsPic != '' ">
-                AND GOODS.GOODS_PIC like concat(concat('%',#{goodsPic}),'%')
-            </if>
-            <if test="dataCreateTime != null  and dataCreateTime != '' ">
-            </if>
-            <if test="dataEditTime != null  and dataEditTime != '' ">
+            <if test="shopName != null  and shopName != '' ">
+                AND "SHOP".SHOP_NAME like concat(concat('%',#{shopName}),'%')
             </if>
             <if test="typeId != null  and typeId != '' ">
+                AND "TYPE".TYPE_ID = #{typeId}
             </if>
-            <if test="status != null ">
-                AND GOODS.STATUS = #{status}
-            </if>
-            <if test="shopId != null  and shopId != '' ">
+            <if test="hotFlag != null">
+                AND NOT EXISTS(select GOODS_ID from XINGYING_SHOP.HOT_GOODS where "HOT_GOODS".GOODS_ID = "GOODS".GOODS_ID)
             </if>
         </where>
     </select>
@@ -63,5 +61,48 @@
                 AND "GOODS".SHOP_ID = #{shopId}
             </if>
         </where>
+        ORDER BY
+            "GOODS".DATA_CREATE_TIME DESC
+    </select>
+<!--    根据Type的信息获取相应的Goods-->
+    <select id="getClassGoodsForHome" resultType="com.xingying.shopping.master.entity.ext.GoodsExt">
+        select
+            "GOODS".*,
+            "TYPE".TYPE_NAME AS typeName,
+            "SHOP".SHOP_NAME AS shopName,
+            NVL(a.lowPrice,0) As lowPrice,
+            NVL(a.highPrice,0) As highPrice
+        from
+            XINGYING_SHOP.GOODS
+            left join XINGYING_SHOP.TYPE on "GOODS".TYPE_ID = "TYPE".TYPE_ID
+            left join XINGYING_SHOP.TYPE bigClass on bigClass.TYPE_ID = "TYPE".PARENT_ID
+            left join XINGYING_SHOP.SHOP on "GOODS".SHOP_ID = "SHOP".SHOP_ID
+            left join(
+                SELECT
+                    "GOODS_DETAILS".GOODS_ID,
+                    MIN(GOODS_PRICE) AS lowPrice,
+                    MAX(GOODS_PRICE) AS highPrice
+                FROM
+                    XINGYING_SHOP.GOODS_DETAILS
+                    GROUP BY
+                    "GOODS_DETAILS".GOODS_ID
+            ) a on a.GOODS_ID = "GOODS".GOODS_ID
+        <where>
+            GOODS.STATUS = '1'
+            <if test="typeParentId != null and typeParentId !='' ">
+                AND bigClass.TYPE_ID = #{typeParentId}
+            </if>
+            <if test="typeId != null and typeId !='' ">
+                AND "TYPE".TYPE_ID = #{typeId}
+            </if>
+            <if test="num != null">
+                AND rownum 	&lt; #{num} --默认前端传过来的值决定
+            </if>
+            <if test="shopId != null and shopId != ''">
+                AND "GOODS".SHOP_ID = #{shopId}
+            </if>
+        </where>
+        ORDER BY
+            "GOODS".DATA_CREATE_TIME DESC --先按时间排序(后续会增加点击率等参数)
     </select>
 </mapper>

@@ -44,9 +44,9 @@ public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements
     private static final String PIC_URL = "/app/shop/goods/";
 
     @Override
-    public PageInfo<Goods> getListByPage(PageQueryEntity<Goods> pageQueryEntity) {
+    public PageInfo<GoodsExt> getListByPage(PageQueryEntity<GoodsExt> pageQueryEntity) {
         PageHelper.startPage(pageQueryEntity.getPageNumber(), pageQueryEntity.getPageSize());
-        List<Goods> list = goodsMapper.getListByPage(pageQueryEntity.getData());
+        List<GoodsExt> list = goodsMapper.getListByPage(pageQueryEntity.getData());
         return new PageInfo<>(list);
     }
 

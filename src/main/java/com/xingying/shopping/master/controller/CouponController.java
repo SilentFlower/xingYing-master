@@ -3,6 +3,7 @@ package com.xingying.shopping.master.controller;
 import com.xingying.shopping.master.common.context.UserContext;
 import com.xingying.shopping.master.common.utils.key.SnowFakeIdGenerator;
 import com.xingying.shopping.master.entity.ext.CouponExt;
+import com.xingying.shopping.master.entity.request.CouponRes;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.baomidou.mybatisplus.core.toolkit.Assert;
 import com.github.pagehelper.PageInfo;
@@ -175,6 +176,21 @@ import com.xingying.shopping.master.entity.Coupon;
         Assert.isTrue(b, "删除失败");
         return new OperationResultBean<>("success");
     }
+
+    /**
+     * 结算界面查找可使用的
+     *
+     *
+     *
+     * @return Result
+     */
+    @PostMapping("/getCanUseCoupon")
+    public QueryResultBean<List<CouponExt>> getCanUseCoupon(@RequestBody CouponRes cuponRes) {
+        List<CouponExt> list = couponService.getCanUseCoupon(cuponRes);
+        return new QueryResultBean<>(list);
+    }
+
+
 
     /**
      * 删除

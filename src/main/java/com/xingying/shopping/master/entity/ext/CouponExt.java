@@ -36,6 +36,34 @@ public class CouponExt extends Coupon {
      */
     private LocalDateTime endTime;
 
+    /**
+     * 领取人ID
+     *
+     */
+    private String userId;
+
+    /**
+     * 使用标志
+     *
+     */
+    private Integer status;
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
     public LocalDateTime getStartTime() {
         return startTime;
     }

@@ -59,15 +59,19 @@ import com.xingying.shopping.master.entity.GoodsDetails;
     }
 
     /**
-     * 获取
+     * 根据各类条件获取某一商品详细
      *
-     * @param key
+     * @param goodsId
      * @return Result
      */
     @GetMapping("/getGoodsDetailsByParam")
-    public QueryResultBean<GoodsDetails> getGoodsDetails(@RequestParam String key) {
-        GoodsDetails goodsDetails = goodsDetailsService.getById(key);
-        return new QueryResultBean<>(goodsDetails);
+    public QueryResultBean<List<GoodsDetails>> getGoodsDetails(String goodsId) {
+        QueryWrapper<GoodsDetails> queryWrapper = new QueryWrapper<>();
+        if (goodsId != null && goodsId != "") {
+            queryWrapper.eq("GOODS_ID", goodsId);
+        }
+        List<GoodsDetails> list = goodsDetailsService.list(queryWrapper);
+        return new QueryResultBean<>(list);
     }
 
     /**

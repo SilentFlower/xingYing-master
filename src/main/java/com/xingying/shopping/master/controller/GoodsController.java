@@ -33,13 +33,24 @@ import com.xingying.shopping.master.entity.Goods;
 
     /**
     * 分页列表
+     * {
+     *     pageSize
+     *     pageNumber
+     *     data:{
+     *      可传
+     *      goodsName //
+     *      shopName //
+     *      typeId //
+     *     }
+     *
+     * }
     *
     * @param params   分页信息
     * @return Result
     */
     @PostMapping("/getListByPage")
-    public QueryResultBean<PageInfo<Goods>> getListByPage(@RequestBody PageQueryEntity<Goods> params) {
-        PageInfo<Goods> page = goodsService.getListByPage(params);
+    public QueryResultBean<PageInfo<GoodsExt>> getListByPage(@RequestBody PageQueryEntity<GoodsExt> params) {
+        PageInfo<GoodsExt> page = goodsService.getListByPage(params);
         return new QueryResultBean<>(page);
     }
 
@@ -50,11 +61,28 @@ import com.xingying.shopping.master.entity.Goods;
      * @return Result
      */
     @GetMapping("/getGoodsByType")
-    public QueryResultBean<List<Goods>> getGoods(@RequestParam String typeId) {
+    public QueryResultBean<List<Goods>> getGoodsByType(@RequestParam String typeId) {
         List<Goods> list = goodsService.list(new QueryWrapper<Goods>()
                 .eq("TYPE_ID", typeId)
                 .eq("STATUS", 1));
         return new QueryResultBean<>(list);
+    }
+
+    /**
+     * 根据各类条件获取某一商品
+     *
+     * @param goodsId
+     * @return Result
+     */
+    @GetMapping("/getGoodsByParam")
+    public QueryResultBean<Goods> getGoodsByParam(String goodsId) {
+        QueryWrapper<Goods> queryWrapper = new QueryWrapper<Goods>()
+                .eq("STATUS", 1);
+        if (goodsId != null && goodsId != "") {
+            queryWrapper.eq("GOODS_ID", goodsId);
+        }
+        Goods one = goodsService.getOne(queryWrapper);
+        return new QueryResultBean<>(one);
     }
 
     /**
@@ -109,6 +137,9 @@ import com.xingying.shopping.master.entity.Goods;
      * {
      *     pageNumber
      *     pageSize
+     *     data:{
+     *         shopId
+     *     }
      * }
      * @return
      * {
@@ -126,13 +157,6 @@ import com.xingying.shopping.master.entity.Goods;
      */
     @PostMapping("/getGoodsByPage")
     public QueryResultBean<PageInfo<GoodsExt>> getGoodsByPage(@RequestBody PageQueryEntity<Goods> param){
-        if (param.getData() == null) {
-            Goods goods = new Goods();
-            goods.setShopId(UserContext.getCurrentUser().getUserId());
-            param.setData(goods);
-        }else{
-            param.getData().setShopId(UserContext.getCurrentUser().getUserId());
-        }
         PageInfo<GoodsExt> info = goodsService.getGoodsByPage(param);
         return new QueryResultBean<>(info);
     }

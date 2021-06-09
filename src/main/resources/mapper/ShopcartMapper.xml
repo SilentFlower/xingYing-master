@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingying.shopping.master.dao.ShopcartMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xingying.shopping.master.entity.Shopcart">
+        <id column="USER_ID" property="userId" />
+        <result column="GOODS_ID" property="goodsId"  />
+        <result column="GOODS_SPC" property="goodsSpc"  />
+        <result column="GOODS_NUM" property="goodsNum"  />
+        <result column="CREATE_TIME" property="createTime"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        USER_ID, GOODS_ID, GOODS_SPC, GOODS_NUM, CREATE_TIME
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.Shopcart">
+        select
+            <include refid="Base_Column_List" />
+        from
+            XINGYING_SHOP.SHOPCART
+        <where>
+            <if test="userId != null  and userId != '' ">
+            </if>
+            <if test="goodsId != null  and goodsId != '' ">
+            </if>
+            <if test="goodsSpc != null  and goodsSpc != '' ">
+                AND SHOPCART.GOODS_SPC like concat(concat('%',#{goodsSpc}),'%')
+            </if>
+            <if test="goodsNum != null  and goodsNum != '' ">
+                AND SHOPCART.GOODS_NUM = #{goodsNum}
+            </if>
+            <if test="createTime != null  and createTime != '' ">
+            </if>
+        </where>
+    </select>
+<!--    根据用户Id获取购物车-->
+    <select id="getShopcartById" resultType="com.xingying.shopping.master.entity.ext.ShopCartExt">
+        SELECT
+            "SHOPCART".*,
+            "GOODS".GOODS_PIC AS goodsPic,
+            "GOODS".GOODS_NAME AS goodsName,
+            "GOODS_DETAILS".GOODS_PRICE AS goodsPrice,
+            "GOODS_DETAILS".GOODS_NUM AS stock,
+            "GOODS".TYPE_ID AS typeId,
+            "GOODS".SHOP_ID AS shopId
+        FROM
+            XINGYING_SHOP.SHOPCART
+            left join XINGYING_SHOP.GOODS on "GOODS".GOODS_ID = "SHOPCART".GOODS_ID
+            left join XINGYING_SHOP.GOODS_DETAILS on "GOODS_DETAILS".GOODS_ID = "SHOPCART".GOODS_ID AND "GOODS_DETAILS".GOODS_SPC = "SHOPCART".GOODS_SPC
+        WHERE
+            "SHOPCART".USER_ID = #{userId}
+        ORDER BY
+            "SHOPCART".CREATE_TIME
+    </select>
+</mapper>

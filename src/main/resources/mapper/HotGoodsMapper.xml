@@ -26,4 +26,57 @@
             </if>
         </where>
     </select>
+
+    <select id="getHotGoods" resultType="com.xingying.shopping.master.entity.ext.GoodsExt">
+        select
+            "GOODS".*,
+            "TYPE".TYPE_NAME AS typeName,
+            "SHOP".SHOP_NAME AS shopName,
+            "HOT_GOODS".ADD_TIME AS hotAddTime
+        from
+            XINGYING_SHOP.HOT_GOODS
+            left join XINGYING_SHOP.GOODS on "GOODS".GOODS_ID = "HOT_GOODS".GOODS_ID
+            left join XINGYING_SHOP.TYPE on "GOODS".TYPE_ID = "TYPE".TYPE_ID
+            left join XINGYING_SHOP.SHOP on "GOODS".SHOP_ID = "SHOP".SHOP_ID
+        <where>
+            GOODS.STATUS = '1'
+            <if test="goodsName != null  and goodsName != '' ">
+                AND "GOODS".GOODS_NAME like concat(concat('%',#{goodsName}),'%')
+            </if>
+            <if test="shopName != null  and shopName != '' ">
+                AND "SHOP".SHOP_NAME like concat(concat('%',#{shopName}),'%')
+            </if>
+            <if test="typeId != null  and typeId != '' ">
+                AND "TYPE".TYPE_ID = #{typeId}
+            </if>
+        </where>
+    </select>
+
+    <select id="getHotGoodsForHome" resultType="com.xingying.shopping.master.entity.ext.GoodsExt">
+        select
+            "GOODS".*,
+            "TYPE".TYPE_NAME AS typeName,
+            "SHOP".SHOP_NAME AS shopName,
+            "HOT_GOODS".ADD_TIME AS hotAddTime,
+            NVL(a.lowPrice,0) As lowPrice,
+            NVL(a.highPrice,0) As highPrice
+        from
+            XINGYING_SHOP.HOT_GOODS
+            left join XINGYING_SHOP.GOODS on "GOODS".GOODS_ID = "HOT_GOODS".GOODS_ID
+            left join XINGYING_SHOP.TYPE on "GOODS".TYPE_ID = "TYPE".TYPE_ID
+            left join XINGYING_SHOP.SHOP on "GOODS".SHOP_ID = "SHOP".SHOP_ID
+            left join(
+                SELECT
+                    "GOODS_DETAILS".GOODS_ID,
+                    MIN(GOODS_PRICE) AS lowPrice,
+                    MAX(GOODS_PRICE) AS highPrice
+                FROM
+                    XINGYING_SHOP.GOODS_DETAILS
+                GROUP BY
+                    "GOODS_DETAILS".GOODS_ID
+            ) a on a.GOODS_ID = "HOT_GOODS".GOODS_ID
+        <where>
+            GOODS.STATUS = '1'
+        </where>
+    </select>
 </mapper>

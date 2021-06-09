@@ -1,5 +1,6 @@
 package com.xingying.shopping.master.controller;
 
+import com.xingying.shopping.master.common.context.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.baomidou.mybatisplus.core.toolkit.Assert;
 import com.github.pagehelper.PageInfo;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.xingying.shopping.master.common.entitys.page.PageQueryEntity;
 import com.xingying.shopping.master.common.entitys.result.OperationResultBean;
 import com.xingying.shopping.master.common.entitys.result.QueryResultBean;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 import com.xingying.shopping.master.service.CouponUserService;
@@ -59,7 +62,10 @@ import com.xingying.shopping.master.entity.CouponUser;
      */
     @PostMapping("/addCouponUser")
     public OperationResultBean<CouponUser> addCouponUser(@RequestBody CouponUser couponUser) {
-        boolean b = couponUserService.saveOrUpdate(couponUser);
+        couponUser.setGetDate(LocalDateTime.now());
+        couponUser.setStatus(1);
+        couponUser.setUserId(UserContext.getCurrentUser().getUserId());
+        boolean b = couponUserService.save(couponUser);
         Assert.isTrue(b,"新增失败");
         return new OperationResultBean<>(couponUser);
     }

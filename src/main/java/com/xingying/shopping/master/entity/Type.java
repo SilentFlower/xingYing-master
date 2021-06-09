@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
+import org.springframework.web.multipart.MultipartFile;
+
 import java.io.Serializable;
 
 /**
@@ -58,6 +60,12 @@ private static final long serialVersionUID = 1L;
     private String memo;
 
     /**
+     * 图片
+     */
+    @TableField(exist = false)
+    private MultipartFile pic;
+
+    /**
      * 图片存放路径
      */
     @TableField("TYPE_PIC")
@@ -80,6 +88,14 @@ private static final long serialVersionUID = 1L;
      */
     @TableField(exist = false)
     private boolean leafFlag;
+
+    public MultipartFile getPic() {
+        return pic;
+    }
+
+    public void setPic(MultipartFile pic) {
+        this.pic = pic;
+    }
 
     public boolean isLeafFlag() {
         return leafFlag;

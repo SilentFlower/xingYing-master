@@ -2,6 +2,7 @@ package com.xingying.shopping.master.dao;
 
 import com.xingying.shopping.master.entity.Coupon;
 import com.xingying.shopping.master.entity.ext.CouponExt;
+import com.xingying.shopping.master.entity.request.CouponRes;
 import org.springframework.stereotype.Repository;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -19,4 +20,11 @@ import java.util.List;
 public interface CouponMapper extends BaseMapper<Coupon> {
 
     List<CouponExt> getListByPage(CouponExt coupon);
+
+    /**
+     *  结算界面查找可使用的
+     * @param cuponRes
+     * @return
+     */
+    List<CouponExt> getCanUseCoupon(CouponRes cuponRes);
 }

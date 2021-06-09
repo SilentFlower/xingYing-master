@@ -28,7 +28,20 @@
         select
             COUPON.*,
             "GOODS".GOODS_NAME AS goodsName,
-            NVL((SELECT COUNT(1) FROM XINGYING_SHOP.COUPON_USER WHERE "COUPON_USER".COUPON_ID = "COUPON".COUPON_ID), 0) AS haveUseCount
+            NVL(
+            (
+            SELECT
+                COUNT(1)
+            FROM
+                XINGYING_SHOP.COUPON_USER
+            <where>
+                "COUPON_USER".COUPON_ID = "COUPON".COUPON_ID
+                <if test="userId != null and userId != '' ">
+                    AND "COUPON_USER".USER_ID = #{userId}
+                </if>
+            </where>
+                ),
+             0) AS haveUseCount
         from
             XINGYING_SHOP.COUPON
             left join XINGYING_SHOP.GOODS on "GOODS".GOODS_ID = "COUPON".GOODS_ID
@@ -36,9 +49,18 @@
             <if test="couponFlag != null ">
                 AND "COUPON".COUPON_FLAG = #{couponFlag}
             </if>
-            <if test="shopId != null  and shopId != '' ">
-                AND "COUPON".SHOP_ID = #{shopId}
-            </if>
+            <choose>
+                <when test="shopId != null  and shopId != ''  and userId == null">
+                    AND "COUPON".SHOP_ID = #{shopId} --用于优惠券管理界面
+                </when>
+                <otherwise>
+                    AND (
+                        "COUPON".GOODS_ID = #{goodsId}
+                     OR
+                        ("COUPON".SHOP_ID = #{shopId} AND "COUPON".GOODS_ID IS null)
+                    ) --对应商品的优惠券
+                </otherwise>
+            </choose>
             <if test="expiredFlag != null">
                 <if test="expiredFlag == 1">
                     AND "COUPON".COUPON_DATE_END &lt; sysdate
@@ -61,6 +83,49 @@
             </if>
             <if test="goodsName != null and goodsName != '' ">
                 AND "GOODS".GOODS_NAME like concat('%',concat(#{goodsName},'%'))
+            </if>
+        </where>
+    </select>
+
+<!--     结算界面查找可使用的  -->
+    <select id="getCanUseCoupon" resultType="com.xingying.shopping.master.entity.ext.CouponExt">
+        select
+            COUPON.*,
+            "GOODS".GOODS_NAME AS goodsName,
+            "GOODS".GOODS_ID AS goodsId,
+            "GOODS".SHOP_ID AS shopId,
+            "COUPON_USER".STATUS AS status
+        from
+            XINGYING_SHOP.COUPON_USER
+            left join XINGYING_SHOP.COUPON on "COUPON_USER".COUPON_ID = "COUPON".COUPON_ID
+            left join XINGYING_SHOP.GOODS on "GOODS".GOODS_ID = "COUPON".GOODS_ID
+        <where>
+            "COUPON_USER".USER_ID = #{userId}
+            <if test="unavailable != null">
+                <if test="unavailable == 1">
+                    AND (
+                    "COUPON_USER".STATUS = '0'
+                    OR "COUPON".COUPON_DATE_END &lt; sysdate
+                    )
+                </if>
+                <if test="unavailable == 0">
+                    AND "COUPON_USER".STATUS = '1'
+                    AND "COUPON".COUPON_DATE_END > sysdate
+                </if>
+            </if>
+            <if test="couponFlag != null ">
+                AND "COUPON".COUPON_FLAG = #{couponFlag}
+            </if>
+            <if test="goods != null">
+                AND (
+                    "COUPON".GOODS_ID IN
+                    <foreach collection="goods" item="good" open="(" separator="," close=")">
+                        #{good.goodsId}
+                    </foreach>
+                    OR ("COUPON".SHOP_ID IN
+                    <foreach collection="goods" item="good" open="(" separator="," close=")">#{good.shopId}
+                    </foreach> AND "COUPON".GOODS_ID IS null)
+                )
             </if>
         </where>
     </select>

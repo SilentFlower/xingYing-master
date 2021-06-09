@@ -16,7 +16,7 @@ import com.xingying.shopping.master.entity.ext.GoodsExt;
  */
 public interface GoodsService extends IService<Goods> {
 
-    PageInfo<Goods> getListByPage(PageQueryEntity<Goods> params);
+    PageInfo<GoodsExt> getListByPage(PageQueryEntity<GoodsExt> params);
 
     /**
      * 新增商品
