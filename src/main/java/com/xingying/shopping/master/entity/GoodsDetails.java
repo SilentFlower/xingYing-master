@@ -45,7 +45,7 @@ private static final long serialVersionUID = 1L;
     private Long goodsNum;
 
     /**
-     * 商品库存
+     * 是否为卡密
      */
     @TableField("GOODS_AUTO")
     private Integer goodsAuto;

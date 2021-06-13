@@ -41,6 +41,9 @@
             <if test="typeId != null  and typeId != '' ">
                 AND "TYPE".TYPE_ID = #{typeId}
             </if>
+            <if test="shopId != null  and shopId != '' ">
+                AND "GOODS".SHOP_ID = #{shopId}
+            </if>
             <if test="hotFlag != null">
                 AND NOT EXISTS(select GOODS_ID from XINGYING_SHOP.HOT_GOODS where "HOT_GOODS".GOODS_ID = "GOODS".GOODS_ID)
             </if>
@@ -96,7 +99,7 @@
                 AND "TYPE".TYPE_ID = #{typeId}
             </if>
             <if test="num != null">
-                AND rownum 	&lt; #{num} --默认前端传过来的值决定
+                AND rownum 	&lt;= #{num} --默认前端传过来的值决定
             </if>
             <if test="shopId != null and shopId != ''">
                 AND "GOODS".SHOP_ID = #{shopId}

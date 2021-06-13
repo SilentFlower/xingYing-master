@@ -15,6 +15,27 @@
     <sql id="Base_Column_List">
         GOODS_ID, GOODS_SPC, GOODS_PRICE, GOODS_NUM, GOODS_AUTO
     </sql>
+<!--   对库存进行rollback操作  -->
+    <update id="rollBackByMastetId">
+    UPDATE
+	    XINGYING_SHOP.GOODS_DETAILS  a
+    SET
+	    a.GOODS_NUM = (
+            select
+                a.GOODS_NUM + b.TOTAL As GOODS_NUM
+            from
+                XINGYING_SHOP.ORDER_DETAIL b
+            WHERE
+                a.GOODS_ID = b.GOODS_ID And a.GOODS_SPC = b.GOODS_SPC
+                AND b.ORDER_ID = #{orderId}
+	    )
+    WHERE
+        EXISTS
+	    (
+	        SELECT 1 FROM XINGYING_SHOP.ORDER_DETAIL b
+	        WHERE a.GOODS_ID = b.GOODS_ID And a.GOODS_SPC = b.GOODS_SPC and b.ORDER_ID = #{orderId}
+	    )
+    </update>
 
     <!-- 分页查询 -->
     <select id="getListByPage" resultType="com.xingying.shopping.master.entity.ext.GoodsDetailsExt">
@@ -35,5 +56,15 @@
                 AND GOODS_DETAILS.GOODS_NUM = #{goodsNum}
             </if>
         </where>
+    </select>
+
+    <select id="getRightPrice" resultType="java.math.BigDecimal">
+        select
+            GOODS_DETAILS.GOODS_PRICE
+        from
+            XINGYING_SHOP.GOODS_DETAILS
+        where
+            "GOODS_DETAILS".GOODS_ID = #{goodsId}
+            AND "GOODS_DETAILS".GOODS_SPC = #{goodsSpc}
     </select>
 </mapper>

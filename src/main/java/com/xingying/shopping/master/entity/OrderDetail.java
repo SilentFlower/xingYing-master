@@ -48,7 +48,7 @@ private static final long serialVersionUID = 1L;
      * 数量
      */
     @TableField("TOTAL")
-    private Long total;
+    private Integer total;
 
     /**
      * 总价
@@ -62,7 +62,20 @@ private static final long serialVersionUID = 1L;
     @TableField("GOODS_SPC")
     private String goodsSpc;
 
+    /**
+     * 状态
+     */
+    @TableField("STATUS")
+    private Integer status;
 
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
 
     public String getGoodsSpc() {
         return goodsSpc;
@@ -105,11 +118,11 @@ private static final long serialVersionUID = 1L;
         this.price = price;
     }
 
-    public Long getTotal() {
+    public Integer getTotal() {
         return total;
     }
 
-    public void setTotal(Long total) {
+    public void setTotal(Integer total) {
         this.total = total;
     }
 

@@ -11,12 +11,73 @@
         <result column="TOTAL" property="total"  />
         <result column="TOTAL_AMOUNT" property="totalAmount"  />
         <result column="GOODS_SPC" property="goodsSpc"  />
+        <result column="STATUS" property="status"  />
+    </resultMap>
+
+    <resultMap id="orderAndCoupon" type="com.xingying.shopping.master.entity.response.OrderAndCoupon">
+        <id column="ORDER_DETAIL_ID" property="orderDetailId" />
+        <result column="PRICE" property="price"  />
+        <result column="NUM" property="num"  />
+        <result column="SUM" property="sum"  />
+        <result column="GOODS_NAME" property="goodsName"  />
+        <result column="GOODS_SPC" property="goodsSpc"  />
+        <result column="GOODS_PIC" property="goodsPic"  />
+        <result column="GOODS_ID_MAIN" property="goodsId"  />
+        <result column="SHOP_ID_MAIN" property="shopId"  />
+        <result column="STATUS" property="status"  />
+        <result column="USER_ID" property="userId"  />
+        <result column="ORDER_ID" property="orderId"/>
+        <collection property="coupon" ofType="com.xingying.shopping.master.entity.Coupon">
+            <id column="COUPON_ID" property="couponId" />
+            <result column="COUPON_TYPE" property="couponType"  />
+            <result column="GOODS_ID" property="goodsId"  />
+            <result column="COUPON_USE_TYPE" property="couponUseType"  />
+            <result column="COUPON_VALUE" property="couponValue"  />
+            <result column="COUPON_LIMIT" property="couponLimit"  />
+            <result column="COUPON_DATE_CREATE" property="couponDateCreate"  />
+            <result column="COUPON_DATE_END" property="couponDateEnd"  />
+            <result column="COUPON_FLAG" property="couponFlag"  />
+            <result column="COUPON_NUM" property="couponNum"  />
+            <result column="SHOP_ID" property="shopId"  />
+            <result column="COUPON_NAME" property="couponName"  />
+        </collection>
+    </resultMap>
+
+    <resultMap id="orderAndGoods" type="com.xingying.shopping.master.entity.ext.GoodsAndOrderDetail">
+        <result column="GOODS_NAME" property="goodsName" />
+        <association property="orderDetail" javaType="com.xingying.shopping.master.entity.OrderDetail">
+            <id column="ORDER_DETAIL_ID" property="orderDetailId" />
+            <result column="GOODS_ID" property="goodsId"  />
+            <result column="ORDER_ID" property="orderId"  />
+            <result column="PRICE" property="price"  />
+            <result column="TOTAL" property="total"  />
+            <result column="TOTAL_AMOUNT" property="totalAmount"  />
+            <result column="GOODS_SPC" property="goodsSpc"  />
+            <result column="STATUS" property="status"  />
+        </association>
+        <association property="goodsDetails" javaType="com.xingying.shopping.master.entity.GoodsDetails">
+            <id column="GOODS_ID" property="goodsId" />
+            <result column="GOODS_SPC" property="goodsSpc"  />
+            <result column="GOODS_PRICE" property="goodsPrice"  />
+            <result column="GOODS_NUM" property="goodsNum"  />
+            <result column="GOODS_AUTO" property="goodsAuto"/>
+        </association>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        ORDER_DETAIL_ID, GOODS_ID, ORDER_ID, PRICE, TOTAL, TOTAL_AMOUNT, GOODS_SPC
+        ORDER_DETAIL_ID, GOODS_ID, ORDER_ID, PRICE, TOTAL, TOTAL_AMOUNT, GOODS_SPC, STATUS
     </sql>
+    <update id="minStock">
+         update
+            XINGYING_SHOP.GOODS_DETAILS
+        set
+            "GOODS_DETAILS".GOODS_NUM = "GOODS_DETAILS".GOODS_NUM - #{goodsNum}
+        where
+            "GOODS_DETAILS".GOODS_ID = #{goodsId}
+            AND "GOODS_DETAILS".GOODS_SPC = #{goodsSpc}
+            AND "GOODS_DETAILS".GOODS_NUM - #{goodsNum} >= 0
+    </update>
 
     <!-- 分页查询 -->
     <select id="getListByPage" resultType="com.xingying.shopping.master.entity.OrderDetail">
@@ -41,5 +102,76 @@
                 AND ORDER_DETAIL.TOTAL_AMOUNT = #{totalAmount}
             </if>
         </where>
+    </select>
+
+<!--    获取店铺优惠券-->
+    <select id="getShopCoupons" resultType="com.xingying.shopping.master.entity.Coupon">
+        select
+            "COUPON".*
+        from
+            XINGYING_SHOP.COUPON_FLOW
+            left join XINGYING_SHOP.COUPON on "COUPON".COUPON_ID = "COUPON_FLOW".COUPON_ID
+        <where>
+            "COUPON_FLOW".ORDER_ID = #{orderId}
+            <if test="flag != null">
+                <if test="flag == 1">
+                    AND "COUPON_FLOW".ORDER_DETAIL_ID IS NULL
+                </if>
+                <if test="flag == 0">
+                    AND "COUPON_FLOW".ORDER_DETAIL_ID IS NOT NULL
+                </if>
+            </if>
+        </where>
+    </select>
+
+<!--    查找订单详细表及相关优惠券 -->
+    <select id="getOrderAndCoupon" resultType="com.xingying.shopping.master.entity.response.OrderAndCoupon" resultMap="orderAndCoupon">
+        select
+            "ORDER_DETAIL".ORDER_DETAIL_ID,
+            "ORDER_DETAIL".PRICE,
+            "ORDER_DETAIL".TOTAL AS NUM,
+            "ORDER_DETAIL".TOTAL_AMOUNT AS SUM,
+            "ORDER_DETAIL".GOODS_SPC,
+            "ORDER_DETAIL".STATUS,
+            "GOODS".GOODS_NAME,
+            "GOODS".GOODS_ID AS GOODS_ID_MAIN,
+            "GOODS".GOODS_PIC,
+            "GOODS".SHOP_ID AS SHOP_ID_MAIN,
+            "ORDER_MASTER".USER_ID,
+            "ORDER_MASTER".ORDER_ID,
+            "COUPON".*
+        from
+            XINGYING_SHOP.ORDER_DETAIL
+            left join XINGYING_SHOP.COUPON_FLOW on "COUPON_FLOW".ORDER_DETAIL_ID = "ORDER_DETAIL".ORDER_DETAIL_ID
+            left join XINGYING_SHOP.GOODS on "GOODS".GOODS_ID = "ORDER_DETAIL".GOODS_ID
+            left join XINGYING_SHOP.COUPON on "COUPON".COUPON_ID = "COUPON_FLOW".COUPON_ID
+            left join XINGYING_SHOP.ORDER_MASTER on "ORDER_MASTER".ORDER_ID = "ORDER_DETAIL".ORDER_ID
+        where
+            "ORDER_DETAIL".ORDER_ID = #{orderId}
+    </select>
+
+<!--    查找自动发货的商品-->
+    <select id="findAutoSend" resultType="com.xingying.shopping.master.entity.ext.GoodsAndOrderDetail" resultMap="orderAndGoods">
+        select
+            "ORDER_DETAIL".ORDER_DETAIL_ID,
+            "ORDER_DETAIL".GOODS_ID,
+            "ORDER_DETAIL".ORDER_ID,
+            "ORDER_DETAIL".PRICE,
+            "ORDER_DETAIL".TOTAL,
+            "ORDER_DETAIL".TOTAL_AMOUNT,
+            "ORDER_DETAIL".GOODS_SPC,
+            "ORDER_DETAIL".STATUS,
+            "GOODS_DETAILS".GOODS_PRICE,
+            "GOODS_DETAILS".GOODS_NUM,
+            "GOODS_DETAILS".GOODS_AUTO,
+            "GOODS".GOODS_NAME
+        from
+            XINGYING_SHOP.ORDER_DETAIL
+            left join XINGYING_SHOP.GOODS_DETAILS on "GOODS_DETAILS".GOODS_ID = "ORDER_DETAIL".GOODS_ID
+            AND "GOODS_DETAILS".GOODS_SPC = "ORDER_DETAIL".GOODS_SPC
+            left join XINGYING_SHOP.GOODS on "GOODS".GOODS_ID = "ORDER_DETAIL".GOODS_ID
+        where
+            "ORDER_DETAIL".ORDER_ID = #{orderId}
+            AND "GOODS_DETAILS".GOODS_AUTO = '1'
     </select>
 </mapper>

@@ -23,6 +23,17 @@
         COUPON_ID, COUPON_TYPE, GOODS_ID, COUPON_USE_TYPE, COUPON_VALUE, COUPON_LIMIT, COUPON_DATE_CREATE, COUPON_DATE_END, COUPON_FLAG, COUPON_NUM, SHOP_ID, COUPON_NAME
     </sql>
 
+<!--    领取减库存(确保不超领) -->
+    <update id="updateStock">
+        update
+            XINGYING_SHOP.COUPON
+        set
+            "COUPON".COUPON_NUM = "COUPON".COUPON_NUM - #{num}
+        where
+            "COUPON".COUPON_ID = #{couponId}
+            AND "COUPON".COUPON_NUM - #{num} >= 0
+    </update>
+
     <!-- 分页查询 -->
     <select id="getListByPage" resultType="com.xingying.shopping.master.entity.ext.CouponExt">
         select

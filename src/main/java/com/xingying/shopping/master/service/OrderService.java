@@ -5,6 +5,9 @@ import com.xingying.shopping.master.common.entitys.page.PageQueryEntity;
 import com.xingying.shopping.master.entity.OrderMaster;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.xingying.shopping.master.entity.ext.OrderMasterExt;
+import com.xingying.shopping.master.entity.rabbit.OrderRabbit;
+import com.xingying.shopping.master.entity.request.MakeOrderRes;
+import com.xingying.shopping.master.entity.request.PayOrder;
 import com.xingying.shopping.master.entity.response.OrderStatistics;
 import com.xingying.shopping.master.entity.response.OrderStatisticsForPic;
 
@@ -40,4 +43,47 @@ public interface OrderService extends IService<OrderMaster> {
      * @return
      */
     List<OrderStatisticsForPic> getStatisticsForPic();
+
+    /**
+     * 生成订单(并放入到rabbitmq队列中，10分钟不支付自动取消)
+     * @param makeOrderRes
+     * @return
+     */
+    List<String> makeOrder(MakeOrderRes makeOrderRes);
+
+    /**
+     * rabbitmq的处理方法
+     * @param orderRabbit
+     */
+    void mqHandler(OrderRabbit orderRabbit);
+
+    /**
+     * 订单支付
+     * @param payOrder
+     */
+    boolean payOrder(PayOrder payOrder);
+
+    /**
+     * 订单确认
+     * @param payOrder
+     */
+    boolean confirmOrder(PayOrder payOrder);
+
+    /**
+     * 订单申述
+     * @param payOrder
+     */
+    boolean appealOrder(PayOrder payOrder);
+
+    /**
+     * 金额退回
+     * @param payOrder
+     */
+    boolean backAmount(PayOrder payOrder);
+
+    /**
+     * 申诉结束
+     * @param payOrder
+     */
+    boolean appealOrderDone(PayOrder payOrder);
 }

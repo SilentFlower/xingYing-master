@@ -19,6 +19,7 @@ public class GoodsDetailsExt extends GoodsDetails {
      */
     private String cards;
 
+
     public String getCards() {
         return cards;
     }

@@ -82,7 +82,7 @@ public class RabbitConfig {
 
     //延迟表队列
     @Bean
-    public Queue delayQcMaster() {
+    public Queue delayOrder() {
         return new Queue(RabbitConfig.DELAY_ORDER, true);
     }
 
@@ -90,12 +90,12 @@ public class RabbitConfig {
     // 队列绑定交换机
     @Bean
     public Binding delayBind() {
-        return BindingBuilder.bind(delayQcMaster()).to(delayExchange()).with(RabbitConfig.DELAY_GOODS).noargs();
+        return BindingBuilder.bind(delayOrder()).to(delayExchange()).with(RabbitConfig.DELAY_ORDER).noargs();
     }
 
     //延迟表队列
     @Bean
-    public Queue delayQcMaster2() {
+    public Queue delayGoods() {
         return new Queue(RabbitConfig.DELAY_GOODS, true);
     }
 
@@ -103,7 +103,7 @@ public class RabbitConfig {
     // 队列绑定交换机
     @Bean
     public Binding delayBind2() {
-        return BindingBuilder.bind(delayQcMaster2()).to(delayExchange()).with(RabbitConfig.DELAY_ORDER).noargs();
+        return BindingBuilder.bind(delayGoods()).to(delayExchange()).with(RabbitConfig.DELAY_GOODS).noargs();
     }
 
 

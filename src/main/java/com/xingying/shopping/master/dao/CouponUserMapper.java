@@ -18,4 +18,5 @@ import java.util.List;
 public interface CouponUserMapper extends BaseMapper<CouponUser> {
 
     List<CouponUser> getListByPage(CouponUser couponUser);
+
 }

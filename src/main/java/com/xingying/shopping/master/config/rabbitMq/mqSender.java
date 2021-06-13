@@ -1,5 +1,6 @@
 package com.xingying.shopping.master.config.rabbitMq;
 
+import com.xingying.shopping.master.entity.rabbit.OrderRabbit;
 import org.springframework.amqp.core.MessageDeliveryMode;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +23,10 @@ public class mqSender {
      * @param message
      * @param delayTimes
      */
-    public void sendMessageForLock(Object message, long delayTimes) {
+    public void sendMessageForOrder(OrderRabbit message,Integer delayTimes) {
         rabbitTemplate.convertAndSend(RabbitConfig.EXCHANGE_NAME,RabbitConfig.DELAY_ORDER,message, message1 -> {
             message1.getMessageProperties().setDeliveryMode(MessageDeliveryMode.PERSISTENT);
-            message1.getMessageProperties().setDelay(Math.toIntExact(delayTimes));
+            message1.getMessageProperties().setDelay(delayTimes);
             return message1;
         });
     }

@@ -43,7 +43,7 @@ private static final long serialVersionUID = 1L;
      * 购买的订单详细ID
      */
     @TableField("ORDER_DETAIL_ID")
-    private BigDecimal orderDetailId;
+    private String orderDetailId;
 
 
     public String getUserId() {
@@ -70,11 +70,11 @@ private static final long serialVersionUID = 1L;
         this.getDate = getDate;
     }
 
-    public BigDecimal getOrderDetailId() {
-            return orderDetailId;
+    public String getOrderDetailId() {
+        return orderDetailId;
     }
 
-    public void setOrderDetailId(BigDecimal orderDetailId) {
+    public void setOrderDetailId(String orderDetailId) {
         this.orderDetailId = orderDetailId;
     }
 

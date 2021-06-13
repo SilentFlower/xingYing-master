@@ -4,6 +4,9 @@ import com.github.pagehelper.PageInfo;
 import com.xingying.shopping.master.common.entitys.page.PageQueryEntity;
 import com.xingying.shopping.master.entity.Cards;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.xingying.shopping.master.entity.GoodsDetails;
+import com.xingying.shopping.master.entity.OrderDetail;
+import com.xingying.shopping.master.entity.ext.GoodsAndOrderDetail;
 
 /**
  * <p>
@@ -22,4 +25,9 @@ public interface CardsService extends IService<Cards> {
      * @param cards
      */
     void updateGoods(Cards cards);
+
+    /**
+     * 卡密发货
+     */
+    boolean cardSend(GoodsAndOrderDetail goodsAndOrderDetail);
 }

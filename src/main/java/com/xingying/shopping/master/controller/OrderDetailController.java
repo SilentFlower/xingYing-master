@@ -1,6 +1,9 @@
 package com.xingying.shopping.master.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Assert;
+import com.xingying.shopping.master.entity.response.DetailsOrder;
+import com.xingying.shopping.master.entity.response.OrderAndCoupon;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.github.pagehelper.PageInfo;
 import org.springframework.web.bind.annotation.*;
@@ -62,6 +65,29 @@ import com.xingying.shopping.master.entity.OrderDetail;
         boolean b = orderDetailService.saveOrUpdate(orderDetail);
         Assert.isTrue(b,"新增失败");
         return new OperationResultBean<>(orderDetail);
+    }
+
+    /**
+     * 手动发货
+     * @param orderDetail OrderDetail 对象
+     * @return
+     */
+    @PostMapping("/manualDelivery")
+    public OperationResultBean<String> manualDelivery(@RequestBody OrderAndCoupon orderDetail) {
+        boolean b = orderDetailService.manualDelivery(orderDetail);
+        Assert.isTrue(b,"新增失败");
+        return new OperationResultBean<>("success");
+    }
+
+    /**
+     * 获取订单详细内容（包含优惠券使用）
+     * @param orderId
+     * @return
+     */
+    @GetMapping("/getAllDetails")
+    public QueryResultBean<DetailsOrder> getAllDetails(String orderId) {
+        DetailsOrder detailsOrder = orderDetailService.getAllDetails(orderId);
+        return new QueryResultBean<>(detailsOrder);
     }
 
     /**

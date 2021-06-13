@@ -27,4 +27,11 @@ public interface CouponMapper extends BaseMapper<Coupon> {
      * @return
      */
     List<CouponExt> getCanUseCoupon(CouponRes cuponRes);
+
+    /**
+     *
+     * @param couponId 领取的优惠券ID
+     * @param num 领取的数量
+     */
+    Boolean updateStock(String couponId, int num);
 }

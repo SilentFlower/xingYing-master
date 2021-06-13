@@ -16,7 +16,7 @@ import java.io.Serializable;
  * @author zhaoweihao
  * @since 2021-05-20
  */
-@TableName(value = "ORDER",schema = "XINGYING_SHOP")
+@TableName(value = "ORDER_MASTER",schema = "XINGYING_SHOP")
 public class OrderMaster implements Serializable {
 
 private static final long serialVersionUID = 1L;
@@ -31,10 +31,10 @@ private static final long serialVersionUID = 1L;
      * 付款金额
      */
     @TableField("PAY_AMOUNT")
-    private Long payAmount;
+    private BigDecimal payAmount;
 
     /**
-     * 订单状态（0取消1创建2付款3删除4申诉5完成）
+     * 订单状态（0取消1创建2付款3删除4申诉5完成6待发货）
      */
     @TableField("STATUS")
     private Integer status;
@@ -75,7 +75,33 @@ private static final long serialVersionUID = 1L;
     @TableField("SHOP_ID")
     private String shopId;
 
+    /**
+     * 申诉标志
+     */
+    @TableField("APPEAL_FLAG")
+    private Integer appealFlag;
 
+    /**
+     * 申诉标志
+     */
+    @TableField("BACK_AMOUNT")
+    private BigDecimal backAmount;
+
+    public BigDecimal getBackAmount() {
+        return backAmount;
+    }
+
+    public void setBackAmount(BigDecimal backAmount) {
+        this.backAmount = backAmount;
+    }
+
+    public Integer getAppealFlag() {
+        return appealFlag;
+    }
+
+    public void setAppealFlag(Integer appealFlag) {
+        this.appealFlag = appealFlag;
+    }
 
     public String getOrderId() {
         return orderId;
@@ -101,11 +127,11 @@ private static final long serialVersionUID = 1L;
         this.shopId = shopId;
     }
 
-    public Long getPayAmount() {
-            return payAmount;
+    public BigDecimal getPayAmount() {
+        return payAmount;
     }
 
-    public void setPayAmount(Long payAmount) {
+    public void setPayAmount(BigDecimal payAmount) {
         this.payAmount = payAmount;
     }
 

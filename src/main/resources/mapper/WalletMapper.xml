@@ -16,6 +16,35 @@
     <sql id="Base_Column_List">
         USER_ID, BALANCE, WALLET_INCOME, WALLET_OUTCOME, UPDATE_DATE, BALANCE_DISABLE
     </sql>
+    <update id="updateBalance">
+        update
+            XINGYING_SHOP.WALLET
+        set
+            <if test="type != null">
+                <if test="type == 1">
+                    "WALLET".BALANCE = "WALLET".BALANCE + #{payAmount}
+                </if>
+                <if test="type == 0">
+                    "WALLET".BALANCE = "WALLET".BALANCE - #{payAmount}
+                </if>
+            </if>
+            <if test="type != null">
+                <if test="type == 1">
+                    "WALLET".WALLET_INCOME = "WALLET".WALLET_INCOME + #{payAmount}
+                </if>
+                <if test="type == 0">
+                    "WALLET".WALLET_OUTCOME = "WALLET".WALLET_OUTCOME + #{payAmount}
+                </if>
+            </if>
+        where
+            "WALLET".USER_ID = #{userId}
+            <if test="type != null">
+                <if test="type == 0">
+                    AND "WALLET".BALANCE - #{payAmount} >= 0
+                </if>
+            </if>
+    </update>
+
 
     <!-- 分页查询 -->
     <select id="getListByPage" resultType="com.xingying.shopping.master.entity.Wallet">

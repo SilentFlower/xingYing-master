@@ -62,11 +62,8 @@ import com.xingying.shopping.master.entity.CouponUser;
      */
     @PostMapping("/addCouponUser")
     public OperationResultBean<CouponUser> addCouponUser(@RequestBody CouponUser couponUser) {
-        couponUser.setGetDate(LocalDateTime.now());
-        couponUser.setStatus(1);
-        couponUser.setUserId(UserContext.getCurrentUser().getUserId());
-        boolean b = couponUserService.save(couponUser);
-        Assert.isTrue(b,"新增失败");
+        boolean b = couponUserService.addCouponUser(couponUser);
+        Assert.isTrue(b, "领取失败");
         return new OperationResultBean<>(couponUser);
     }
 

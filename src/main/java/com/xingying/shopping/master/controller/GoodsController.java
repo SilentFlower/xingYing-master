@@ -41,6 +41,7 @@ import com.xingying.shopping.master.entity.Goods;
      *      goodsName //
      *      shopName //
      *      typeId //
+     *      shopId
      *     }
      *
      * }

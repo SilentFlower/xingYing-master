@@ -57,6 +57,20 @@ private static final long serialVersionUID = 1L;
     @TableField("MSG_STATUS")
     private Integer msgStatus;
 
+    /**
+     * 发送人ID
+     */
+    @TableField("SEND_ID")
+    private String sendId;
+
+    public String getSendId() {
+        return sendId;
+    }
+
+    public void setSendId(String sendId) {
+        this.sendId = sendId;
+    }
+
     public Integer getMsgStatus() {
         return msgStatus;
     }
@@ -105,7 +119,17 @@ private static final long serialVersionUID = 1L;
         this.msgDate = msgDate;
     }
 
+    public Message() {
+    }
 
+    public Message(String msgId, String msgType, String msgContent, LocalDateTime msgDate, String userId, Integer msgStatus) {
+        this.msgId = msgId;
+        this.msgType = msgType;
+        this.msgContent = msgContent;
+        this.msgDate = msgDate;
+        this.userId = userId;
+        this.msgStatus = msgStatus;
+    }
 
     @Override
     public String toString() {

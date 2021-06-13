@@ -16,4 +16,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface CouponUserService extends IService<CouponUser> {
 
     PageInfo<CouponUser> getListByPage(PageQueryEntity<CouponUser> params);
+
+    /**
+     * 领取
+     * @param couponUser
+     * @return
+     */
+    boolean addCouponUser(CouponUser couponUser);
 }

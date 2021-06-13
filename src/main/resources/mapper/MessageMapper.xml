@@ -10,11 +10,12 @@
         <result column="MSG_DATE" property="msgDate"  />
         <result column="USER_ID" property="userId"  />
         <result column="MSG_STATUS" property="msgStatus"  />
+        <result column="SEND_ID" property="sendId"  />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        MSG_ID, MSG_TYPE, MSG_CONTENT, MSG_DATE, USER_ID, MSG_STATUS
+        MSG_ID, MSG_TYPE, MSG_CONTENT, MSG_DATE, USER_ID, MSG_STATUS, SEND_ID
     </sql>
 
     <!-- 分页查询 -->
@@ -35,7 +36,9 @@
             <if test="msgDate != null  and msgDate != '' ">
             </if>
             <if test="userId != null  and userId != '' ">
+                AND MESSAGE.USER_ID = #{userId}
             </if>
         </where>
+        ORDER BY MSG_DATE DESC
     </select>
 </mapper>

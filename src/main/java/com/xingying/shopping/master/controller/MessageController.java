@@ -89,6 +89,22 @@ import java.util.List;
         return new OperationResultBean<>(message);
     }
 
+    /**
+     * 发送 星荧商城个人消息表
+     * @param message Message 对象
+     * @return
+     */
+    @PostMapping("/sendMessage")
+    public OperationResultBean<Message> sendMessage(@RequestBody Message message) {
+        message.setMsgStatus(0);
+        message.setMsgDate(LocalDateTime.now());
+        message.setSendId(UserContext.getCurrentUser().getUserId());
+        message.setMsgId(String.valueOf(snowFakeIdGenerator.nextId()));
+        boolean b = messageService.saveOrUpdate(message);
+        Assert.isTrue(b,"新增失败");
+        return new OperationResultBean<>(message);
+    }
+
 
     /**
      * 删除

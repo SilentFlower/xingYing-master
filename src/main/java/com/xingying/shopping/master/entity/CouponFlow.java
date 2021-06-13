@@ -24,7 +24,7 @@ private static final long serialVersionUID = 1L;
     /**
      * 订单详细表ID
      */
-    @TableId(value = "ORDER_DETAIL_ID", type = IdType.INPUT)
+    @TableField("ORDER_DETAIL_ID")
     private String orderDetailId;
 
     /**
@@ -34,10 +34,49 @@ private static final long serialVersionUID = 1L;
     private String couponId;
 
     /**
+     * 订单主表ID
+     */
+    @TableId(value = "ORDER_ID",type = IdType.INPUT)
+    private String orderId;
+
+    /**
      * 使用时间
      */
     @TableField("USE_DATE")
     private LocalDateTime useDate;
+
+    /**
+     * 使用时间
+     */
+    @TableField("STATUS")
+    private Integer status;
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    @TableField(exist = false)
+    private String goodsId;
+
+    public String getGoodsId() {
+        return goodsId;
+    }
+
+    public void setGoodsId(String goodsId) {
+        this.goodsId = goodsId;
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
 
     public String getOrderDetailId() {
         return orderDetailId;

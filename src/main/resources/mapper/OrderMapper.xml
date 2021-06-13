@@ -13,11 +13,13 @@
         <result column="DATA_COM_TIME" property="dataComTime"  />
         <result column="DATA_CAL_TIME" property="dataCalTime"  />
         <result column="SHOP_ID" property="shopId"/>
+        <result column="APPEAL_FLAG" property="appealFlag"/>
+        <result column="BACK_AMOUNT" property="backAmount"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        ORDER_ID, PAY_AMOUNT, STATUS, USER_ID, DATA_CREATE_TIME, DATA_EDIT_TIME, DATA_COM_TIME, DATA_CAL_TIME, SHOP_ID
+        ORDER_ID, PAY_AMOUNT, STATUS, USER_ID, DATA_CREATE_TIME, DATA_EDIT_TIME, DATA_COM_TIME, DATA_CAL_TIME, SHOP_ID, APPEAL_FLAG, BACK_AMOUNT
     </sql>
 
     <!-- 分页查询 -->
@@ -106,7 +108,7 @@
             XINGYING_SHOP.ORDER_MASTER
         WHERE
             ("ORDER_MASTER".USER_ID = #{userId} OR "ORDER_MASTER".SHOP_ID = #{userId})
-            AND "ORDER_MASTER".STATUS = '5'--查找订单完成的
+            AND "ORDER_MASTER".STATUS = '5' --查找订单完成的
     </select>
 
 <!--    查询某天某用户的统计数据 -->
