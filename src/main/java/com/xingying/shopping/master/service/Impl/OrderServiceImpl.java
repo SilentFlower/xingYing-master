@@ -17,6 +17,7 @@ import com.xingying.shopping.master.entity.rabbit.OrderRabbit;
 import com.xingying.shopping.master.entity.request.MakeOrderRes;
 import com.xingying.shopping.master.entity.request.OrderGoodsRes;
 import com.xingying.shopping.master.entity.request.PayOrder;
+import com.xingying.shopping.master.entity.response.AppealNum;
 import com.xingying.shopping.master.entity.response.OrderStatistics;
 import com.xingying.shopping.master.entity.response.OrderStatisticsForPic;
 import com.xingying.shopping.master.service.CardsService;
@@ -65,6 +66,8 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderMaster> impl
     private mqSender sender;
     @Autowired
     private WalletMapper walletMapper;
+    @Autowired
+    private MessageMapper messageMapper;
     @Autowired
     private SnowFakeIdGenerator snowFakeIdGenerator;
 
@@ -122,7 +125,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderMaster> impl
             //生成钱包记录表
             WalletFlow walletFlow = new WalletFlow();
             walletFlow.setUserId(userId);
-            walletFlow.setWalletFlowBalance(balance.min(orderMaster.getPayAmount()));
+            walletFlow.setWalletFlowBalance(balance.subtract(orderMaster.getPayAmount()));
             walletFlow.setWalletFlowStatus(1);
             walletFlow.setWalletFlowId(String.valueOf(snowFakeIdGenerator.nextId()));
             //涉及金额
@@ -145,6 +148,8 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderMaster> impl
             walletFlow.setWalletFlowType(3);
             walletFlow.setWalletFlowDate(now);
             walletFlowMapper.insert(walletFlow);
+            //4更新用户的钱包总支出
+            walletMapper.updateBalance2(orderMaster.getPayAmount(), userId);
         }
         //2.5 更新商家的钱包（增加）
         String shopId = orderMaster.getShopId();
@@ -187,16 +192,23 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderMaster> impl
     public boolean confirmOrder(PayOrder payOrder) {
         OrderMaster orderMaster = new OrderMaster();
         orderMaster.setStatus(5);
+        orderMaster.setDataComTime(LocalDateTime.now());
         orderMaster.setOrderId(payOrder.getOrderId());
         int i = orderMapper.updateById(orderMaster);
         Assert.isTrue(i > 0, "订单确认失败");
         return true;
     }
 
+    /**
+     * 订单申诉
+     * @param payOrder
+     * @return
+     */
     @Override
     public boolean appealOrder(PayOrder payOrder) {
         OrderMaster orderMaster = new OrderMaster();
         orderMaster.setStatus(4);
+        orderMaster.setDataEditTime(LocalDateTime.now());
         orderMaster.setAppealFlag(1);
         orderMaster.setOrderId(payOrder.getOrderId());
         int i = orderMapper.updateById(orderMaster);
@@ -255,7 +267,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderMaster> impl
             //商家的钱减少(可能出现钱包余额少于0的情况时候直接报错)
             Boolean b = walletMapper.updateBalance(backAmount, orderMaster.getShopId(), 0);
             Assert.isTrue(b, "商家钱包余额不足，请充值");
-            orderMaster.setPayAmount(orderMaster.getPayAmount().min(backAmount));
+            orderMaster.setPayAmount(orderMaster.getPayAmount().subtract(backAmount));
             BigDecimal before = orderMaster.getBackAmount();
             if (before != null) {
                 backAmount = backAmount.add(before);
@@ -263,6 +275,15 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderMaster> impl
             orderMaster.setBackAmount(backAmount);
             int i1 = orderMapper.updateById(orderMaster);
             Assert.isTrue(i1 > 0, "退款失败");
+            Message message = new Message();
+            message.setMsgStatus(0);
+            message.setMsgDate(LocalDateTime.now());
+            message.setSendId(UserContext.getCurrentUser().getUserId());
+            message.setMsgId(String.valueOf(snowFakeIdGenerator.nextId()));
+            message.setUserId(payOrder.getUserId());
+            message.setMsgType("退款信息");
+            message.setMsgContent("申诉订单:" + payOrder.getOrderId() + "已经退款￥" + payOrder.getBackAmount());
+            messageMapper.insert(message);
         }
         Assert.isTrue(i > -1, "授予退款金额大于付款金额");
         return true;
@@ -277,10 +298,33 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderMaster> impl
     public boolean appealOrderDone(PayOrder payOrder) {
         OrderMaster orderMaster = new OrderMaster();
         orderMaster.setStatus(5);
+        orderMaster.setDataEditTime(LocalDateTime.now());
         orderMaster.setOrderId(payOrder.getOrderId());
         int i = orderMapper.updateById(orderMaster);
         Assert.isTrue(i > 0, "申诉结束失败");
+        Message message = new Message();
+        message.setMsgStatus(0);
+        message.setMsgDate(LocalDateTime.now());
+        message.setSendId(UserContext.getCurrentUser().getUserId());
+        message.setMsgId(String.valueOf(snowFakeIdGenerator.nextId()));
+        message.setUserId(payOrder.getUserId());
+        message.setMsgType("订单状态提醒");
+        message.setMsgContent("申诉订单:" + payOrder.getOrderId() + "已经结束申诉");
+        messageMapper.insert(message);
         return true;
+    }
+
+    /**
+     * 申诉订单数量查询
+     * @return
+     */
+    @Override
+    public AppealNum getAppealNum() {
+        String userId = UserContext.getCurrentUser().getUserId();
+        Wallet wallet = walletMapper.selectById(userId);
+        AppealNum appealNum = orderMapper.getAppealNum(userId);
+        appealNum.setFrozenAmount(wallet.getBalanceDisable());
+        return appealNum;
     }
 
     /**
@@ -334,9 +378,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderMaster> impl
                                     if (coupon.getCouponUseType().equals("折扣优惠券")) {
                                         disCountPrice = goods.getGoodsPrice().multiply(coupon.getCouponValue().multiply(BigDecimal.valueOf(0.1)));
                                     }else if(coupon.getCouponUseType().equals("满减优惠券")){
-                                        disCountPrice = goods.getGoodsPrice().min(coupon.getCouponValue());
+                                        disCountPrice = goods.getGoodsPrice().subtract(coupon.getCouponValue());
                                     }
-                                    all = all.min(goods.getGoodsPrice()).add(disCountPrice);
+                                    all = all.subtract(goods.getGoodsPrice()).add(disCountPrice);
                                     goods.setAmount(disCountPrice.setScale(2, RoundingMode.HALF_UP));
                                     //将优惠券使用记录存入
                                     CouponFlow couponFlow = new CouponFlow();
@@ -359,7 +403,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderMaster> impl
                                 disCountPrice = all.multiply(coupon.getCouponValue().multiply(BigDecimal.valueOf(0.1)));
                                 System.out.println("-----------" + disCountPrice);
                             }else if(coupon.getCouponUseType().equals("满减优惠券")){
-                                disCountPrice = all.min(coupon.getCouponValue());
+                                disCountPrice = all.subtract(coupon.getCouponValue());
                             }
                             all = disCountPrice;
                             System.out.println(all);
@@ -434,11 +478,19 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderMaster> impl
         return ids;
     }
 
+    /**
+     * 主订单
+     * @param allPrice
+     * @param now
+     * @param shopId
+     * @return
+     */
     private String createMaster(BigDecimal allPrice,LocalDateTime now,String shopId){
         String id = String.valueOf(snowFakeIdGenerator.nextId());
         //生成主订单
         OrderMaster orderMaster = new OrderMaster();
         orderMaster.setDataCreateTime(now);
+        orderMaster.setPayAmount(BigDecimal.valueOf(0));
         orderMaster.setOrderId(id);
         orderMaster.setPayAmount(allPrice);
         //代表创建

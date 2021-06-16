@@ -104,8 +104,24 @@
             <if test="shopId != null and shopId != ''">
                 AND "GOODS".SHOP_ID = #{shopId}
             </if>
+            <if test="goodsName != null and goodsName != ''">
+                AND "GOODS".GOODS_NAME like concat(concat('%',#{goodsName}),'%')
+            </if>
         </where>
-        ORDER BY
-            "GOODS".DATA_CREATE_TIME DESC --先按时间排序(后续会增加点击率等参数)
+        <choose>
+            <when test="priceFlag != null">
+                <if test="priceFlag == 1">
+                    ORDER BY (a.lowPrice+a.highPrice)
+                </if>
+                <if test="priceFlag == 0">
+                    ORDER BY (a.lowPrice+a.highPrice) DESC
+                </if>
+            </when>
+            <otherwise>
+                ORDER BY "GOODS".DATA_CREATE_TIME DESC --先按时间排序(后续会增加点击率等参数)
+            </otherwise>
+        </choose>
+
+
     </select>
 </mapper>

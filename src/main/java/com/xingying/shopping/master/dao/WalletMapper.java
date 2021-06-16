@@ -30,4 +30,10 @@ public interface WalletMapper extends BaseMapper<Wallet> {
      */
     Boolean updateBalance(@Param("payAmount") BigDecimal payAmount,@Param("userId") String userId,@Param("type")Integer type);
 
+    /**
+     * 钱包支出（当使用其他支付时）
+     * @param payAmount
+     * @param userId
+     */
+    void updateBalance2(@Param("payAmount") BigDecimal payAmount, @Param("userId")String userId);
 }

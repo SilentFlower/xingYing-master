@@ -1,6 +1,7 @@
 package com.xingying.shopping.master.dao;
 
 import com.xingying.shopping.master.entity.CardsUser;
+import com.xingying.shopping.master.entity.ext.CardsUserExt;
 import org.springframework.stereotype.Repository;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -17,5 +18,5 @@ import java.util.List;
 @Repository
 public interface CardsUserMapper extends BaseMapper<CardsUser> {
 
-    List<CardsUser> getListByPage(CardsUser cardsUser);
+    List<CardsUserExt> getListByPage(CardsUser cardsUser);
 }

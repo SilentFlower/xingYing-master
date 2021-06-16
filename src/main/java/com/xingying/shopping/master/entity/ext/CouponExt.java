@@ -48,6 +48,7 @@ public class CouponExt extends Coupon {
      */
     private Integer status;
 
+
     public Integer getStatus() {
         return status;
     }

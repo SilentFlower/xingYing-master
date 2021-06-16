@@ -4,6 +4,7 @@ import com.github.pagehelper.PageInfo;
 import com.xingying.shopping.master.common.entitys.page.PageQueryEntity;
 import com.xingying.shopping.master.entity.CardsUser;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.xingying.shopping.master.entity.ext.CardsUserExt;
 
 /**
  * <p>
@@ -15,5 +16,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface CardsUserService extends IService<CardsUser> {
 
-    PageInfo<CardsUser> getListByPage(PageQueryEntity<CardsUser> params);
+    PageInfo<CardsUserExt> getListByPage(PageQueryEntity<CardsUser> params);
 }

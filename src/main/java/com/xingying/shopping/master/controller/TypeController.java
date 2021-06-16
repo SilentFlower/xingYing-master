@@ -183,9 +183,7 @@ public class TypeController {
 
     /**
      * 获取商品
-     * @param typeName
-     * @param num
-     * @param shopId
+     * @param req
      * @return
      */
     @GetMapping("/getClassGoodForHome")

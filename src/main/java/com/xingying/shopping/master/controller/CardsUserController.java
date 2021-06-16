@@ -1,5 +1,6 @@
 package com.xingying.shopping.master.controller;
 
+import com.xingying.shopping.master.entity.ext.CardsUserExt;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.baomidou.mybatisplus.core.toolkit.Assert;
 import com.github.pagehelper.PageInfo;
@@ -35,8 +36,8 @@ import com.xingying.shopping.master.entity.CardsUser;
     * @return Result
     */
     @PostMapping("/getListByPage")
-    public QueryResultBean<PageInfo<CardsUser>> getListByPage(@RequestBody PageQueryEntity<CardsUser> params) {
-        PageInfo<CardsUser> page = cardsUserService.getListByPage(params);
+    public QueryResultBean<PageInfo<CardsUserExt>> getListByPage(@RequestBody PageQueryEntity<CardsUser> params) {
+        PageInfo<CardsUserExt> page = cardsUserService.getListByPage(params);
         return new QueryResultBean<>(page);
     }
 

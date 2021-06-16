@@ -2,6 +2,7 @@ package com.xingying.shopping.master.dao;
 
 import com.xingying.shopping.master.entity.OrderMaster;
 import com.xingying.shopping.master.entity.ext.OrderMasterExt;
+import com.xingying.shopping.master.entity.response.AppealNum;
 import com.xingying.shopping.master.entity.response.OrderStatistics;
 import com.xingying.shopping.master.entity.response.OrderStatisticsForPic;
 import org.apache.ibatis.annotations.Param;
@@ -45,4 +46,11 @@ public interface OrderMapper extends BaseMapper<OrderMaster> {
      * @return
      */
     OrderStatisticsForPic getStatisticsForPic(@Param("orderTime") LocalDateTime orderTime, @Param("userId") String userId);
+
+    /**
+     * 申诉订单数量查询
+     * @param userId
+     * @return
+     */
+    AppealNum getAppealNum(String userId);
 }

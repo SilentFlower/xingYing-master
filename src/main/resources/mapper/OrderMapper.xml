@@ -108,7 +108,7 @@
             XINGYING_SHOP.ORDER_MASTER
         WHERE
             ("ORDER_MASTER".USER_ID = #{userId} OR "ORDER_MASTER".SHOP_ID = #{userId})
-            AND "ORDER_MASTER".STATUS = '5' --查找订单完成的
+            AND ("ORDER_MASTER".STATUS = '5' OR "ORDER_MASTER".STATUS = '4') --查找订单完成或申诉的
     </select>
 
 <!--    查询某天某用户的统计数据 -->
@@ -119,12 +119,12 @@
             NVL( SUM(case when "ORDER_MASTER".STATUS = '5' then 1 else 0 end), 0) AS successfulOrder,--成功的订单
             NVL( SUM(case when
             "ORDER_MASTER".USER_ID = #{userId}
-            AND "ORDER_MASTER".STATUS = '5'
+            AND ("ORDER_MASTER".STATUS = '5' OR "ORDER_MASTER".STATUS = '4')
             then "ORDER_MASTER".PAY_AMOUNT else 0 end
             ), 0) AS outcome, --当天支出
             NVL( SUM(case when
             "ORDER_MASTER".SHOP_ID = #{userId}
-            AND "ORDER_MASTER".STATUS = '5'
+            AND ("ORDER_MASTER".STATUS = '5' OR "ORDER_MASTER".STATUS = '4')
             then "ORDER_MASTER".PAY_AMOUNT else 0 end
             ), 0) AS income --当天收入
         FROM
@@ -132,5 +132,16 @@
         WHERE
             ("ORDER_MASTER".USER_ID = #{userId} OR "ORDER_MASTER".SHOP_ID = #{userId})
             AND trunc("ORDER_MASTER".DATA_CREATE_TIME) = trunc(#{orderTime}) --查询限定时间
+    </select>
+    <select id="getAppealNum" resultType="com.xingying.shopping.master.entity.response.AppealNum">
+        select
+            COUNT(1) As allNum,
+            NVL( SUM(case when "ORDER_MASTER".STATUS = '5' then 1 else 0 end), 0) As done,
+            NVL( SUM(case when "ORDER_MASTER".STATUS = '4' then 1 else 0 end), 0) As processing
+        from
+            XINGYING_SHOP.ORDER_MASTER
+        where
+            "ORDER_MASTER".SHOP_ID = #{userId}
+            AND "ORDER_MASTER".APPEAL_FLAG = '1'
     </select>
 </mapper>

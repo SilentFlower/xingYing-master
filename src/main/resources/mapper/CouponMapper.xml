@@ -61,6 +61,9 @@
                 AND "COUPON".COUPON_FLAG = #{couponFlag}
             </if>
             <choose>
+                <when test="haveUseCount != null">
+                    AND "COUPON".SHOP_ID = #{shopId} --对应商品的优惠券
+                </when>
                 <when test="shopId != null  and shopId != ''  and userId == null">
                     AND "COUPON".SHOP_ID = #{shopId} --用于优惠券管理界面
                 </when>

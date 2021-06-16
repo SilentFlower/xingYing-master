@@ -8,6 +8,7 @@ import com.xingying.shopping.master.entity.ext.OrderMasterExt;
 import com.xingying.shopping.master.entity.rabbit.OrderRabbit;
 import com.xingying.shopping.master.entity.request.MakeOrderRes;
 import com.xingying.shopping.master.entity.request.PayOrder;
+import com.xingying.shopping.master.entity.response.AppealNum;
 import com.xingying.shopping.master.entity.response.OrderStatistics;
 import com.xingying.shopping.master.entity.response.OrderStatisticsForPic;
 
@@ -86,4 +87,10 @@ public interface OrderService extends IService<OrderMaster> {
      * @param payOrder
      */
     boolean appealOrderDone(PayOrder payOrder);
+
+    /**
+     * 申诉订单数量查询
+     * @return
+     */
+    AppealNum getAppealNum();
 }

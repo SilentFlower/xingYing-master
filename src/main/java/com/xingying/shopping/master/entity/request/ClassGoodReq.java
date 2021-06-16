@@ -29,6 +29,31 @@ public class ClassGoodReq {
      */
     private String typeParentId;
 
+    /**
+     * 商品名
+     */
+    private String goodsName;
+
+    /**
+     * 是否按照价格排序
+     */
+    private Integer priceFlag;
+
+    public String getGoodsName() {
+        return goodsName;
+    }
+
+    public void setGoodsName(String goodsName) {
+        this.goodsName = goodsName;
+    }
+
+    public Integer getPriceFlag() {
+        return priceFlag;
+    }
+
+    public void setPriceFlag(Integer priceFlag) {
+        this.priceFlag = priceFlag;
+    }
 
     public String getTypeName() {
         return typeName;

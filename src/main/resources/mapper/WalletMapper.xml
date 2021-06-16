@@ -22,10 +22,10 @@
         set
             <if test="type != null">
                 <if test="type == 1">
-                    "WALLET".BALANCE = "WALLET".BALANCE + #{payAmount}
+                    "WALLET".BALANCE = "WALLET".BALANCE + #{payAmount},
                 </if>
                 <if test="type == 0">
-                    "WALLET".BALANCE = "WALLET".BALANCE - #{payAmount}
+                    "WALLET".BALANCE = "WALLET".BALANCE - #{payAmount},
                 </if>
             </if>
             <if test="type != null">
@@ -36,13 +36,22 @@
                     "WALLET".WALLET_OUTCOME = "WALLET".WALLET_OUTCOME + #{payAmount}
                 </if>
             </if>
-        where
+        <where>
             "WALLET".USER_ID = #{userId}
             <if test="type != null">
                 <if test="type == 0">
                     AND "WALLET".BALANCE - #{payAmount} >= 0
                 </if>
             </if>
+        </where>
+    </update>
+    <update id="updateBalance2">
+        update
+            XINGYING_SHOP.WALLET
+        set
+            "WALLET".WALLET_OUTCOME = "WALLET".WALLET_OUTCOME + #{payAmount}
+        where
+            "WALLET".USER_ID = #{userId}
     </update>
 
 

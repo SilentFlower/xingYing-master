@@ -56,6 +56,17 @@ import com.xingying.shopping.master.entity.Shop;
     }
 
     /**
+     * 获取星荧商城商家表
+     *
+     * @return Result
+     */
+    @GetMapping("/getShop")
+    public QueryResultBean<Shop> getShopInfo(String shopId) {
+        Shop shop = shopService.getById(shopId);
+        return new QueryResultBean<>(shop);
+    }
+
+    /**
      * 新增 星荧商城商家表
      * @param shop Shop 对象
      * @return

@@ -10,25 +10,40 @@
         <result column="ORDER_DETAIL_ID" property="orderDetailId"  />
     </resultMap>
 
+    <resultMap id="Base" type="com.xingying.shopping.master.entity.ext.CardsUserExt">
+        <id column="USER_ID" property="userId" />
+        <result column="CARD_ID" property="cardId"  />
+        <result column="GET_DATE" property="getDate"  />
+        <result column="ORDER_DETAIL_ID" property="orderDetailId"  />
+        <result column="GOODS_ID" property="goodsId" />
+        <result column="GOODS_SPC" property="goodsSpc"  />
+        <result column="GOODS_NAME" property="goodsName"/>
+        <result column="GOODS_PIC" property="goodsPic"/>
+        <result column="GOODS_CARDS" property="card"/>
+    </resultMap>
+
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         USER_ID, CARD_ID, GET_DATE, ORDER_DETAIL_ID
     </sql>
 
     <!-- 分页查询 -->
-    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.CardsUser">
+    <select id="getListByPage" resultType="com.xingying.shopping.master.entity.CardsUser" resultMap="Base">
         select
-            <include refid="Base_Column_List" />
+            CARDS_USER.*,
+            "ORDER_DETAIL".GOODS_ID,
+            "ORDER_DETAIL".GOODS_SPC,
+            "GOODS".GOODS_NAME,
+            "GOODS".GOODS_PIC,
+            "CARDS".GOODS_CARDS
         from
             XINGYING_SHOP.CARDS_USER
+            left join XINGYING_SHOP.CARDS on "CARDS".CARD_ID = "CARDS_USER".CARD_ID
+            left join XINGYING_SHOP.ORDER_DETAIL on "ORDER_DETAIL".ORDER_DETAIL_ID = "CARDS_USER".ORDER_DETAIL_ID
+            left join XINGYING_SHOP.GOODS on "GOODS".GOODS_ID = "ORDER_DETAIL".GOODS_ID
         <where>
             <if test="userId != null  and userId != '' ">
-            </if>
-            <if test="cardId != null  and cardId != '' ">
-            </if>
-            <if test="getDate != null  and getDate != '' ">
-            </if>
-            <if test="orderDetailId != null  and orderDetailId != '' ">
+                AND "CARDS_USER".USER_ID = #{userId}
             </if>
         </where>
     </select>

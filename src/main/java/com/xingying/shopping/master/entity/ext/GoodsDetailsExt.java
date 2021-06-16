@@ -19,6 +19,20 @@ public class GoodsDetailsExt extends GoodsDetails {
      */
     private String cards;
 
+    /**
+     * 图片
+     *
+     * @return
+     */
+    private String goodsPic;
+
+    public String getGoodsPic() {
+        return goodsPic;
+    }
+
+    public void setGoodsPic(String goodsPic) {
+        this.goodsPic = goodsPic;
+    }
 
     public String getCards() {
         return cards;

@@ -13,6 +13,7 @@ import com.xingying.shopping.master.entity.ext.OrderMasterExt;
 import com.xingying.shopping.master.entity.request.MakeOrderRes;
 import com.xingying.shopping.master.entity.request.OrderGoodsRes;
 import com.xingying.shopping.master.entity.request.PayOrder;
+import com.xingying.shopping.master.entity.response.AppealNum;
 import com.xingying.shopping.master.entity.response.OrderStatistics;
 import com.xingying.shopping.master.entity.response.OrderStatisticsForPic;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -115,6 +116,17 @@ import com.xingying.shopping.master.entity.OrderMaster;
     public OperationResultBean<String> confirmOrder(@RequestBody PayOrder payOrder) {
         orderService.confirmOrder(payOrder);
         return new OperationResultBean<>("success");
+    }
+
+    /**
+     * 申诉订单数量查询
+     * @param
+     * @return
+     */
+    @GetMapping("/getAppealNum")
+    public QueryResultBean<AppealNum> getAppealNum() {
+        AppealNum appealNum = orderService.getAppealNum();
+        return new QueryResultBean<>(appealNum);
     }
 
     /**
@@ -241,9 +253,10 @@ import com.xingying.shopping.master.entity.OrderMaster;
      */
     @GetMapping("/getNumberByStatus")
     public QueryResultBean<Integer> getNumberByStatus(Integer status) {
+        String userId = UserContext.getCurrentUser().getUserId();
         int count = orderService.count(new QueryWrapper<OrderMaster>()
-                .eq("USER_ID", UserContext.getCurrentUser().getUserId())
-                .eq("STATUS", status));
+                .eq("STATUS", status)
+                .and(wrapper -> wrapper.eq("USER_ID", userId).or().eq("SHOP_ID", userId)));
         return new QueryResultBean<>(count);
     }
 
